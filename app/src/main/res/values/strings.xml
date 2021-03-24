@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">AppTourDuLich</string>
     <string name="nameload">HouseTour</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_usename">Số Điện Thoại</string>
+    <string name="prompt_password">Mật Khẩu</string>
+    <string name="dangnhap">Đăng Nhập</string>
+    <string name="dangki">Đăng Kí</string>
+    <string name="quenmatkhau">Quên Mật Khẩu</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="hoten">Họ Tên</string>
+    <string name="diachi">Địa Chỉ</string>
+    <string name="guilaimaotp">Gửi lại mã</string>
+    <string name="dongy">Đồng ý</string>
 </resources>
