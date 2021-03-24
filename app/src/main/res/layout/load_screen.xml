@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFCD4D"
+    android:background="@color/Background"
     android:orientation="vertical"
     tools:context=".LoadScreen">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtSloganStart1.1"
         android:layout_width="match_parent"
         android:layout_height="69dp"
         android:layout_marginTop="70dp"

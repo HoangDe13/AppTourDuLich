@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nendangki"
+    tools:context=".Fragment_Start3">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="271dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifhyView"
+            android:layout_width="391dp"
+            android:layout_height="396dp"
+            android:layout_marginStart="-55dp"
+            android:layout_marginTop="-80dp"
+            android:src="@drawable/img_start6" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnBatDau"
+        android:layout_width="158dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/Button"
+        android:enabled="true"
+        android:text="@string/start"
+        android:textColor="@color/TextButton"
+        app:layout_constraintBottom_toTopOf="@+id/indicator"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.pixelcan.inkpageindicator.InkPageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        app:ipi_animationDuration="320"
+        app:ipi_currentPageIndicatorColor="@android:color/black"
+        app:ipi_dotDiameter="8dp"
+        app:ipi_dotGap="8dp"
+        app:ipi_pageIndicatorColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSloganStart3"
+        android:layout_width="355dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/artifika"
+        android:gravity="center"
+        android:shadowColor="#4A3A3A"
+        android:shadowDx="5"
+        android:shadowRadius="5"
+        android:text="@string/sloganstart3"
+        android:textColor="#01579B"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

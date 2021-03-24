@@ -32,7 +32,7 @@ public class ProgressBarLoad extends Animation{
         tv_Load.setText((int)value+" %");
 
         if(value==to){
-            context.startActivity(new Intent(context,HomeScreen.class));
+            context.startActivity(new Intent(context,StartActivity.class));
         }
 
     }
