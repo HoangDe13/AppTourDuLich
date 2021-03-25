@@ -8,16 +8,9 @@
     android:orientation="vertical"
     tools:context=".LoadScreen">
 
-    <TextView
-        android:id="@+id/txtSloganStart1.1"
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:layout_marginTop="70dp"
-        android:fontFamily="cursive"
-        android:gravity="center"
-        android:text="@string/nameload"
-        android:textColor="#000000"
-        android:textSize="50sp" />
+        android:layout_height="88dp" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifhyView"
@@ -47,18 +40,6 @@
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:fontFamily="cursive"
-        android:gravity="center"
-        android:text="Welcome !"
-        android:textColor="#000000"
-        android:textSize="30sp"
         android:textStyle="bold" />
 
 
