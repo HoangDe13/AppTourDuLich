@@ -10,6 +10,7 @@
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
+    <string name="Nhaplaimatkhau">Nhập Lại Mật Khẩu</string>
     <string name="login_failed">"Login failed"</string>
     <string name="hoten">Họ Tên</string>
     <string name="diachi">Địa Chỉ</string>
@@ -18,7 +19,9 @@
     <string name="start">Bắt Đầu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="facebook">Đăng Nhập Facebook</string>
+    <string name="Gmail">Đăng Nhập Gmail</string>
+    <string name="CMNN">Nhập CMNN/CCCD</string>
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
     <string name="sloganstart1.1">Tận Hưởng  </string>
