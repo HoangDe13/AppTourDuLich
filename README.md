@@ -11,3 +11,4 @@ Du khách tự thiết lập cho mình những kế hoặc riêng phù hợp v�
 Các app du lịch việt nam giúp bạn sẽ dễ dàng tìm kiếm được cho mình và người thân tour du lịch như ý và đầy đủ thông tin điểm đến, ngày khởi hành, lịch trình và chi phí.
 Với ứng dụng đặt tour trên các app du lịch, chỉ bằng vài thao tác ngay trên điện thoại di động, bạn đã có thể tìm hiểu thông tin và đăng ký xong tour du lịch yêu thích.
 app du lịch hay có hàng ngàn thông tin tour du lịch trọn gói, địa điểm du lịch, sự kiện du lịch, tips du lịch trong nước với đa dạng hình ảnh, bình luận và đánh giá để người dùng tham khảo.
+Phần mềm được thực hiện trên nền tảng ANDROID. ANDROID STUDIO là công cụ phát triển được ra mắt vào năm 2013. Tới thời điểm hiện tại ANDROID STUDIO đã đến vesion 4.1.3 . 
