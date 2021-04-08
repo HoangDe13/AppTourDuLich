@@ -10,6 +10,7 @@
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
+    <string name="Nhaplaimatkhau">Nhập Lại Mật Khẩu</string>
     <string name="login_failed">"Login failed"</string>
     <string name="hoten">Họ Tên</string>
     <string name="diachi">Địa Chỉ</string>
@@ -18,12 +19,14 @@
     <string name="start">Bắt Đầu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="facebook">Đăng Nhập Facebook</string>
+    <string name="Gmail">Đăng Nhập Gmail</string>
+    <string name="CMNN">Nhập CMNN/CCCD</string>
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
     <string name="sloganstart1.1">Tận Hưởng  </string>
-    <string name="sloganstart1.2">Bản Sắc Việt </string>
+    <string name="sloganstart1.2">Chào mừng bạn đến với du lịch Việt Nam !</string>
     <string name="sloganstart2"> Mỗi hành trình đều có những điểm đến bí mật mà ngay cả du khách cũng không thể ngờ tới.</string>
-    <string name="sloganstart3">Hãy để chúng tôi mang đến cho bạn những trải nghiệm tuyệt vời nhất</string>
+    <string name="sloganstart3">Hãy để chúng tôi mang đến cho bạn những trải nghiệm tuyệt vời nhất !</string>
 
 </resources>

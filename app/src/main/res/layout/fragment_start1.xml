@@ -36,53 +36,35 @@
         android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginBottom="44dp"
         app:ipi_animationDuration="320"
         app:ipi_currentPageIndicatorColor="@android:color/black"
         app:ipi_dotDiameter="20dp"
         app:ipi_dotGap="20dp"
         app:ipi_pageIndicatorColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSloganStart1.2"></com.pixelcan.inkpageindicator.InkPageIndicator>
-
-    <TextView
-        android:id="@+id/txtSloganStart1.1"
-        android:layout_width="272dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="380dp"
-
-        android:layout_marginEnd="127dp"
-        android:fontFamily="@font/artifika"
-        android:gravity="center"
-        android:shadowColor="#0D7AB1"
-        android:shadowDx="5"
-        android:shadowRadius="100"
-        android:text="@string/sloganstart1.1"
-        android:textColor="#024457"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSloganStart1.2"
+        app:layout_constraintVertical_bias="1.0"></com.pixelcan.inkpageindicator.InkPageIndicator>
 
     <TextView
         android:id="@+id/txtSloganStart1.2"
-        android:layout_width="301dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="68dp"
+        android:layout_width="361dp"
+        android:layout_height="140dp"
 
-        android:layout_marginTop="29dp"
-        android:fontFamily="@font/artifika"
-        android:gravity="center|top"
-        android:shadowColor="#CABA4F"
+        android:layout_marginTop="128dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
         android:shadowDx="5"
         android:shadowRadius="20"
         android:text="@string/sloganstart1.2"
-        android:textColor="#B71C1C"
-        android:textSize="40dp"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSloganStart1.1" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
