@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".sign_up">
 
     <Button
@@ -44,8 +45,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="390dp"
-        android:layout_height="357dp"
+        android:layout_width="393dp"
+        android:layout_height="343dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="99dp"
@@ -148,6 +149,7 @@
         android:id="@+id/imageView"
         android:layout_width="417dp"
         android:layout_height="202dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
