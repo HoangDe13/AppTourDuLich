@@ -4,26 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/bg1"
     android:orientation="vertical"
     tools:context=".LoadScreen">
-
-    <TextView
-        android:id="@+id/txtSloganStart1.1"
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:layout_marginTop="70dp"
-        android:fontFamily="cursive"
-        android:gravity="center"
-        android:text="@string/nameload"
-        android:textColor="#000000"
-        android:textSize="50sp" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifhyView"
         android:layout_width="410dp"
         android:layout_height="395dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="1dp"
         android:src="@drawable/cartravel"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,18 +36,6 @@
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:fontFamily="cursive"
-        android:gravity="center"
-        android:text="Welcome !"
-        android:textColor="#000000"
-        android:textSize="30sp"
         android:textStyle="bold" />
 
 
