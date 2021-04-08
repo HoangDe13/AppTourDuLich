@@ -4,31 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nendangnhap"
     tools:context=".sign_up">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="177dp"
-        android:layout_height="156dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="9dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/login3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:srcCompat="@drawable/vt39031_png_860" />
-
     <Button
-        android:id="@+id/login3"
+        android:id="@+id/btnDangKi"
         android:layout_width="186dp"
         android:layout_height="60dp"
         android:layout_gravity="start"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="28dp"
         android:background="#019ac1"
         android:enabled="false"
         android:fontFamily="@font/baloo"
@@ -37,39 +22,41 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
         app:layout_constraintVertical_bias="0.176" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="237dp"
         android:layout_height="86dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="200dp"
         android:fontFamily="@font/baloo"
         android:gravity="center"
         android:text="TextView"
         android:textColor="#224E78"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/dangki" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="391dp"
-        android:layout_height="354dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="390dp"
+        android:layout_height="357dp"
+        android:layout_marginStart="6dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="99dp"
         android:background="@android:drawable/checkbox_off_background"
+        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.878">
 
         <LinearLayout
             android:layout_width="406dp"
@@ -88,7 +75,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="8dp" />
+                android:layout_height="10dp" />
 
             <EditText
                 android:id="@+id/edtSDT"
@@ -101,7 +88,20 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="8dp" />
+                android:layout_height="10dp" />
+
+            <EditText
+                android:id="@+id/edtCMNN"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/CMNN"
+                android:inputType="textPersonName"
+                android:textSize="22sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName2"
@@ -143,5 +143,14 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="417dp"
+        android:layout_height="202dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dangnhap" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
