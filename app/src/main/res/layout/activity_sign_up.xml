@@ -2,56 +2,60 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".sign_up">
 
     <Button
         android:id="@+id/btnDangKi"
-        android:layout_width="186dp"
-        android:layout_height="60dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_gravity="start"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="25dp"
         android:background="#019ac1"
         android:enabled="false"
         android:fontFamily="@font/baloo"
         android:text="@string/dangki"
         android:textColor="#ffffff"
         android:textSize="22sp"
+        app:backgroundTint="#019AC1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.582"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintTop_toBottomOf="@+id/btndangnhap"
         app:layout_constraintVertical_bias="0.176" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="237dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="243dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/baloo"
+        android:foregroundGravity="center"
         android:gravity="center"
-        android:text="TextView"
+        android:text="Đăng Kí"
         android:textColor="#224E78"
-        android:textSize="50sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:text="@string/dangki" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="393dp"
-        android:layout_height="343dp"
+        android:layout_width="388dp"
+        android:layout_height="381dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="99dp"
+        android:layout_marginBottom="90dp"
         android:background="@android:drawable/checkbox_off_background"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
@@ -60,95 +64,147 @@
         app:layout_constraintVertical_bias="0.878">
 
         <LinearLayout
-            android:layout_width="406dp"
-            android:layout_height="342dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edtHoTen"
                 android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/name"
+                android:drawablePadding="15dp"
                 android:ems="10"
                 android:hint="@string/hoten"
                 android:inputType="textPersonName"
-                android:textSize="22sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/sex"
+                    android:drawablePadding="10dp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioNam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Nam"
+                        android:textColor="#8C8C8C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Nữ"
+                        android:textColor="#9C9C9C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="60dp"
+                        android:layout_height="33dp"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/edtSDT"
                 android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/phonecall"
+                android:drawablePadding="15dp"
                 android:ems="10"
                 android:hint="Số Điện Thoại"
                 android:inputType="phone"
-                android:textSize="22sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edtCMNN"
                 android:layout_width="354dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/passport"
+                android:drawablePadding="15dp"
                 android:ems="10"
                 android:hint="@string/CMNN"
                 android:inputType="textPersonName"
-                android:textSize="22sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName2"
                 android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/homeaddress"
+                android:drawablePadding="15dp"
                 android:ems="10"
                 android:hint="@string/diachi"
                 android:inputType="textPersonName"
-                android:textSize="22sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="8dp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edtMatKhau"
                 android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/lock"
+                android:drawableEnd="@drawable/hide__1_"
+                android:drawablePadding="15dp"
                 android:hint="@string/prompt_password"
                 android:imeActionLabel="@string/invalid_password"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:selectAllOnFocus="true"
                 android:textColor="#F57C00"
-                android:textSize="22sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="8dp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edtNhapLaiMatKhau"
                 android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/lock"
+                android:drawableEnd="@drawable/hide__1_"
+                android:drawablePadding="15dp"
                 android:ems="10"
                 android:hint="Nhập Lại Mật Khẩu"
                 android:inputType="textPassword"
-                android:textSize="22sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="417dp"
-        android:layout_height="202dp"
+        android:layout_width="412dp"
+        android:layout_height="200dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,6 +4,7 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_usename">Số Điện Thoại</string>
     <string name="prompt_password">Mật Khẩu</string>
+    <string name="otp">Mã OTP</string>
     <string name="dangnhap">Đăng Nhập</string>
     <string name="dangki">Đăng Kí</string>
     <string name="quenmatkhau">Quên Mật Khẩu</string>

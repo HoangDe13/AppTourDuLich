@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7A7A7A"
     tools:context=".HomeScreen">
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="149dp"
-        android:layout_height="95dp"
-        android:layout_marginBottom="436dp"
-        android:text="GETSTART"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottomBar"
+        android:layout_margin="25dp"
+        android:background="@drawable/shape"
+        app:itemIconSize="30dp"
+        app:menu="@menu/menu_item" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

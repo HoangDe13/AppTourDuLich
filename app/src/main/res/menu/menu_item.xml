@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/list"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="Tour"/>
+    <item android:id="@+id/voucher"
+        android:icon="@drawable/ic_baseline_style_24"
+        android:title="Khuyến Mãi"/>
+    <item android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Trang Chủ"/>
+    <item android:id="@+id/location"
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="Bản Đồ"/>
+    <item android:id="@+id/user"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Cá Nhân"/>
+</menu>
