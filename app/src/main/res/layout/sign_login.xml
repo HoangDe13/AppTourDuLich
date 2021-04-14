@@ -7,6 +7,23 @@
     android:background="#FFFFFF"
     tools:context=".SignLoginActivity">
 
+    <Button
+        android:id="@+id/btndn"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:background="#019AC1"
+        android:fontFamily="@font/baloo"
+        android:text="@string/Login"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="#019AC1"
+        app:layout_constraintEnd_toStartOf="@+id/btnDangKi"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="414dp"
@@ -42,12 +59,21 @@
             <EditText
                 android:id="@+id/edtSDT"
                 android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableLeft="@drawable/telephone__1_"
+                android:drawablePadding="10dp"
                 android:hint="@string/prompt_usename"
                 android:inputType="number"
                 android:selectAllOnFocus="true"
+                android:shadowColor="#002EDA"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
                 android:textColor="#F57C00"
-                android:textSize="22sp" />
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="10dp"
@@ -56,51 +82,42 @@
             <EditText
                 android:id="@+id/password"
                 android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/lock"
+                android:drawableEnd="@drawable/hide__1_"
+                android:drawablePadding="10dp"
                 android:hint="@string/prompt_password"
                 android:imeActionLabel="@string/invalid_password"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:selectAllOnFocus="true"
+                android:textAlignment="textStart"
                 android:textColor="#F57C00"
-                android:textSize="22sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/btnlogin"
-        android:layout_width="160dp"
-        android:layout_height="55dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="48dp"
-        android:background="#019AC1"
-        android:enabled="false"
-        android:fontFamily="@font/baloo"
-        android:text="@string/dangnhap"
-        android:textColor="#ffffff"
-        android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <Button
         android:id="@+id/btnDangKi"
         android:layout_width="160dp"
         android:layout_height="55dp"
-        android:layout_marginStart="12dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="36dp"
         android:background="#019AC1"
         android:fontFamily="@font/baloo"
         android:text="@string/Register"
         android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/btnlogin"
+        android:textSize="18sp"
+        app:backgroundTint="#019AC1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="304dp"
-        android:layout_height="67dp"
+        android:layout_width="298dp"
+        android:layout_height="65dp"
         android:layout_marginTop="212dp"
         android:fontFamily="@font/baloo"
         android:gravity="center"
@@ -126,15 +143,16 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="237dp"
         android:layout_height="96dp"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="82dp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"

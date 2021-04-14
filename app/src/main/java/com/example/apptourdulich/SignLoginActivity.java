@@ -15,7 +15,8 @@ public class SignLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_login);
-        dangnhap=(Button)findViewById(R.id.btnlogin);
+
+        dangnhap=(Button)findViewById(R.id.btndn);
         dangki=(Button)findViewById(R.id.btnDangKi);
         Quenmatkhau=(TextView)findViewById(R.id.tvQuenMatKhau);
         dangki.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +30,13 @@ public class SignLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i= new Intent(SignLoginActivity.this,ForgetPassword.class);
+                startActivity(i);
+            }
+        });
+        dangnhap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(SignLoginActivity.this,HomeScreen.class);
                 startActivity(i);
             }
         });
