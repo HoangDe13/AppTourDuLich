@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nendangki"
+    android:background="@drawable/backgroud"
     tools:context=".Fragment_Start3">
 
     <!-- TODO: Update blank fragment layout -->
@@ -68,7 +68,7 @@
         android:shadowRadius="5"
         android:text="@string/sloganstart3"
         android:textColor="#000000"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
