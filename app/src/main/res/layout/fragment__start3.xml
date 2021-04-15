@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroud"
+    android:background="@drawable/nendangki"
     tools:context=".Fragment_Start3">
 
     <!-- TODO: Update blank fragment layout -->
@@ -34,13 +34,13 @@
         android:id="@+id/btnBatDau"
         android:layout_width="158dp"
         android:layout_height="41dp"
+        android:layout_marginStart="124dp"
         android:layout_marginBottom="12dp"
         android:background="@color/Button"
         android:enabled="true"
         android:text="@string/start"
         android:textColor="@color/TextButton"
         app:layout_constraintBottom_toTopOf="@+id/indicator"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.pixelcan.inkpageindicator.InkPageIndicator
@@ -60,15 +60,15 @@
         android:id="@+id/txtSloganStart3"
         android:layout_width="355dp"
         android:layout_height="180dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/artifika"
         android:gravity="center"
         android:shadowDx="5"
         android:shadowRadius="5"
         android:text="@string/sloganstart3"
-        android:textColor="#504F4F"
+        android:textColor="#000000"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 

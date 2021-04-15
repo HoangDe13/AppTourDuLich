@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroud"
+    android:background="@drawable/nendangki"
     tools:context=".Fragment_Start2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -49,12 +49,12 @@
         android:layout_width="336dp"
         android:layout_height="187dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="42dp"
         android:fontFamily="@font/artifika"
         android:gravity="center"
         android:text="@string/sloganstart2"
-        android:textColor="#4A4A4A"
+        android:textColor="#000000"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
