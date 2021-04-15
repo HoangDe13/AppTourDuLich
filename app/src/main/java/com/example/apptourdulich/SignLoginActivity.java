@@ -18,7 +18,7 @@ public class SignLoginActivity extends AppCompatActivity {
 
         dangnhap=(Button)findViewById(R.id.btndn);
         dangki=(Button)findViewById(R.id.btnDangKi);
-        Quenmatkhau=(TextView)findViewById(R.id.tvQuenMatKhau);
+
         dangki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,13 +26,7 @@ public class SignLoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        Quenmatkhau.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(SignLoginActivity.this,ForgetPassword.class);
-                startActivity(i);
-            }
-        });
+
         dangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
