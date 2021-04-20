@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".Confirm_otp">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="277dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/_49ae95a34d8c7869ec9_depositphotos_bgremover" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/inputOTP"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvSoDienThoaiConfirm"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0123456789"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:drawableStart="@drawable/pin_code24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textSize="30sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <Button
+            android:id="@+id/btnXacNhanOTP"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="#019AC1"
+            android:fontFamily="@font/baloo"
+            android:text="@string/Confirm"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:backgroundTint="#00019AC1"
+            app:backgroundTintMode="screen" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

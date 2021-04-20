@@ -16,7 +16,7 @@
     <string name="hoten">Họ Tên</string>
     <string name="diachi">Địa Chỉ</string>
     <string name="guilaimaotp">Gửi lại mã</string>
-    <string name="dongy">Đồng ý</string>
+    <string name="Confirm">Xác Nhận</string>
     <string name="start">Bắt Đầu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -35,4 +35,17 @@
     <string name="Boy">Nam</string>
     <string name="Girl">Nữ</string>
     <string name="PhoneNumber">Số Điện Thoại</string>
+    <string name="inputOTP">Vui lòng nhập mã OTP được gửi đến </string>
+    <string name="youhaveaccount">Bạn đã có tài khoản chưa?</string>
+    <string name="title_activity_home__screen">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_home_screen">MainActivity</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="Tour">Tour</string>
+    <string name="Home">Trang Chủ</string>
+    <string name="Location">Vị Trí</string>
+    <string name="Promotion">Khuyến Mãi</string>
+    <string name="Profile">Cá Nhân</string>
 </resources>

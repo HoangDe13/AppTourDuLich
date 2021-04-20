@@ -60,7 +60,7 @@
         android:shadowDx="5"
         android:shadowRadius="20"
         android:text="@string/sloganstart1.2"
-        android:textColor="#454444"
+        android:textColor="#E9575454"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
