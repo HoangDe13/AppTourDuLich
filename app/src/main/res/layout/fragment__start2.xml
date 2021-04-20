@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nendangki"
+    android:background="@drawable/backgroud"
     tools:context=".Fragment_Start2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -49,17 +49,15 @@
         android:layout_width="336dp"
         android:layout_height="187dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="42dp"
         android:fontFamily="@font/artifika"
         android:gravity="center"
-        android:shadowColor="#39A7DD"
-        android:shadowDx="5"
-        android:shadowRadius="2"
         android:text="@string/sloganstart2"
-        android:textColor="#01579B"
+        android:textColor="#DA474646"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView4"
         tools:ignore="MissingConstraints" />

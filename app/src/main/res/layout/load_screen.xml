@@ -4,19 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/backgroundload1"
     android:orientation="vertical"
     tools:context=".LoadScreen">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="88dp" />
-
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifhyView"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="395dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="1dp"
         android:src="@drawable/cartravel"
         app:layout_constraintEnd_toEndOf="parent"

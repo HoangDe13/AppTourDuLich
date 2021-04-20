@@ -28,7 +28,7 @@ public class LoadScreen extends AppCompatActivity {
     }
     public void progressBarLoad(){
         ProgressBarLoad load=new ProgressBarLoad(this,progressBar,tvLoadl,0f,100f);
-        load.setDuration(8000);
+        load.setDuration(7000);
         progressBar.setAnimation(load);
 
     }
