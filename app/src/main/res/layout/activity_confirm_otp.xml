@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroud"
+    android:background="@drawable/uilogin"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".Confirm_otp">
@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="277dp"
-        android:layout_height="147dp"
+        android:layout_height="196dp"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/_49ae95a34d8c7869ec9_depositphotos_bgremover" />
 
@@ -37,7 +37,7 @@
         android:id="@+id/editTextNumber"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:drawableStart="@drawable/pin_code24"
         android:drawablePadding="10dp"
         android:ems="10"
