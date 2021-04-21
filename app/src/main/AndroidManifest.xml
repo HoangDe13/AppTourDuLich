@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Quenmatkhau2"></activity>
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".Feedback" />
+        <activity android:name=".Quenmatkhau2" />
         <activity android:name=".StartActivity" />
         <activity android:name=".ForgetPassword" />
         <activity android:name=".SignLoginActivity" />

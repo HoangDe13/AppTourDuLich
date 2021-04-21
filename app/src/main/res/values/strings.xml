@@ -23,11 +23,22 @@
     <string name="facebook">Đăng Nhập Facebook</string>
     <string name="Gmail">Đăng Nhập Gmail</string>
     <string name="CMNN">Nhập CMNN/CCCD</string>
+    <string name="CCCD">CMNN/CCCD</string>
+    <string name="phone">Số Điện Thoại </string>
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
     <string name="sloganstart1.1">Tận Hưởng  </string>
     <string name="sloganstart1.2">Chào mừng bạn đến với du lịch Việt Nam !</string>
     <string name="sloganstart2"> Mỗi hành trình đều có những điểm đến bí mật mà ngay cả du khách cũng không thể ngờ tới.</string>
     <string name="sloganstart3">Hãy để chúng tôi mang đến cho bạn những trải nghiệm tuyệt vời nhất !</string>
-
+    <string name="feedback">Góp Ý</string>
+    <string name="title_activity_profile">Profile</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+<string name="sex">Giới Tính</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
