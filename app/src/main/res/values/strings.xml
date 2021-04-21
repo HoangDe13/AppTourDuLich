@@ -26,8 +26,7 @@
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
     <string name="Birthday">Ngày Sinh</string>
-    <string name="sloganstart1.1">Tận Hưởng  </string>
-    <string name="sloganstart1.2">Chào mừng bạn đến với du lịch Việt Nam !</string>
+    <string name="sloganstart1.2">Chào mừng bạn đến với du lịch Việt Nam. Vác balo lên và đánh dấu lại những dấu chân .</string>
     <string name="sloganstart2"> Mỗi hành trình đều có những điểm đến bí mật mà ngay cả du khách cũng không thể ngờ tới.</string>
     <string name="sloganstart3">Hãy để chúng tôi mang đến cho bạn những trải nghiệm tuyệt vời nhất !</string>
     <string name="Loginwithfacebook">Đăng Nhập với Facebook</string>
@@ -48,4 +47,7 @@
     <string name="Location">Vị Trí</string>
     <string name="Promotion">Khuyến Mãi</string>
     <string name="Profile">Cá Nhân</string>
+    <string name="Haytanhuong">Tận hưởng cuộc sống</string>
+    <string name="vedepbattan">Vẻ Đẹp Bất Tận</string>
+    <string name="vedeptieman">Vẻ Đẹp Tiềm Ẩn</string>
 </resources>
