@@ -22,13 +22,35 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook">Đăng Nhập Facebook</string>
     <string name="Gmail">Đăng Nhập Gmail</string>
+
+  
+    <string name="CCCD">CMNN/CCCD</string>
+    <string name="update">Cập Nhật
+    </string>
+    <string name="phone">Số Điện Thoại </string>
+
     <string name="CMNN">CMNN/CCCD</string>
+
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
     <string name="Birthday">Ngày Sinh</string>
     <string name="sloganstart1.2">Chào mừng bạn đến với du lịch Việt Nam. Vác balo lên và đánh dấu lại những dấu chân .</string>
     <string name="sloganstart2"> Mỗi hành trình đều có những điểm đến bí mật mà ngay cả du khách cũng không thể ngờ tới.</string>
-    <string name="sloganstart3">Hãy để chúng tôi mang đến cho bạn những trải nghiệm tuyệt vời nhất !</string>
+
+    <string name="feedback">Góp Ý</string>
+    <string name="title_activity_profile">Profile</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="sex">Giới Tính</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="facebook_app_id">460035038397239</string>
+    <string name="fb_login_protocol_scheme">fb460035038397239</string>
+
+
     <string name="Loginwithfacebook">Đăng Nhập với Facebook</string>
     <string name="Loginwithgmail">Đăng Nhập với Gmail</string>
     <string name="Boy">Nam</string>
@@ -50,4 +72,5 @@
     <string name="Haytanhuong">Tận hưởng cuộc sống</string>
     <string name="vedepbattan">Vẻ Đẹp Bất Tận</string>
     <string name="vedeptieman">Vẻ Đẹp Tiềm Ẩn</string>
+
 </resources>
