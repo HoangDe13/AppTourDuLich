@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <fragment
+        android:id="@+id/fm_Container"
+        android:name="com.example.apptourdulich.fm_container"
+        android:layout_width="423dp"
+        android:layout_height="755dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="68dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.967">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#FFFFFF"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:itemIconTint="@color/Button"
+            app:itemRippleColor="#8AB3FF"
+            app:itemTextColor="@color/Background"
+            app:labelVisibilityMode="auto"
+            app:menu="@menu/bottommenu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

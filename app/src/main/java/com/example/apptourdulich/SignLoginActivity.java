@@ -6,19 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class SignLoginActivity extends AppCompatActivity {
- Button dangnhap,dangki;
- TextView Quenmatkhau;
+ Button dangnhap;
+ TextView  dangki;
+ EditText edtSoDienThoai;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_login);
 
-        dangnhap=(Button)findViewById(R.id.btndn);
-        dangki=(Button)findViewById(R.id.btnDangKi);
-        Quenmatkhau=(TextView)findViewById(R.id.tvQuenMatKhau);
+        dangnhap=findViewById(R.id.btndn);
+        dangki=findViewById(R.id.btnDangKi);
+        edtSoDienThoai=findViewById(R.id.edtSDT);
         dangki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,17 +28,14 @@ public class SignLoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        Quenmatkhau.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(SignLoginActivity.this,ForgetPassword.class);
-                startActivity(i);
-            }
-        });
+
         dangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(SignLoginActivity.this,HomeScreen.class);
+                Intent i=new Intent(SignLoginActivity.this,Confirm_otp.class);
+                Bundle b= new Bundle();
+                b.putString("SoDienThoai",edtSoDienThoai.getText().toString());
+                i.putExtras(b);
                 startActivity(i);
             }
         });
