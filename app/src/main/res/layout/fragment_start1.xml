@@ -46,11 +46,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginBottom="20dp" />
+
     <com.pixelcan.inkpageindicator.InkPageIndicator
         android:id="@+id/indicator"
         android:layout_width="268dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="80dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="30dp"
         app:ipi_animationDuration="320"
         app:ipi_currentPageIndicatorColor="@android:color/black"
         app:ipi_dotDiameter="20dp"
