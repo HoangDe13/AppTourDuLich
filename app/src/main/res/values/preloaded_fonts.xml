@@ -3,6 +3,8 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aclonica</item>
         <item>@font/aladin</item>
+        <item>@font/alex_brush</item>
+        <item>@font/arizonia</item>
         <item>@font/artifika</item>
         <item>@font/baloo</item>
 

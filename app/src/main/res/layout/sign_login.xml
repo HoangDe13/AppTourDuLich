@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/uilogin"
+    android:background="@drawable/nendangnhapdangky"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".SignLoginActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="312dp"
-        android:layout_height="210dp"
-        app:srcCompat="@drawable/_49ae95a34d8c7869ec9_depositphotos_bgremover" />
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:scaleType="center"
+        app:srcCompat="@drawable/travel_in_vietnam" />
 
     <EditText
         android:id="@+id/edtSDT"

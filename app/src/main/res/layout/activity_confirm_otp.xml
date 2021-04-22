@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/uilogin"
+    android:background="@drawable/nendangnhapdangky"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".Confirm_otp">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="277dp"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
         android:layout_height="196dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/_49ae95a34d8c7869ec9_depositphotos_bgremover" />
+        android:scaleType="center"
+        app:srcCompat="@drawable/travel_in_vietnam" />
 
     <TextView
         android:id="@+id/textView2"

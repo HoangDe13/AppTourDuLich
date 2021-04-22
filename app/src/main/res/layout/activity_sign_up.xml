@@ -4,181 +4,195 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgrouddangki"
+    android:background="@drawable/nendangnhapdangky"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".sign_up">
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="284dp"
-        android:layout_height="123dp"
-        app:srcCompat="@drawable/_49ae95a34d8c7869ec9_depositphotos_bgremover" />
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:scaleType="center"
+        app:srcCompat="@drawable/travel_in_vietnam" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="243dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/baloo"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="@string/Register"
-        android:textColor="#266F97"
-        android:textSize="36sp" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="334dp"
-        android:layout_height="377dp"
-        android:layout_marginTop="10dp"
-        android:background="@android:drawable/checkbox_off_background"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="360dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/edtHoTen"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
-                android:background="?attr/editTextBackground"
-                android:drawableStart="@drawable/identification24"
-                android:drawablePadding="15dp"
-                android:ems="10"
-                android:hint="@string/hoten"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="330dp"
-                android:layout_height="50dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="350dp"
+                android:layout_height="441dp"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:paddingStart="15dp">
+                android:background="@android:drawable/checkbox_off_background"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="48dp"
-                    android:layout_height="match_parent"
-                    android:drawableStart="@drawable/couple__1_24"
-                    android:drawablePadding="10dp" />
-
-                <RadioGroup
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radioNam"
-                        android:layout_width="98dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/Boy"
-                        android:textColor="#8C8C8C"
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="243dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/baloo"
+                        android:foregroundGravity="center"
+                        android:gravity="center"
+                        android:text="@string/Register"
+                        android:textColor="#266F97"
+                        android:textSize="36sp" />
+
+                    <EditText
+                        android:id="@+id/edtHoTen"
+                        android:layout_width="330dp"
+                        android:layout_height="50dp"
+                        android:background="?attr/editTextBackground"
+                        android:drawableStart="@drawable/identification24"
+                        android:drawablePadding="15dp"
+                        android:ems="10"
+                        android:hint="@string/hoten"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
                         android:textSize="14sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton6"
-                        android:layout_width="111dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/Girl"
-                        android:textColor="#9C9C9C"
+                    <LinearLayout
+                        android:layout_width="330dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="15dp">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="48dp"
+                            android:layout_height="match_parent"
+                            android:drawableStart="@drawable/couple__1_24"
+                            android:drawablePadding="10dp" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioNam"
+                                android:layout_width="98dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/Boy"
+                                android:textColor="#8C8C8C"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton6"
+                                android:layout_width="111dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/Girl"
+                                android:textColor="#9C9C9C"
+                                android:textSize="14sp" />
+
+                            <Space
+                                android:layout_width="60dp"
+                                android:layout_height="33dp"
+                                android:layout_weight="1" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtNgaySinh"
+                        android:layout_width="330dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/editTextBackground"
+                        android:drawableStart="@drawable/calendar24"
+                        android:drawablePadding="15dp"
+                        android:ems="10"
+                        android:hint="@string/Birthday"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
                         android:textSize="14sp" />
 
-                    <Space
-                        android:layout_width="60dp"
-                        android:layout_height="33dp"
-                        android:layout_weight="1" />
-                </RadioGroup>
+                    <EditText
+                        android:id="@+id/edtSDT"
+                        android:layout_width="330dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/editTextBackground"
+                        android:drawableStart="@drawable/telephone__1_24"
+                        android:drawablePadding="15dp"
+                        android:ems="10"
+                        android:hint="@string/PhoneNumber"
+                        android:inputType="phone"
+                        android:padding="5dp"
+                        android:textSize="14sp" />
 
-            </LinearLayout>
+                    <EditText
+                        android:id="@+id/edtCMNN"
+                        android:layout_width="330dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/editTextBackground"
+                        android:drawableStart="@drawable/id_card24"
+                        android:drawablePadding="15dp"
+                        android:ems="10"
+                        android:hint="@string/CMNN"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/edtNgaySinh"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
+                    <EditText
+                        android:id="@+id/edtDiaChi"
+                        android:layout_width="330dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/editTextBackground"
+                        android:drawableStart="@drawable/placeholder__1_24"
+                        android:drawablePadding="15dp"
+                        android:ems="10"
+                        android:hint="@string/diachi"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="?attr/editTextBackground"
-                android:drawableStart="@drawable/calendar24"
-                android:drawablePadding="15dp"
-                android:ems="10"
-                android:hint="@string/Birthday"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textSize="14sp" />
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
 
-            <EditText
-                android:id="@+id/edtSDT"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="?attr/editTextBackground"
-                android:drawableStart="@drawable/telephone__1_24"
-                android:drawablePadding="15dp"
-                android:ems="10"
-                android:hint="@string/PhoneNumber"
-                android:inputType="phone"
-                android:padding="5dp"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/edtCMNN"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="?attr/editTextBackground"
-                android:drawableStart="@drawable/id_card24"
-                android:drawablePadding="15dp"
-                android:ems="10"
-                android:hint="@string/CMNN"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/edtDiaChi"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="?attr/editTextBackground"
-                android:drawableStart="@drawable/placeholder__1_24"
-                android:drawablePadding="15dp"
-                android:ems="10"
-                android:hint="@string/diachi"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textSize="14sp" />
-
+                <Button
+                    android:id="@+id/btnDangKi"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:background="#019ac1"
+                    android:enabled="false"
+                    android:fontFamily="@font/baloo"
+                    android:text="@string/dangki"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:backgroundTintMode="screen" />
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp">
-
-        <Button
-            android:id="@+id/btnDangKi"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="#019ac1"
-            android:enabled="false"
-            android:fontFamily="@font/baloo"
-            android:text="@string/dangki"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
-            app:backgroundTintMode="screen" />
-    </androidx.cardview.widget.CardView>
-
+    </ScrollView>
 </LinearLayout>
