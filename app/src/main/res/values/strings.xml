@@ -24,6 +24,8 @@
     <string name="Gmail">Đăng Nhập Gmail</string>
     <string name="CMNN">Nhập CMNN/CCCD</string>
     <string name="CCCD">CMNN/CCCD</string>
+    <string name="update">Cập Nhật
+    </string>
     <string name="phone">Số Điện Thoại </string>
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
@@ -38,7 +40,10 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-<string name="sex">Giới Tính</string>
+    <string name="sex">Giới Tính</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="facebook_app_id">460035038397239</string>
+    <string name="fb_login_protocol_scheme">fb460035038397239</string>
+
 </resources>
