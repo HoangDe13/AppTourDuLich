@@ -1,8 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_start1"
+    android:background="@drawable/nendangnhapdangky"
+    android:gravity="center|top"
     android:orientation="vertical"
-    tools:context=".fmHome" />
+    tools:context=".fmHome">
+
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/etTimKiem"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:ems="10"
+            android:gravity="center|left"
+            android:hint="@string/Search"
+
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_notifications_active_24" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="750dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="332dp"
+                android:layout_height="193dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.viewpager.widget.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/circleIndicator"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="160dp"
+                    app:ipi_dotDiameter="10dp"
+                    app:ipi_dotGap="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="372dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="226dp"
+                    android:layout_height="38dp"
+                    android:fontFamily="@font/artifika"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDx="7"
+                    android:shadowDy="10"
+                    android:shadowRadius="7"
+                    android:text="@string/News"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/ViewAll" />
+
+            </LinearLayout>
+
+            <view
+                android:id="@+id/viewPagerImage"
+                class="androidx.viewpager2.widget.ViewPager2"
+                android:layout_width="411dp"
+                android:layout_height="181dp"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp" />
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="221dp"
+                    android:layout_height="38dp"
+                    android:fontFamily="@font/artifika"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDx="7"
+                    android:shadowDy="5"
+                    android:shadowRadius="7"
+                    android:text="@string/ListTour"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="116dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/ViewAll" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

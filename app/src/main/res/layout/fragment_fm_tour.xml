@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fmTour">
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".fmTour" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="7" />
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:scrollbarSize="0dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="20dp">
+
+            <Button
+                android:id="@+id/btnTatCa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/All" />
+
+            <Button
+                android:id="@+id/btnMienBac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/North" />
+
+            <Button
+                android:id="@+id/btnMienTrung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/Central" />
+
+            <Button
+                android:id="@+id/btnMienNam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/South" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.apptourdulich.fragmentTour"
+        android:layout_width="match_parent"
+        android:layout_height="642dp"
+        tools:layout="@layout/fragment_tour" />
+</LinearLayout>

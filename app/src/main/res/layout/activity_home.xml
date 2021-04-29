@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_fm_container" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="340dp"
@@ -36,7 +37,7 @@
             android:foreground="?attr/selectableItemBackground"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            app:itemIconTint="@color/Button"
+
             app:itemRippleColor="#8AB3FF"
             app:itemTextColor="@color/Background"
             app:labelVisibilityMode="auto"

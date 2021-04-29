@@ -50,4 +50,16 @@
     <string name="Haytanhuong">Tận hưởng cuộc sống</string>
     <string name="vedepbattan">Vẻ Đẹp Bất Tận</string>
     <string name="vedeptieman">Vẻ Đẹp Tiềm Ẩn</string>
+    <string name="Search">Tìm Kiếm</string>
+    <string name="or">Hoặc</string>
+    <string name="ListTour">Danh Sách Tour</string>
+    <string name="ViewAll">Xem tất cả</string>
+    <string name="News">Tin Tức</string>
+    <string name="All">Tất Cả</string>
+    <string name="South">Miền Nam</string>
+    <string name="North">Miền Bắc</string>
+    <string name="Central">Miền Trung</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

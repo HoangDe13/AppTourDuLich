@@ -46,16 +46,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-    <Button
-        android:id="@+id/btnBatDau"
-        android:layout_width="158dp"
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="202dp"
         android:layout_height="40dp"
-        android:background="@color/Button"
-        android:enabled="true"
-        android:text="@string/start"
-        android:textColor="@color/TextButton"
-        app:layout_constraintBottom_toTopOf="@+id/indicator"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:cardCornerRadius="20dp">
+
+        <Button
+            android:id="@+id/btnBatDau"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/Button"
+            android:enabled="true"
+            android:text="@string/start"
+            android:textColor="@color/TextButton"
+            app:layout_constraintBottom_toTopOf="@+id/indicator"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.cardview.widget.CardView>
 
     <Space
         android:layout_width="match_parent"
