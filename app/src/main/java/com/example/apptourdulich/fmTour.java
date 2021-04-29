@@ -101,7 +101,7 @@ public class fmTour extends Fragment implements View.OnClickListener{
     private void loadFragment(Fragment fragment) {
         // load Fragment
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fm_Container, fragment);
+        transaction.replace(R.id.fragment, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
