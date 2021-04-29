@@ -13,22 +13,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".Search"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".UpdateProfile" />
         <activity android:name=".Profile" />
   
 
+
         <activity
             android:name=".Home"
-            android:label="@string/title_activity_home"></activity>
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
         <activity android:name=".Confirm_otp" />
 
-        <activity android:name=".StartActivity" />
-        <activity android:name=".SignLoginActivity" />
-        <activity android:name=".sign_up" />
-        <activity
-            android:name=".ui.login.LoginActivity"
+        <activity android:name=".StartActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+        <activity android:name=".SignLoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+        <activity android:name=".sign_up"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+
+       
+      
             android:label="@string/title_activity_login" />
+
         <activity android:name=".LoadScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

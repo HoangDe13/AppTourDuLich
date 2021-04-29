@@ -43,7 +43,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="20dp" />
 
     <com.pixelcan.inkpageindicator.InkPageIndicator

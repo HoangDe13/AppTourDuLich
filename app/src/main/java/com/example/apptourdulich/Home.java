@@ -8,14 +8,22 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.widget.Toolbar;
 
+import nl.joery.animatedbottombar.AnimatedBottomBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
-    private ActionBar toolbar;
+    ActionBar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
         toolbar = getSupportActionBar();
 
@@ -33,7 +41,6 @@ public class Home extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.navigation_tour:
-
                     fragment = new fmTour();
                     loadFragment(fragment);
                     return true;
@@ -53,6 +60,7 @@ public class Home extends AppCompatActivity {
                     fragment=new fmProfile();
                     loadFragment(fragment);
                     return true;
+
             }
             return false;
         }
