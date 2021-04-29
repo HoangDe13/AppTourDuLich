@@ -38,8 +38,9 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
 
+            app:itemIconTint="@color/light_blue_A400"
             app:itemRippleColor="#8AB3FF"
-            app:itemTextColor="@color/Background"
+            app:itemTextColor="#3519D2"
             app:labelVisibilityMode="auto"
             app:menu="@menu/bottommenu">
 

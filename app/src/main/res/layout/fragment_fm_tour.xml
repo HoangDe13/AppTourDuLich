@@ -1,51 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/nendangnhapdangky"
     android:baselineAligned="false"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".fmTour" >
+    tools:context=".fmTour">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="114dp"
         android:paddingTop="20dp"
         android:scrollbarSize="0dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:paddingStart="20dp">
+            android:paddingStart="30dp">
 
             <Button
                 android:id="@+id/btnTatCa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/All" />
+                android:onClick="onClick"
+                android:text="@string/All"
+                android:textColor="#0761BA"
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="50dp" />
 
             <Button
                 android:id="@+id/btnMienBac"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/North" />
+                android:onClick="onClick"
+                android:text="@string/North"
+                android:textColor="#0761BA"
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="50dp" />
 
             <Button
                 android:id="@+id/btnMienTrung"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/Central" />
+                android:onClick="onClick"
+                android:text="@string/Central"
+                android:textColor="#0761BA"
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="50dp" />
 
             <Button
                 android:id="@+id/btnMienNam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/South" />
+                android:onClick="onClick"
+                android:text="@string/South"
+                android:textColor="#0761BA"
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="50dp" />
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -53,7 +78,7 @@
     <fragment
         android:id="@+id/fragment"
         android:name="com.example.apptourdulich.fragmentTour"
-        android:layout_width="match_parent"
-        android:layout_height="642dp"
+        android:layout_width="312dp"
+        android:layout_height="575dp"
         tools:layout="@layout/fragment_tour" />
 </LinearLayout>
