@@ -3,17 +3,19 @@ package com.example.apptourdulich;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link fmTour#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fmTour extends Fragment {
+public class fmTour extends Fragment implements View.OnClickListener{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,11 +56,53 @@ public class fmTour extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    Button btnTatCa;
+    Button btnMienBac;
+    Button btnMientrung;
+    Button btnMienNam;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fm_tour, container, false);
+        View  view= inflater.inflate(R.layout.fragment_fm_tour, container, false);
+        btnMienBac=view.findViewById(R.id.btnMienBac);
+        btnMientrung=view.findViewById(R.id.btnMienTrung);
+        btnMienNam=view.findViewById(R.id.btnMienNam);
+        btnTatCa=view.findViewById(R.id.btnTatCa);
+        loadFragment(new fragmentTour());
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Fragment fragment;
+        switch (v.getId()) {
+            case R.id.btnTatCa:
+                fragment=new fragmentTour();
+                loadFragment(fragment);
+                break;
+            case R.id.btnMienBac:
+                fragment=new fm_tour_mien_bac();
+                loadFragment(fragment);
+                break;
+            case R.id.btnMienTrung:
+                fragment=new fm_tour_mien_trung();
+                loadFragment(fragment);
+                break;
+            case R.id.btnMienNam:
+                fragment=new fm_tour_mien_nam();
+                loadFragment(fragment);
+                break;
+            default:
+                break;
+        }
+
+    }
+    private void loadFragment(Fragment fragment) {
+        // load Fragment
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fm_Container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

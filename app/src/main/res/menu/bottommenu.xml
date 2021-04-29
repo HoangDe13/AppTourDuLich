@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_tour"
-        android:icon="@drawable/ic_baseline_event_note_24"
-        android:title="@string/Tour" />
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/Home" />
 
     <item
         android:id="@+id/navigation_promo"
@@ -11,10 +11,9 @@
         android:title="@string/Promotion" />
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/Home" />
-
+        android:id="@+id/navigation_tour"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="@string/Tour" />
     <item
         android:id="@+id/navigation_location"
         android:icon="@drawable/ic_baseline_location_on_24"
