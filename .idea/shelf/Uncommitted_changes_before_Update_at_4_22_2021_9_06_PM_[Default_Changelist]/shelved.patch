@@ -1,0 +1,629 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    package=\"com.example.apptourdulich\">\r\n    <uses-permission android:name=\"android.permission.INTERNET\"/>\r\n\r\n    <application\r\n\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\">\r\n        <activity android:name=\".MainActivity\"></activity>\r\n        <activity android:name=\".UpdateProfile\" />\r\n        <activity android:name=\".Profile\" />\r\n        <activity android:name=\".Feedback\" />\r\n        <activity android:name=\".Quenmatkhau2\" />\r\n        <activity android:name=\".StartActivity\" />\r\n        <activity android:name=\".ForgetPassword\" />\r\n        <activity android:name=\".SignLoginActivity\" />\r\n        <activity android:name=\".sign_up\" />\r\n        <activity\r\n            android:name=\".ui.login.LoginActivity\"\r\n            android:label=\"@string/title_activity_login\" />\r\n        <activity android:name=\".HomeScreen\" />\r\n        <activity android:name=\".LoadScreen\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity android:name=\"com.facebook.FacebookActivity\"\r\n            android:configChanges=\r\n                \"keyboard|keyboardHidden|screenLayout|screenSize|orientation\"\r\n            android:label=\"@string/app_name\"\r\n            tools:ignore=\"MissingClass\" />\r\n        <activity\r\n            android:name=\"com.facebook.CustomTabActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.VIEW\" />\r\n                <category android:name=\"android.intent.category.DEFAULT\" />\r\n                <category android:name=\"android.intent.category.BROWSABLE\" />\r\n                <data android:scheme=\"@string/fb_login_protocol_scheme\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <meta-data android:name=\"com.facebook.sdk.ApplicationId\"\r\n            android:value=\"@string/facebook_app_id\"/>\r\n\r\n\r\n        <meta-data\r\n\r\n            android:name=\"preloaded_fonts\"\r\n            android:resource=\"@array/preloaded_fonts\" />\r\n\r\n\r\n    </application>\r\n\r\n\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
++++ app/src/main/AndroidManifest.xml	(date 1619099527551)
+@@ -12,7 +12,6 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
+-        <activity android:name=".MainActivity"></activity>
+         <activity android:name=".UpdateProfile" />
+         <activity android:name=".Profile" />
+         <activity android:name=".Feedback" />
+Index: app/src/main/res/layout/activity_quenmatkhau2.xml
+===================================================================
+--- app/src/main/res/layout/activity_quenmatkhau2.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
++++ app/src/main/res/layout/activity_quenmatkhau2.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
+@@ -1,100 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="#FFFFFF"
+-    tools:context=".Quenmatkhau2">
+-
+-    <TextView
+-        android:id="@+id/textView2"
+-        android:layout_width="335dp"
+-        android:layout_height="63dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="244dp"
+-        android:layout_marginEnd="16dp"
+-        android:fontFamily="@font/baloo"
+-        android:text="@string/quenmatkhau"
+-        android:textColor="#36516C"
+-        android:textSize="45sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.59"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/cardView3"
+-        android:layout_width="358dp"
+-        android:layout_height="148dp"
+-        android:layout_marginStart="25dp"
+-        android:layout_marginTop="10dp"
+-        app:cardCornerRadius="10dp"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+-
+-        <LinearLayout
+-            android:layout_width="354dp"
+-            android:layout_height="match_parent"
+-            android:orientation="vertical">
+-
+-            <EditText
+-                android:id="@+id/edtMatKhau"
+-                android:layout_width="343dp"
+-                android:layout_height="64dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/lock"
+-                android:drawableEnd="@drawable/hide__1_"
+-                android:drawablePadding="10dp"
+-                android:ems="10"
+-                android:hint="@string/prompt_password"
+-                android:inputType="phone"
+-                android:textColor="#FFFFFF"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <Space
+-                android:layout_width="match_parent"
+-                android:layout_height="12dp" />
+-
+-            <EditText
+-                android:id="@+id/editOTP"
+-                android:layout_width="343dp"
+-                android:layout_height="64dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/lock"
+-                android:drawableEnd="@drawable/hide__1_"
+-                android:drawablePadding="10dp"
+-                android:ems="10"
+-                android:hint="@string/Nhaplaimatkhau"
+-                android:inputType="number"
+-                android:textColor="#FFFFFF"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-        </LinearLayout>
+-    </androidx.cardview.widget.CardView>
+-
+-    <Button
+-        android:id="@+id/btnDongY2"
+-        android:layout_width="150dp"
+-        android:layout_height="54dp"
+-        android:layout_marginTop="30dp"
+-        android:background="#019AC1"
+-        android:text="@string/dongy"
+-        android:textColor="#FFFFFF"
+-        android:textSize="21sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.498"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+-
+-    <ImageView
+-        android:id="@+id/imageView6"
+-        android:layout_width="418dp"
+-        android:layout_height="230dp"
+-        android:scaleType="fitXY"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/tourist_camping_illustration_cartoon_tiny_people_preparing_campsite_tent_summer_day_backpacking_nature_eco_trip_white_109722_1092" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_sign_up.xml
+===================================================================
+--- app/src/main/res/layout/activity_sign_up.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
++++ app/src/main/res/layout/activity_sign_up.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
+@@ -1,214 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="wrap_content"
+-    android:layout_height="match_parent"
+-    android:background="#FFFFFF"
+-    tools:context=".sign_up">
+-
+-    <Button
+-        android:id="@+id/btnDangKi"
+-        android:layout_width="150dp"
+-        android:layout_height="50dp"
+-        android:layout_gravity="start"
+-        android:layout_marginStart="30dp"
+-        android:layout_marginEnd="48dp"
+-        android:layout_marginBottom="25dp"
+-        android:background="#019ac1"
+-        android:enabled="false"
+-        android:fontFamily="@font/baloo"
+-        android:text="@string/dangki"
+-        android:textColor="#ffffff"
+-        android:textSize="22sp"
+-        app:backgroundTint="#019AC1"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.582"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/btndangnhap"
+-        app:layout_constraintVertical_bias="0.176" />
+-
+-    <TextView
+-        android:id="@+id/textView7"
+-        android:layout_width="243dp"
+-        android:layout_height="60dp"
+-        android:layout_marginTop="16dp"
+-        android:fontFamily="@font/baloo"
+-        android:foregroundGravity="center"
+-        android:gravity="center"
+-        android:text="Đăng Kí"
+-        android:textColor="#224E78"
+-        android:textSize="36sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+-        tools:text="@string/dangki" />
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/cardView"
+-        android:layout_width="388dp"
+-        android:layout_height="381dp"
+-        android:layout_marginStart="6dp"
+-        android:layout_marginEnd="1dp"
+-        android:layout_marginBottom="90dp"
+-        android:background="@android:drawable/checkbox_off_background"
+-        app:cardBackgroundColor="#FFFFFF"
+-        app:cardCornerRadius="10dp"
+-        app:cardElevation="10dp"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.166"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+-        app:layout_constraintVertical_bias="0.878">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:gravity="center"
+-            android:orientation="vertical">
+-
+-            <EditText
+-                android:id="@+id/edtHoTen"
+-                android:layout_width="350dp"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/name"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:hint="@string/hoten"
+-                android:inputType="textPersonName"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <LinearLayout
+-                android:layout_width="350dp"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:orientation="horizontal">
+-
+-                <TextView
+-                    android:id="@+id/textView6"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="match_parent"
+-                    android:drawableStart="@drawable/sex"
+-                    android:drawablePadding="10dp" />
+-
+-                <RadioGroup
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:orientation="horizontal">
+-
+-                    <RadioButton
+-                        android:id="@+id/radioNam"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="match_parent"
+-                        android:layout_weight="1"
+-                        android:text="Nam"
+-                        android:textColor="#8C8C8C"
+-                        android:textSize="18sp"
+-                        android:textStyle="bold" />
+-
+-                    <RadioButton
+-                        android:id="@+id/radioButton6"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="50dp"
+-                        android:layout_weight="1"
+-                        android:text="Nữ"
+-                        android:textColor="#9C9C9C"
+-                        android:textSize="18sp"
+-                        android:textStyle="bold" />
+-
+-                    <Space
+-                        android:layout_width="60dp"
+-                        android:layout_height="33dp"
+-                        android:layout_weight="1" />
+-                </RadioGroup>
+-
+-            </LinearLayout>
+-
+-            <EditText
+-                android:id="@+id/edtSDT"
+-                android:layout_width="350dp"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/phonecall"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:hint="Số Điện Thoại"
+-                android:inputType="phone"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <EditText
+-                android:id="@+id/edtCMNN"
+-                android:layout_width="354dp"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/passport"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:hint="@string/CMNN"
+-                android:inputType="textPersonName"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <EditText
+-                android:id="@+id/editTextTextPersonName2"
+-                android:layout_width="350dp"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/homeaddress"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:hint="@string/diachi"
+-                android:inputType="textPersonName"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <EditText
+-                android:id="@+id/edtMatKhau"
+-                android:layout_width="350dp"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/lock"
+-                android:drawableEnd="@drawable/hide__1_"
+-                android:drawablePadding="15dp"
+-                android:hint="@string/prompt_password"
+-                android:imeActionLabel="@string/invalid_password"
+-                android:imeOptions="actionDone"
+-                android:inputType="textPassword"
+-                android:selectAllOnFocus="true"
+-                android:textColor="#F57C00"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <EditText
+-                android:id="@+id/edtNhapLaiMatKhau"
+-                android:layout_width="350dp"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/lock"
+-                android:drawableEnd="@drawable/hide__1_"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:hint="Nhập Lại Mật Khẩu"
+-                android:inputType="textPassword"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-        </LinearLayout>
+-
+-    </androidx.cardview.widget.CardView>
+-
+-    <ImageView
+-        android:id="@+id/imageView"
+-        android:layout_width="412dp"
+-        android:layout_height="200dp"
+-        android:scaleType="fitXY"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/dangnhap" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_forget_password.xml
+===================================================================
+--- app/src/main/res/layout/activity_forget_password.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
++++ app/src/main/res/layout/activity_forget_password.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
+@@ -1,112 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="#FFFFFF"
+-    tools:context=".ForgetPassword">
+-
+-    <TextView
+-        android:id="@+id/textView8"
+-        android:layout_width="335dp"
+-        android:layout_height="63dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="244dp"
+-        android:layout_marginEnd="16dp"
+-        android:fontFamily="@font/baloo"
+-        android:text="@string/quenmatkhau"
+-        android:textColor="#36516C"
+-        android:textSize="45sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.59"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/cardView3"
+-        android:layout_width="358dp"
+-        android:layout_height="148dp"
+-        android:layout_marginTop="30dp"
+-        app:cardCornerRadius="10dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.49"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+-
+-        <LinearLayout
+-            android:layout_width="354dp"
+-            android:layout_height="match_parent"
+-            android:layout_marginLeft="5dp"
+-            android:orientation="vertical">
+-
+-            <EditText
+-                android:id="@+id/edtMatKhau"
+-                android:layout_width="343dp"
+-                android:layout_height="64dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/telephone__1_"
+-                android:drawablePadding="10dp"
+-                android:ems="10"
+-                android:hint="@string/prompt_usename"
+-                android:inputType="phone"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <Space
+-                android:layout_width="match_parent"
+-                android:layout_height="12dp" />
+-
+-            <EditText
+-                android:id="@+id/editOTP"
+-                android:layout_width="343dp"
+-                android:layout_height="64dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/id"
+-                android:drawablePadding="10dp"
+-                android:ems="10"
+-                android:hint="Mã OTP"
+-                android:inputType="phone"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-        </LinearLayout>
+-    </androidx.cardview.widget.CardView>
+-
+-    <TextView
+-        android:id="@+id/tvGuiLaiMa"
+-        android:layout_width="98dp"
+-        android:layout_height="27dp"
+-        android:layout_marginTop="20dp"
+-        android:text="@string/guilaimaotp"
+-        android:textColor="#000000"
+-        android:textSize="18sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.856"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+-
+-    <Button
+-        android:id="@+id/btnDongY"
+-        android:layout_width="150dp"
+-        android:layout_height="54dp"
+-        android:layout_marginTop="48dp"
+-        android:background="#019AC1"
+-        android:text="@string/dongy"
+-        android:textColor="#FFFFFF"
+-        android:textSize="21sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.498"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+-
+-    <ImageView
+-        android:id="@+id/imageView5"
+-        android:layout_width="418dp"
+-        android:layout_height="230dp"
+-        android:scaleType="fitXY"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/tourist_camping_illustration_cartoon_tiny_people_preparing_campsite_tent_summer_day_backpacking_nature_eco_trip_white_109722_1092" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_feedback.xml
+===================================================================
+--- app/src/main/res/layout/activity_feedback.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
++++ app/src/main/res/layout/activity_feedback.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
+@@ -1,99 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="@drawable/backgroud"
+-    android:gravity="center"
+-    android:orientation="vertical">
+-
+-    <ImageView
+-        android:id="@+id/imageView7"
+-        android:layout_width="67dp"
+-        android:layout_height="wrap_content"
+-        android:layout_gravity="left"
+-        android:layout_marginTop="-10dp"
+-        app:srcCompat="@drawable/left_arrow" />
+-
+-    <TextView
+-        android:id="@+id/textView3"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="30dp"
+-        android:fontFamily="@font/baloo"
+-        android:gravity="center"
+-        android:text="@string/feedback"
+-        android:textColor="#FFFFFF"
+-        android:textSize="40sp" />
+-
+-    <androidx.cardview.widget.CardView
+-        android:layout_width="match_parent"
+-        android:layout_height="386dp"
+-        android:layout_marginLeft="20dp"
+-        android:layout_marginTop="40dp"
+-        android:layout_marginRight="20dp">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="401dp"
+-            android:orientation="vertical">
+-
+-            <EditText
+-                android:id="@+id/edtHoTenGopY"
+-                android:layout_width="match_parent"
+-                android:layout_height="50dp"
+-                android:layout_marginTop="10dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/name"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:hint="@string/hoten"
+-                android:inputType="textPersonName"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <EditText
+-                android:id="@+id/edtSDTGopY"
+-                android:layout_width="match_parent"
+-                android:layout_height="50dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawableStart="@drawable/telephone__2_"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:hint="Số Điện Thoại"
+-                android:inputType="phone"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-            <EditText
+-                android:id="@+id/edtNoiDungGopY"
+-                android:layout_width="match_parent"
+-                android:layout_height="289dp"
+-                android:background="@android:drawable/editbox_background"
+-                android:drawablePadding="15dp"
+-                android:ems="10"
+-                android:gravity="top"
+-                android:hint="    Nội Dung Góp Ý"
+-                android:inputType="textPersonName"
+-                android:textSize="18sp"
+-                android:textStyle="bold" />
+-
+-        </LinearLayout>
+-    </androidx.cardview.widget.CardView>
+-
+-    <Space
+-        android:layout_width="match_parent"
+-        android:layout_height="10dp" />
+-
+-    <Button
+-        android:id="@+id/btnGopY"
+-        android:layout_width="205dp"
+-        android:layout_height="65dp"
+-        android:background="#019ac1"
+-        android:text="@string/feedback"
+-        android:textSize="20sp"
+-        app:backgroundTint="#019ac1" />
+-
+-</LinearLayout>
+Index: app/src/main/res/layout/sign_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"#FFFFFF\"\r\n    tools:context=\".SignLoginActivity\">\r\n\r\n    <Button\r\n        android:id=\"@+id/btndn\"\r\n        android:layout_width=\"160dp\"\r\n        android:layout_height=\"55dp\"\r\n        android:layout_marginStart=\"24dp\"\r\n        android:layout_marginTop=\"48dp\"\r\n        android:background=\"#019AC1\"\r\n        android:fontFamily=\"@font/baloo\"\r\n        android:text=\"@string/Login\"\r\n        android:textColor=\"#FFFFFF\"\r\n        android:textSize=\"18sp\"\r\n        app:backgroundTint=\"#019AC1\"\r\n        app:layout_constraintEnd_toStartOf=\"@+id/btnDangKi\"\r\n        app:layout_constraintHorizontal_bias=\"0.562\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/cardView2\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView4\"\r\n        android:layout_width=\"414dp\"\r\n        android:layout_height=\"187dp\"\r\n        android:layout_marginTop=\"4dp\"\r\n        android:scaleType=\"fitXY\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.666\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:srcCompat=\"@drawable/dangnhap\" />\r\n\r\n    <androidx.cardview.widget.CardView\r\n        android:id=\"@+id/cardView2\"\r\n        android:layout_width=\"371dp\"\r\n        android:layout_height=\"166dp\"\r\n        android:layout_marginStart=\"10dp\"\r\n        android:layout_marginTop=\"19dp\"\r\n        android:layout_marginEnd=\"10dp\"\r\n        app:cardCornerRadius=\"20dp\"\r\n        app:cardElevation=\"10dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.7\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/textView5\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"162dp\"\r\n            android:gravity=\"center\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <EditText\r\n                android:id=\"@+id/edtSDT\"\r\n                android:layout_width=\"350dp\"\r\n                android:layout_height=\"60dp\"\r\n                android:background=\"@android:drawable/editbox_background\"\r\n                android:drawableLeft=\"@drawable/telephone__1_\"\r\n                android:drawablePadding=\"10dp\"\r\n                android:hint=\"@string/prompt_usename\"\r\n                android:inputType=\"number\"\r\n                android:selectAllOnFocus=\"true\"\r\n                android:shadowColor=\"#002EDA\"\r\n                android:textAlignment=\"textStart\"\r\n                android:textAllCaps=\"false\"\r\n                android:textColor=\"#F57C00\"\r\n                android:textColorHighlight=\"#FFFFFF\"\r\n                android:textColorLink=\"#FFFFFF\"\r\n                android:textSize=\"18sp\"\r\n                android:textStyle=\"bold\" />\r\n\r\n            <Space\r\n                android:layout_width=\"10dp\"\r\n                android:layout_height=\"10dp\" />\r\n\r\n            <EditText\r\n                android:id=\"@+id/password\"\r\n                android:layout_width=\"350dp\"\r\n                android:layout_height=\"60dp\"\r\n                android:background=\"@android:drawable/editbox_background\"\r\n                android:drawableStart=\"@drawable/lock\"\r\n                android:drawableEnd=\"@drawable/hide__1_\"\r\n                android:drawablePadding=\"10dp\"\r\n                android:hint=\"@string/prompt_password\"\r\n                android:imeActionLabel=\"@string/invalid_password\"\r\n                android:imeOptions=\"actionDone\"\r\n                android:inputType=\"textPassword\"\r\n                android:selectAllOnFocus=\"true\"\r\n                android:textAlignment=\"textStart\"\r\n                android:textColor=\"#F57C00\"\r\n                android:textSize=\"18sp\"\r\n                android:textStyle=\"bold\" />\r\n        </LinearLayout>\r\n    </androidx.cardview.widget.CardView>\r\n\r\n    <Button\r\n        android:id=\"@+id/btnDangKi\"\r\n        android:layout_width=\"160dp\"\r\n        android:layout_height=\"55dp\"\r\n        android:layout_marginTop=\"48dp\"\r\n        android:layout_marginEnd=\"36dp\"\r\n        android:background=\"#019AC1\"\r\n        android:fontFamily=\"@font/baloo\"\r\n        android:text=\"@string/Register\"\r\n        android:textColor=\"#FFFFFF\"\r\n        android:textSize=\"18sp\"\r\n        app:backgroundTint=\"#019AC1\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/cardView2\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView5\"\r\n        android:layout_width=\"298dp\"\r\n        android:layout_height=\"65dp\"\r\n        android:layout_marginTop=\"212dp\"\r\n        android:fontFamily=\"@font/baloo\"\r\n        android:gravity=\"center\"\r\n        android:text=\"@string/dangnhap\"\r\n        android:textColor=\"#DF1E4973\"\r\n        android:textSize=\"30sp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.495\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvQuenMatKhau\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"16dp\"\r\n        android:text=\"@string/quenmatkhau\"\r\n        android:textColor=\"#000000\"\r\n        android:textSize=\"16sp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.927\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/cardView2\" />\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/linearLayout\"\r\n        android:layout_width=\"237dp\"\r\n        android:layout_height=\"96dp\"\r\n        android:layout_marginStart=\"76dp\"\r\n        android:layout_marginEnd=\"82dp\"\r\n        android:layout_marginBottom=\"50dp\"\r\n        android:orientation=\"horizontal\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\">\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView2\"\r\n            android:layout_width=\"130dp\"\r\n            android:layout_height=\"92dp\"\r\n            app:srcCompat=\"@drawable/facebook\" />\r\n\r\n        <Space\r\n            android:layout_width=\"12dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_weight=\"1\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView3\"\r\n            android:layout_width=\"106dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginEnd=\"60dp\"\r\n            app:srcCompat=\"@drawable/gmail1\" />\r\n    </LinearLayout>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/sign_login.xml	(revision 4bd2ecb3f150863bba97cdea9beb67f5ff8a9f4d)
++++ app/src/main/res/layout/sign_login.xml	(date 1618909927759)
+@@ -24,18 +24,6 @@
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+ 
+-    <ImageView
+-        android:id="@+id/imageView4"
+-        android:layout_width="414dp"
+-        android:layout_height="187dp"
+-        android:layout_marginTop="4dp"
+-        android:scaleType="fitXY"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.666"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/dangnhap" />
+-
+     <androidx.cardview.widget.CardView
+         android:id="@+id/cardView2"
+         android:layout_width="371dp"
+Index: app/src/main/res/layout/fragment_second.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_second.xml	(date 1618911273323)
++++ app/src/main/res/layout/fragment_second.xml	(date 1618911273323)
+@@ -0,0 +1,27 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".SecondFragment">
++
++    <TextView
++        android:id="@+id/textview_second"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintBottom_toTopOf="@id/button_second"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Button
++        android:id="@+id/button_second"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="@string/previous"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/textview_second" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
