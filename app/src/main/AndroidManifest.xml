@@ -13,13 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        android:name="androidx.multidex.MultiDexApplication" >
+        <activity android:name=".UpdateProfile" />
+        <activity android:name=".Profile" />
+
+
         <activity android:name=".Search"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
 
 
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".UpdateProfile" />
-        <activity android:name=".Profile" />
+     
   
 
 
@@ -41,6 +45,7 @@
       
             android:label="@string/title_activity_login" />
 
+
         <activity android:name=".LoadScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +53,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".StartActivity" />
+
+        <activity android:name=".SignLoginActivity" />
+
+<activity android:name=".Home"/>
         <activity android:name="com.facebook.FacebookActivity"
             android:configChanges=
                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
