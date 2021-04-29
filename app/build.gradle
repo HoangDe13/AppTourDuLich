@@ -6,11 +6,13 @@ android {
 
     defaultConfig {
         applicationId "com.example.apptourdulich"
-        minSdkVersion 17
+
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        minSdkVersion 17
 
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -21,7 +23,8 @@ android {
         }
     }
 }
-
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.android.application'
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0-alpha1'
@@ -39,8 +42,13 @@ dependencies {
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    implementation 'com.google.firebase:firebase-auth:20.0.4'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -55,15 +63,21 @@ dependencies {
 
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
     implementation 'com.google.firebase:firebase-analytics'
+
     implementation 'com.google.firebase:firebase-inappmessaging-display:19.0.3'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     compile 'com.facebook.android:facebook-android-sdk:4.12.0'
     implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
-
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "androidx.multidex:multidex:2.0.1"
     //screen-load
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 }
