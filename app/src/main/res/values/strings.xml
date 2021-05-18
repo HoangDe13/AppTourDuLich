@@ -21,9 +21,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook">Đăng Nhập Facebook</string>
-    <string name="Gmail">Đăng Nhập Gmail</string>
+    <string name="Gmail">
+        Gmail</string>
 
-  
+    <string name="Contact">Liên Hệ</string>
+    <string name="addressContact">828 Sư Vạn Hạnh, phường 13,Quận 10</string>
+    <string name="HotlineContact">01254621321</string>
+    <string name="EmailContact">HouseTour@gmail.com</string>
+    <string name="infoContact">House Tour</string>
+    <string name="ContactByPhone">Tư Vấn Qua Điện Thoại</string>
     <string name="CCCD">CMNN/CCCD</string>
     <string name="update">Cập Nhật
     </string>
@@ -85,5 +91,12 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-
+    <string name="Rules">Điều Khoản</string>
+    <string name="DetailRules1"> 1. Bạn cam kết và đảm bảo rằng bạn là một cá nhân về mặt pháp lý có toàn quyền tham gia giao kết thỏa thuận theo pháp luật nước Cộng hòa xã hội chủ nghĩa Việt Nam.</string>
+    <string name="DetailRules2"> 2. Chúng tôi thu thập và xử lý các thông tin của bạn, như là tên, địa chỉ email khi bạn đăng ký. Bạn phải cung cấp chính xác và đầy đủ thông tin, cập nhật thông tin và đồng ý cung cấp cho chúng tôi bất kỳ bằng chứng nào về danh tính theo yêu cầu hợp lý của chúng tôi. </string>
+    <string name="DetailRules3"> 3. Nếu các thông tin mà bạn cung cấp cho chúng tôi thay đổi, ví dụ, nếu bạn thay đổi địa chỉ email, hoặc nếu bạn muốn hủy tài khoản, xin vui lòng cập nhật chi tiết bằng cách gửi yêu cầu đến chúng tôi. Chúng tôi, trong khả năng của mình, sẽ nỗ lực thực hiện thay đổi theo yêu cầu trong ba mươi (30) ngày làm việc kể từ khi nhận được thông báo về thay đổi.</string>
+    <string name="DetailRules4"> 4. Bạn có thể chọn mua một phần hoặc toàn bộ các nội dung của Ứng dụng bằng cách thanh toán cho chúng tôi.
+        5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
+    <string name="DetailRules5">5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
+    <string name="close">Đóng</string>
 </resources>
