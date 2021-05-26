@@ -23,7 +23,9 @@
     <string name="facebook">Đăng Nhập Facebook</string>
     <string name="Gmail">
         Gmail</string>
-
+    <string name="DatVe">Đặt Vé</string>
+    <string name="InfoTour">Thông Tin</string>
+    <string name="details">Mô Tả</string>
     <string name="Contact">Liên Hệ</string>
     <string name="addressContact">828 Sư Vạn Hạnh, phường 13,Quận 10</string>
     <string name="HotlineContact">01254621321</string>
@@ -34,8 +36,6 @@
     <string name="update">Cập Nhật
     </string>
     <string name="phone">Số Điện Thoại </string>
-
-    <string name="CMNN">CMNN/CCCD</string>
 
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
@@ -99,4 +99,30 @@
         5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
     <string name="DetailRules5">5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
     <string name="close">Đóng</string>
+    <string name="title_activity_infor_tour">InforTour</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_info_tour">MainActivity</string>
+    <string name="NgayKhoiHanh">Ngày Khởi Hành</string>
+    <string name="NgayKetThuc">Ngày Kết Thúc</string>
+    <string name="Khachsan">Khách Sạn</string>
+    <string name="CMNN">CMNN/CCCD</string>
+    <string name="GiaVe">Giá Vé</string>
+    <string name="NoiKhoiHanh">Nơi Khởi Hành</string>
+<string name="HoaDon">Hóa Đơn</string>
+    <string name="SoNgay">Số Ngày</string>
+    <string name="ThongTinKhachHang">Thông Tin Khách Hàng</string>
+    <string name="ThongTinTour">Thông Tin Tour</string>
+    <string name="KhuyenMai">Khuyến Mãi</string>
+    <string name="ApDung">Áp Dụng</string>
+    <string name="ThongTinThanhToan">Thông Tin Thanh Toán</string>
+    <string name="TenTour">Tên Tour</string>
+    <string name="ChietKhau">Chiết Khấu</string>
+    <string name="SoTienThanhToan">Số Tiền Thanh Toán</string>
+    <string name="PhuongThucThanhToan">Phương Thức Thanh Toán</string>
+    <string name="PhuongTien">Phương Tiện</string>
+    <string name="NguoiLon">Người Lớn</string>
+    <string name="TreEm">Trẻ Em</string>
+    <string name="SoTien">Số Tiền</string>
+    <string name="ThanhToan">Thanh Toán</string>
 </resources>
