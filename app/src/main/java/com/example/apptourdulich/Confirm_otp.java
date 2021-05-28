@@ -22,6 +22,7 @@ public class Confirm_otp extends AppCompatActivity {
         String sdt=(b.getString("SoDienThoai"));
         tvSoDienThoai.setText(sdt);
 
+
         btnXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

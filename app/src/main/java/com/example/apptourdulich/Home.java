@@ -6,6 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Window;
@@ -16,21 +21,36 @@ import android.widget.Toolbar;
 import nl.joery.animatedbottombar.AnimatedBottomBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.Locale;
+
+import static androidx.core.app.ActivityCompat.recreate;
+
 public class Home extends AppCompatActivity {
     ActionBar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_home);
+
+
+
         toolbar = getSupportActionBar();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        loadFragment(new fmHome());
+        getSupportFragmentManager().beginTransaction().replace(R.id.fm_Container,
+                new fmProfile()).commit();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fm_Container,
+                new fmHome()).commit();
+
+        //loadFragment(new fmHome());
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -74,4 +94,5 @@ public class Home extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 }

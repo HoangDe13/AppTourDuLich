@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Bill"></activity>
+        <activity android:name=".ChangeLanguage"></activity>
+        <activity android:name=".Bill" />
         <activity
             android:name=".InfoTour"
             android:label="@string/title_activity_info_tour" />
@@ -55,7 +56,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="@string/fb_login_protocol_scheme" />
+                <data android:scheme="fb498471527958027" />
             </intent-filter>
         </activity>
 

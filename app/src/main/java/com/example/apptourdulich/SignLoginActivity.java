@@ -64,7 +64,7 @@ private static final  String Email="email";
         dangnhap=findViewById(R.id.btndn);
         loginButton=findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList(Email));
-
+        edtSoDienThoai=findViewById(R.id.edtSDT);
         callbackManager=CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override

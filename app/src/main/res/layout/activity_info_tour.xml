@@ -74,7 +74,6 @@
                 android:layout_width="132dp"
                 android:layout_height="wrap_content"
                 android:background="#0097A7"
-                android:shadowRadius="20dp"
                 android:text="@string/DatVe"
                 android:textSize="20sp"
                 app:backgroundTint="#0097A7"
