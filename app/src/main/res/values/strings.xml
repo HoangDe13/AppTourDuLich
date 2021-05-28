@@ -62,7 +62,6 @@
 
 
     <string name="Loginwithfacebook">Đăng Nhập với Facebook</string>
-    <string name="Loginwithgmail">Đăng Nhập với Gmail</string>
     <string name="Boy">Nam</string>
     <string name="Girl">Nữ</string>
     <string name="PhoneNumber">Số Điện Thoại</string>
@@ -115,8 +114,9 @@
     <string name="CMNN">CMNN/CCCD</string>
     <string name="GiaVe">Giá Vé</string>
     <string name="NoiKhoiHanh">Nơi Khởi Hành</string>
-    <!--Bill-->
-<string name="HoaDon">Hóa Đơn</string>
+
+    <string name="HoaDon">Hóa Đơn</string>
+
     <string name="SoNgay">Số Ngày</string>
     <string name="ThongTinKhachHang">Thông Tin Khách Hàng</string>
     <string name="ThongTinTour">Thông Tin Tour</string>
@@ -132,6 +132,18 @@
     <string name="TreEm">Trẻ Em</string>
     <string name="SoTien">Số Tiền</string>
     <string name="ThanhToan">Thanh Toán</string>
+
+
+    <!--Profile -->
+    <string name="dathich">Đã thích</string>
+    <string name="dieukhoan">Điều khoản</string>
+    <string name="ngonngu">Ngôn ngữ</string>
+    <string name="lichsu">Lịch sử</string>
+    <string name="lienhe">Liên hệ</string>
+    <string name="thongtincanhan">Thông tin cá nhân ></string>
+    <!--Activiti ChangeLanguage -->
+    <string name="haychonngonngu">Chọn ngôn ngữ</string>
+
     <string name="GuiLaiMa">Gửi lại</string>
 
     <string name="DaLatThang1">Hoa Anh Đào Đà Lạt</string>
@@ -189,6 +201,7 @@ Còn gì tuyệt vời hơn khi được đứng ở độ cao 3143m vươn vai 
     <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
     <string name="Retry">Thử Lại</string>
     <string name="LogOut">Đăng Xuất</string>
+
 
 
 </resources>

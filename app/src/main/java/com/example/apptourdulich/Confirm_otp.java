@@ -48,8 +48,10 @@ public class Confirm_otp extends AppCompatActivity {
         guilai=findViewById(R.id.tvGuiLai);
         Bundle b= getIntent().getExtras();
         String sdt=(b.getString("SoDienThoai"));
+
         SoDienThoai.setText(sdt);
         codeotp=getIntent().getStringExtra("codeotp");
+
         btnXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

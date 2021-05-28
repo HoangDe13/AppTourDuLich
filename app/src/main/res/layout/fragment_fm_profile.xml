@@ -44,7 +44,7 @@
                     android:id="@+id/tvProfile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Thông tin cá nhân >"
+                    android:text="@string/thongtincanhan"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
@@ -63,8 +63,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="10dp"
-                android:background="#FFFFFF"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="#F0D3F1FA"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -84,7 +83,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Đã thích"
+                        android:text="@string/dathich"
                         android:textColor="#000000" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -97,7 +96,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="#F0D3F1FA"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -117,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Lịch sử"
+                        android:text="@string/lichsu"
                         android:textColor="#050505" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -129,6 +128,7 @@
             android:gravity="center">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/changeMyLang"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="25dp"
@@ -136,7 +136,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="#F0D3F1FA"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -156,7 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Ngôn ngữ"
+                        android:text="@string/ngonngu"
                         android:textColor="#000000" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -169,7 +169,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="#F0D3F1FA"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -189,7 +189,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Điều khoản"
+                        android:text="@string/dieukhoan"
                         android:textColor="#000000" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -208,7 +208,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="#F0D3F1FA"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -228,7 +228,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Liên hệ"
+                        android:text="@string/lienhe"
                         android:textColor="#000000" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
