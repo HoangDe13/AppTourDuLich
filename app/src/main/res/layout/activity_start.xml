@@ -24,6 +24,7 @@
         app:ipi_dotGap="15dp"
         app:ipi_pageIndicatorColor="#CCCCCC"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/pager"
         app:layout_constraintVertical_bias="1.0"

@@ -23,7 +23,7 @@
     <string name="facebook">Đăng Nhập Facebook</string>
     <string name="Gmail">Đăng Nhập Gmail</string>
 
-  
+
     <string name="CCCD">CMNN/CCCD</string>
     <string name="update">Cập Nhật
     </string>
@@ -36,7 +36,7 @@
     <string name="Birthday">Ngày Sinh</string>
     <string name="sloganstart1.2">Chào mừng bạn đến với du lịch Việt Nam. Vác balo lên và đánh dấu lại những dấu chân .</string>
     <string name="sloganstart2"> Mỗi hành trình đều có những điểm đến bí mật mà ngay cả du khách cũng không thể ngờ tới.</string>
-
+    <string name="sloganstart3">Hãy để chúng tôi mang đến cho bạn tuyệt vời nhất !</string>
     <string name="feedback">Góp Ý</string>
     <string name="title_activity_profile">Profile</string>
     <!-- Strings used for fragments for navigation -->
@@ -85,5 +85,60 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="DaLatThang1">Hoa Anh Đào Đà Lạt</string>
+    <string name="HoaAnhDao1">Đầu tháng 12 năm nay mai anh đào nở sớm ở một số điểm tại Đà Lạt nhưng thời điểm rộ nhất phải kể tới là 1 - 2 tuần tính từ Tết Dương lịch. Hoa sẽ nở kéo dài cả tháng và mỗi thời điểm thì hoa lại trổ đẹp ở những khu vực khác nhau. </string>
+    <string name="HoaAnhDao2">Mai anh đào sẽ nở rộ từ giữa tháng 1 đến giữa tháng 2 nên lưu ý những con đường đẹp để chụp hoa này là Trần Hưng Đạo, Triệu Việt Vương, đường đi Trại Mát, Trương Công Định, bờ hồ Xuân Hương, trường chuyên Thăng Long hoặc THCS Phan Chu Trinh. Nhưng nhìn chung thì vào mùa hoa nở, hầu hết mọi cung đường ở Đà Lạt đều sẽ không thiếu bóng dáng loài hoa này đâu.</string>
+    <string name="HoaAnhDao3">Khí hậu ôn hòa và tiết trời đẹp đẽ vào mùa xuân là điều kiện tuyệt vời để bạn du lịch Đà Lạt tháng 1 và ngắm mai anh đào, vì khi ấy sắc hồng của nó sẽ nổi bật hơn trên nền trời xanh thẳm. Lúc ấy thì chỉ cần canh góc và giơ máy lên là đã có ngay một bức ảnh thật đẹp chẳng cần qua chỉnh sửa. “Bật mí” với bạn là muốn chụp mai anh đào đẹp (không bị ngược sáng) thì nên đi vào buổi sáng để có nắng vàng và màu trời hài hòa hơn.
+                                Còn khi muốn chụp cùng thì nên đứng ở khoảng giữa cây hoa đã nở đều để bạn có thể nổi bật hơn giữa màu hồng rực rỡ ấy.</string>
+    <string name="HaGiangThang10">Hoa Tam Giác Mạch Hà Giang</string>
+    <string name="HaGiang1">Hà Giang cứ đến tháng 10, tháng 11 lại đón từng đoàn khách đi Tour Hà Giang ngắm những đồi hoa tam giác mạch trải bạt ngàn đồi núi. Màu sắc của hoa tam giác mạch thay đổi theo từng giai đoạn. </string>
+    <string name="HaGiang2"> Khi mới nở hoa mang màu trắng tinh khôi, rồi chuyển sang hồng nhạt, hồng ánh tím rồi đỏ sẫm cuối cùng chuyển sang đen khi tàn thì không còn đẹp nữa. Bởi vậy khách du lịch tour Hà Giang từ Hà Nội có thể đến ngắm những cánh đồng hoa này nở rộ đẹp nhất vào khoảng giữa tháng 10 đến giữa tháng 11, có năm từ giữa tháng 9 hoa đã bắt đầu lấm tấm màu trắng. </string>
+    <string name="HaGiang3">Hoa Tam Giác Mạch từ lâu đã trở thành điểm nhấn thu hút đông đảo khách du lịch Hà Giang mỗi năm, đặc biệt là các bạn trẻ thích du lịch và đam mê khám phá. Vùng đất địa đầu Tổ Quốc, nơi được ví như “Đà Lạt thứ hai của Việt Nam” này có những dãy núi cao hun hút tận mây xanh, những khu rừng hoang sơ và cao nguyên đá Đồng Văn rộng lớn, bát ngát. Bên cạnh đó, những cung đường trải dài, uốn lượn quanh những khu ruộng bậc thang trùng điệp cũng là điều hớp hồn bất cứ ai đến với Hà Giang lần đầu tiên.</string>
+
+    <string name="TuyetsapaThang1">Tuyết Rơi Sapa</string>
+    <string name="Tuyet3">Du khách đặt chân tới đây không khỏi ngỡ ngàng trước vẻ đẹp hiếm thấy ở một nước vùng nhiệt đới như Việt Nam. Tuyết phủ trắng từng mái nhà, từng con ngõ, từng ngóc ngách trong thị trấn. Từng nhành cây kẽ lá, hay những giọt sương mai chỉ kịp đậu trên cành, chưa kịp tan cũng đã bị đóng băng, trắng xóa.</string>
+    <string name="Tuyet2">Nếu Sapa lộng lẫy với muôn hoa khoe sắc vào mùa Xuân hay đượm sắc ánh vàng vào mùa Lúa thì Sapa lại còn sở hữu riêng cho mình một mùa đông tuyết trắng. Đó là điều Sapa thật đặc biệt và khác với mùa đông ở Hà Nội hay những tỉnh khác của miền Bắc. </string>
+    <string name="Tuyet1">Mùa tuyết rơi ở Sapa - vùng “Bắc cực” có một không hai ở nước ta, bạn đừng quên note ngay lại những điều cực thú vị và hấp dẫn để trải nghiệm tại nơi này nhé. </string>
+
+    <string name="PhuQuocThang5">Phú Quốc Mùa Biển</string>
+    <string name="PhuQuoc3">Phú Quốc được mệnh danh là Đảo Ngọc. Chắc chắn phải có lý do của nó. Các bãi biển ở đây không thể chê đâu được. Bãi biển dài với cát trắng, mặt nước xanh biếc. Có nơi bạn có thể nhìn thấy cả những tảng san hô nằm dưới mặt nước biển. Những hàng dừa xanh trải dài theo bãi biển. Tất cả tạo nên khung cảnh tuyệt đẹp, khó nơi đâu có được. Khám phá các bãi biển tuyệt đẹp Phú Quốc là lựa chọn đầu tiên khi đi du lịch vào tháng 5 này.</string>
+    <string name="PhuQuoc2">Du lịch Phú Quốc tháng 5, bạn sẽ không lo sẽ không đi tham quan và vui chơi được. Thời điểm này mới bắt đầu xuất hiện lác đác vài cơn mưa nhỏ. Mưa ở Phú Quốc giống như mưa ở Sài Gòn, đến nhanh hết nhanh.</string>
+    <string name="PhuQuoc1">Tháng 5 tùy rơi vào mùa mưa ở Phú Quốc nhưng đây là thời điểm tốt để đi du lịch. Tháng 5 là thời điểm giao mùa từ khô sang mưa. </string>
+
+    <string name="CamNangSapa">Cẩm Nang Sapa</string>
+    <string name="CamNang2">Đến Sapa vào mỗi mùa đều có những trải nghiệm thú vị riêng của mảnh đất vùng cao xinh đẹp này.
+
+– Thời điểm thích hợp để đi du lịch Sapa là từ tháng 9 đến tháng 11 hoặc từ tháng 3 đến 5. Thời điểm này thời tiết Sapa ổn định, ngày nắng khô, đêm lạnh.
+
+– Tháng 4 – 5 là mùa nước đổ, những ruộng bậc thang ngút mắt cảm tưởng như chạy đến tận chân trời.
+
+– Tháng 9 – 10 là mùa lúa chín, khi ấy Sapa như được khoác chiếc áo vàng óng ả, lấp lánh. Bạn nên đi vào giữa hoặc cuối tháng 9 bởi sang tháng 10 ruộng bậc thang nhiều nơi đã gặt xong.
+
+– Tháng 12 đến tháng 2 trời rất lạnh, có thể xuất hiện băng và thỉnh thoảng có tuyết rơi. Đây cũng là mùa nở của hoa đào, đỗ quyên…</string>
+    <string name="CamNang3">Đỉnh Fansipan- nóc nhà Đông Dương
+Còn gì tuyệt vời hơn khi được đứng ở độ cao 3143m vươn vai hít thở bầu không khí trên cao, tận hưởng cảm giác như chạm vào mây và phóng tầm mắt xuống bức tranh Sapa toàn cảnh bên dưới.</string>
+    <string name="CamNang1">Sapa là “nơi gặp gỡ giữa trời và đất” với cảnh sắc thiên nhiên hùng vĩ bậc nhất miền Bắc. Đây cũng là nơi hội tụ đồng bào các dân tộc thiểu số sinh sống bao đời nay. Bạn đã đến để chiêm ngưỡng và trải nghiệm vùng đất đầy thú vị này chưa? </string>
+    <string name="DuLichAnToan">Du Lịch An Toàn Mùa Lễ</string>
+    <string name="AnToan4">Sau khi bạn trở về nhà, hãy làm theo các khuyến cáo hoặc yêu cầu từ chính quyền địa phương như khai báo y tế đầy đủ và tiếp tục tuân thủ tất cả các biện pháp phòng ngừa chính.</string>
+    <string name="AnToan2">Kiểm tra trước những lựa chọn có sẵn tại điểm đến của bạn về phương tiện đi lại, thức ăn và chỗ ở. Hãy nhớ rằng một số hoạt động kinh doanh và dịch vụ có thể bị gián đoạn hoàn toàn hoặc một phần ở các khu vực bị ảnh hưởng, bao gồm giao thông công cộng, cửa hàng và nhà hàng, cũng như các điểm du lịch nổi tiếng - vì vậy hãy kiểm tra thông tin mới nhất về những thay đổi đối với dịch vụ và thủ tục.</string>
+    <string name="AnToan3">Tránh đến những không gian đông đúc, không gian kín, không thông thoáng, cũng như bất kỳ cuộc tụ tập đông người nào như hòa nhạc, sự kiện và tiệc tùng. Tránh giờ cao điểm tại các bãi biển như buổi chiều.</string>
+    <string name="AnToan1">Dù trong nước, dịch bệnh đã được kiểm soát tốt, song nguy cơ dịch bệnh bùng phát trở lại luôn thường trực. Nếu bạn đã lên kế hoạch cho chuyến nghỉ dưỡng dịp lễ này, dưới đây là một số "mẹo" để giúp bạn thực hiện một chuyến du lịch một cách an toàn hơn.</string>
+    <string name="HoaDaQuyDaLat">Hoa Dã Quỳ Đà Lạt</string>
+    <string name="DaQuy1">Dã quỳ là một trong những loài hoa dại đẹp nổi tiếng của khắp núi rừng Tây Nguyên và nhiều tỉnh miền núi Tây Bắc. Tuy nhiên để đưa vẻ đẹp của hoa Dã Qùy lên một tầm cao mới thì chỉ có Đà Lạt.</string>
+    <string name="DaQuy3">Đà Lạt – Cầu Đất – Đ’ran – Châu Sơn – Phi Nôm – Tu Tra
+      Đây có thể được xem là cung đường ngắm hoa Dã Quỳ đẹp nhất tại Đà Lạt, khu vực dọc theo cung đường từ Trại Mát về đến đồ trà Cầu Đất, hoa Quỳ nở vàng rực hai bên đường, và đây cũng là mùa hồng giòn Đà Lạt đang chín nên bạn sẽ tha hồ đắm chìm vào không gian thiên nhiên xinh đẹp hai bên cung đường này. Qua hết đèo Dran là địa phận của thị trấn Đơn Dương, bạn sẽ dễ dàng bắt gặp những cung đường với hoa Dã Quỳ vàng rực hai bên và chân đập nước Đa Nhim là nơi hoa Dã Quỳ Đà Lạt rực rỡ nhất.</string>
+    <string name="DaQuy2">Mùa hoa dã quỳ Đà Lạt đẹp không phải bởi một hai bông hoa riêng lẻ, mà vì hoa ở đây mọc lên như buôn, như làng Tây Nguyên, tập trung thành từng khu quây quần ríu rít bên nhau tạo thành những thảm hoa vàng vô cùng ấn tượng.</string>
+    <string name="DuThuyenHaLong">Du Thuyền Trên Vịnh Hạ Long</string>
+    <string name="DuThuyen1">Du thuyền Starlight tự hào là du thuyền sang trọng bậc nhất tại Hạ Long với những khoảng không gian chung rộng rãi, thoáng mát, trang bị hiện đại. </string>
+    <string name="DuThuyen2">32 cabins của Starlight được trang bị đầy đủ như các Phòng khách sạn 5 sao xứng tầm thế giới. Du thuyền đã biến ước mơ xây dựng một khách sạn cao cấp “nổi” giữa kỳ quan Hạ Long xinh đẹp thành hiện thực</string>
+    <string name="DuThuyen3">Đến với Starlight cruise, du khách sẽ được đón chào bởi những nụ cười tươi, sự chuyên nghiệp trong phục vụ, sự quan tâm chu đáo đảm bảo cho du khách một chuyến đi đáng nhớ. Chúng tôi hiểu rằng: Dịch vụ du lịch không  chỉ đơn giản là đáp ứng những nhu cầu thăm quan, đi lại thông thường mà còn có sứ mệnh tạo ra những giây phút nghỉ dưỡng sảng khoái, những niềm hạnh phúc tinh thần bằng sự phục vụ tinh tế và đẳng cấp.</string>
+    <string name="QuangNinh">Quảng Ninh Phát Triển Du Lịch Thông Minh</string>
+    <string name="QuangNinh1">Quảng Ninh là một trong những địa phương tiên phong trên cả nước triển khai các giải pháp du lịch thông minh. Hạ tầng du lịch thông minh của Quảng Ninh cũng đang dần hoàn thiện dựa trên “bệ phóng” của đô thị thông minh.</string>
+    <string name="QuangNinh2">Các tàu du lịch trên Vịnh Hạ Long đều được lắp đặt hệ thống định vị GPS để nâng cao hệ số an toàn cho khách du lịch. Hệ thống camera giám sát ở một số hang động lớn như: Hang Ðầu Gỗ, động Thiên Cung, bảo đảm liên tục truyền dữ liệu về cho bộ phận giám sát.</string>
+    <string name="QuangNinh3">Đặc biệt, chỉ với 1 chiếc điện thoại thông minh, du khách có thể tiếp cận với các tiện ích, ứng dụng thông minh về du lịch, như tìm kiếm thông tin bằng giọng nói, dịch chuyển ngôn ngữ, hệ thống thuyết minh tự động tại các điểm đến với hướng dẫn viên ảo, hay tham quan 3D... trên nền tảng điện thoại di động.</string>
+    <string name="NoInterNetConnection">Không Có Kết Nối Internet</string>
+    <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
+    <string name="Retry">Thử Lại</string>
+    <string name="LogOut">Đăng Xuất</string>
 
 </resources>

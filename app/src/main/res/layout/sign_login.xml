@@ -112,20 +112,20 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="269dp"
-            android:layout_height="34dp"
+            android:layout_height="28dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="5dp"
             app:cardElevation="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <com.facebook.login.widget.LoginButton
                     android:id="@+id/login_button"
-                    android:layout_width="279dp"
+                    android:layout_width="269dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="30dp"
