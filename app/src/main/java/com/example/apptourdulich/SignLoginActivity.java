@@ -5,11 +5,18 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+
 import android.content.IntentFilter;
+
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -29,14 +36,22 @@ import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCanceledListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
 import com.squareup.picasso.Picasso;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 public class SignLoginActivity extends AppCompatActivity {
  Button dangnhap;
@@ -47,6 +62,7 @@ NetworkChangeListener networkChangeListener=new NetworkChangeListener();
   CallbackManager callbackManager = CallbackManager.Factory.create();
          private FirebaseAuth mFirebaseAuth;
          private LoginButton loginButton;
+
 private static final  String Email="email";
 
 
@@ -60,7 +76,11 @@ private static final  String Email="email";
         dangnhap=findViewById(R.id.btndn);
         loginButton=findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList(Email));
+
+        edtSoDienThoai=findViewById(R.id.edtSDT);
+
         dangki=findViewById(R.id.btnDangKi);
+
         callbackManager=CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -96,12 +116,50 @@ private static final  String Email="email";
         dangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(SignLoginActivity.this,Confirm_otp.class);
-                Bundle b= new Bundle();
-                b.putString("SoDienThoai",edtSoDienThoai.getText().toString());
-                i.putExtras(b);
-                startActivity(i);
-            }
+                String SoDienThoai= edtSoDienThoai.getText().toString().trim();
+                if(SoDienThoai.isEmpty())
+                {
+                    edtSoDienThoai.setError("Phone is requied");
+                    edtSoDienThoai.requestFocus();
+                    return;
+                }
+               else{
+               dangnhap.setVisibility(View.VISIBLE);
+
+                PhoneAuthOptions options;
+                options = PhoneAuthOptions.newBuilder(mFirebaseAuth)
+                        .setPhoneNumber("+84"+edtSoDienThoai.getText().toString().trim())       // Phone number to verify
+                        .setTimeout(60l, TimeUnit.SECONDS) // Timeout and unit
+                        .setActivity(SignLoginActivity.this)                 // Activity (for callback binding)
+                        .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
+                                dangnhap.setVisibility(View.VISIBLE);
+
+
+                            }
+
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e) {
+                                dangnhap.setVisibility(View.VISIBLE);
+                            }
+                            @Override
+                            public void onCodeSent(@NonNull String s,
+                                                   @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                               dangnhap.setVisibility(View.VISIBLE);
+                                Intent i=new Intent(SignLoginActivity.this,Confirm_otp.class);
+
+                                i.putExtra("SoDienThoai",edtSoDienThoai.getText().toString());
+                                i.putExtra("codeotp",s);
+                                startActivity(i);
+                            }
+                        } )          // OnVerificationStateChangedCallbacks
+                        .build();
+                PhoneAuthProvider.verifyPhoneNumber(options);
+
+
+            }}
         });
     }
 

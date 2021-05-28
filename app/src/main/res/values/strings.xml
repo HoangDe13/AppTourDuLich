@@ -21,15 +21,25 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook">Đăng Nhập Facebook</string>
-    <string name="Gmail">Đăng Nhập Gmail</string>
 
+    <string name="Gmail">
+        Gmail</string>
+    <string name="DatVe">Đặt Vé</string>
+    <string name="InfoTour">Thông Tin</string>
+    <string name="details">Mô Tả</string>
+    <string name="Contact">Liên Hệ</string>
+    <string name="addressContact">828 Sư Vạn Hạnh, phường 13,Quận 10</string>
+    <string name="HotlineContact">01254621321</string>
+    <string name="EmailContact">HouseTour@gmail.com</string>
+    <string name="infoContact">House Tour</string>
+    <string name="ContactByPhone">Tư Vấn Qua Điện Thoại</string>
+
+    
 
     <string name="CCCD">CMNN/CCCD</string>
     <string name="update">Cập Nhật
     </string>
     <string name="phone">Số Điện Thoại </string>
-
-    <string name="CMNN">CMNN/CCCD</string>
 
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
@@ -47,8 +57,8 @@
     <string name="sex">Giới Tính</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="facebook_app_id">460035038397239</string>
-    <string name="fb_login_protocol_scheme">fb460035038397239</string>
+    <string name="facebook_app_id">498471527958027</string>
+    <string name="fb_login_protocol_scheme">fb498471527958027</string>
 
 
     <string name="Loginwithfacebook">Đăng Nhập với Facebook</string>
@@ -85,6 +95,45 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="Rules">Điều Khoản</string>
+    <string name="DetailRules1"> 1. Bạn cam kết và đảm bảo rằng bạn là một cá nhân về mặt pháp lý có toàn quyền tham gia giao kết thỏa thuận theo pháp luật nước Cộng hòa xã hội chủ nghĩa Việt Nam.</string>
+    <string name="DetailRules2"> 2. Chúng tôi thu thập và xử lý các thông tin của bạn, như là tên, địa chỉ email khi bạn đăng ký. Bạn phải cung cấp chính xác và đầy đủ thông tin, cập nhật thông tin và đồng ý cung cấp cho chúng tôi bất kỳ bằng chứng nào về danh tính theo yêu cầu hợp lý của chúng tôi. </string>
+    <string name="DetailRules3"> 3. Nếu các thông tin mà bạn cung cấp cho chúng tôi thay đổi, ví dụ, nếu bạn thay đổi địa chỉ email, hoặc nếu bạn muốn hủy tài khoản, xin vui lòng cập nhật chi tiết bằng cách gửi yêu cầu đến chúng tôi. Chúng tôi, trong khả năng của mình, sẽ nỗ lực thực hiện thay đổi theo yêu cầu trong ba mươi (30) ngày làm việc kể từ khi nhận được thông báo về thay đổi.</string>
+    <string name="DetailRules4"> 4. Bạn có thể chọn mua một phần hoặc toàn bộ các nội dung của Ứng dụng bằng cách thanh toán cho chúng tôi.
+        5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
+    <string name="DetailRules5">5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
+    <string name="close">Đóng</string>
+    <string name="title_activity_infor_tour">InforTour</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_info_tour">MainActivity</string>
+    <!--info tour-->
+    <string name="NgayKhoiHanh">Ngày Khởi Hành</string>
+    <string name="NgayKetThuc">Ngày Kết Thúc</string>
+    <string name="Khachsan">Khách Sạn</string>
+    <string name="CMNN">CMNN/CCCD</string>
+    <string name="GiaVe">Giá Vé</string>
+    <string name="NoiKhoiHanh">Nơi Khởi Hành</string>
+    <!--Bill-->
+<string name="HoaDon">Hóa Đơn</string>
+    <string name="SoNgay">Số Ngày</string>
+    <string name="ThongTinKhachHang">Thông Tin Khách Hàng</string>
+    <string name="ThongTinTour">Thông Tin Tour</string>
+    <string name="KhuyenMai">Khuyến Mãi</string>
+    <string name="ApDung">Áp Dụng</string>
+    <string name="ThongTinThanhToan">Thông Tin Thanh Toán</string>
+    <string name="TenTour">Tên Tour</string>
+    <string name="ChietKhau">Chiết Khấu</string>
+    <string name="SoTienThanhToan">Số Tiền Thanh Toán</string>
+    <string name="PhuongThucThanhToan">Phương Thức Thanh Toán</string>
+    <string name="PhuongTien">Phương Tiện</string>
+    <string name="NguoiLon">Người Lớn</string>
+    <string name="TreEm">Trẻ Em</string>
+    <string name="SoTien">Số Tiền</string>
+    <string name="ThanhToan">Thanh Toán</string>
+    <string name="GuiLaiMa">Gửi lại</string>
+
     <string name="DaLatThang1">Hoa Anh Đào Đà Lạt</string>
     <string name="HoaAnhDao1">Đầu tháng 12 năm nay mai anh đào nở sớm ở một số điểm tại Đà Lạt nhưng thời điểm rộ nhất phải kể tới là 1 - 2 tuần tính từ Tết Dương lịch. Hoa sẽ nở kéo dài cả tháng và mỗi thời điểm thì hoa lại trổ đẹp ở những khu vực khác nhau. </string>
     <string name="HoaAnhDao2">Mai anh đào sẽ nở rộ từ giữa tháng 1 đến giữa tháng 2 nên lưu ý những con đường đẹp để chụp hoa này là Trần Hưng Đạo, Triệu Việt Vương, đường đi Trại Mát, Trương Công Định, bờ hồ Xuân Hương, trường chuyên Thăng Long hoặc THCS Phan Chu Trinh. Nhưng nhìn chung thì vào mùa hoa nở, hầu hết mọi cung đường ở Đà Lạt đều sẽ không thiếu bóng dáng loài hoa này đâu.</string>
@@ -140,5 +189,6 @@ Còn gì tuyệt vời hơn khi được đứng ở độ cao 3143m vươn vai 
     <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
     <string name="Retry">Thử Lại</string>
     <string name="LogOut">Đăng Xuất</string>
+
 
 </resources>

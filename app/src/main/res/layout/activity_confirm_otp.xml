@@ -34,7 +34,7 @@
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edtOtp"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -65,5 +65,15 @@
             app:backgroundTint="#00019AC1"
             app:backgroundTintMode="screen" />
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvGuiLai"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/GuiLaiMa"
+        android:textColor="#035F68"
+        android:textSize="18sp" />
 
 </LinearLayout>
