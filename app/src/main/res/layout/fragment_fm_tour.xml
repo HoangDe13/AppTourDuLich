@@ -13,7 +13,6 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="114dp"
-        android:paddingTop="20dp"
         android:scrollbarSize="0dp">
 
         <LinearLayout
@@ -21,51 +20,100 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingStart="30dp">
+            android:paddingStart="40dp">
 
-            <Button
-                android:id="@+id/btnTatCa"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:onClick="onClick"
-                android:text="@string/All"
-                android:textColor="#0761BA"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="50dp" />
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="5dp">
 
-            <Button
-                android:id="@+id/btnMienBac"
+                <Button
+                    android:id="@+id/btnTatCa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/messenger_button_white_bg_selector"
+                    android:gravity="center"
+                    android:shadowColor="#616363"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3"
+                    android:text="@string/All"
+                    android:textColor="#0073FF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#FFFFFF" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:onClick="onClick"
-                android:text="@string/North"
-                android:textColor="#0761BA"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="50dp" />
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
 
-            <Button
-                android:id="@+id/btnMienTrung"
+                <Button
+                    android:id="@+id/btnMienBac"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/com_facebook_auth_dialog_header_background"
+                    android:gravity="center"
+                    android:shadowColor="#616363"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3"
+                    android:text="@string/North"
+                    android:textColor="#0073FF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#FFFFFF" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:onClick="onClick"
-                android:text="@string/Central"
-                android:textColor="#0761BA"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="50dp" />
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
 
-            <Button
-                android:id="@+id/btnMienNam"
+                <Button
+                    android:id="@+id/btnMienTrung"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/com_facebook_auth_dialog_header_background"
+                    android:gravity="center"
+                    android:shadowColor="#616363"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3"
+                    android:text="@string/Central"
+                    android:textColor="#0073FF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#FFFFFF" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:onClick="onClick"
-                android:text="@string/South"
-                android:textColor="#0761BA"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="50dp" />
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
+
+                <Button
+                    android:id="@+id/btnMienNam"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/com_facebook_auth_dialog_header_background"
+                    android:gravity="center"
+                    android:shadowColor="#616363"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3"
+                    android:text="@string/South"
+                    android:textColor="#0073FF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#FFFFFF" />
+            </androidx.cardview.widget.CardView>
 
             <Space
                 android:layout_width="50dp"
@@ -76,7 +124,7 @@
     </HorizontalScrollView>
 
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/fmTatCa"
         android:name="com.example.apptourdulich.fragmentTour"
         android:layout_width="312dp"
         android:layout_height="575dp"
