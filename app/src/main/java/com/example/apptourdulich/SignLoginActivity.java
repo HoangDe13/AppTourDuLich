@@ -5,10 +5,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+
+import android.content.IntentFilter;
+
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Base64;
@@ -53,7 +58,7 @@ public class SignLoginActivity extends AppCompatActivity {
  TextView  dangki,Demo;
  EditText edtSoDienThoai;
  ImageView imageView;
-
+NetworkChangeListener networkChangeListener=new NetworkChangeListener();
   CallbackManager callbackManager = CallbackManager.Factory.create();
          private FirebaseAuth mFirebaseAuth;
          private LoginButton loginButton;
@@ -71,7 +76,11 @@ private static final  String Email="email";
         dangnhap=findViewById(R.id.btndn);
         loginButton=findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList(Email));
+
         edtSoDienThoai=findViewById(R.id.edtSDT);
+
+        dangki=findViewById(R.id.btnDangKi);
+
         callbackManager=CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -93,17 +102,17 @@ private static final  String Email="email";
                 Toast.makeText(SignLoginActivity.this,"Login error"+error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
-        /*
+
         dangki=findViewById(R.id.btnDangKi);
-        edtSoDienThoai=findViewById(R.id.edtSDT);
+
         dangki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(SignLoginActivity.this,sign_up.class);
+                Intent i= new Intent(SignLoginActivity.this,Register.class);
                 startActivity(i);
             }
         });
-*/
+      edtSoDienThoai=findViewById(R.id.edtSDT);
         dangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,5 +202,17 @@ private static final  String Email="email";
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter filter=new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(networkChangeListener,filter);
+    }
 
+    @Override
+    protected void onStop() {
+
+        super.onStop();
+        unregisterReceiver(networkChangeListener);
+    }
 }

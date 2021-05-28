@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/home_icon_silhouette"
         android:title="@string/Home" />
 
     <item
         android:id="@+id/navigation_promo"
-        android:icon="@drawable/ic_baseline_style_24"
+        android:icon="@drawable/coupon"
         android:title="@string/Promotion" />
 
     <item
@@ -16,10 +16,10 @@
         android:title="@string/Tour" />
     <item
         android:id="@+id/navigation_location"
-        android:icon="@drawable/ic_baseline_location_on_24"
-        android:title="@string/Location" />
+        android:icon="@drawable/news__1_"
+        android:title="@string/News" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:icon="@drawable/man_user"
         android:title="@string/Profile" />
 </menu>

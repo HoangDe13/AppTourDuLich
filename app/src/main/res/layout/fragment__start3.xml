@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".Fragment_Start3">
 
@@ -13,8 +12,8 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="408dp"
-        android:layout_height="500dp"
+        android:layout_width="403dp"
+        android:layout_height="502dp"
         android:layout_marginStart="-2dp"
         android:scaleType="fitXY"
         android:src="@drawable/safari"
@@ -27,64 +26,68 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
         android:gravity="center"
         android:text="@string/vedeptieman"
         android:textColor="#000000"
         android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtSloganStart3"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:textColor="#DA000000"
-        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp" />
+    <TextView
+        android:id="@+id/txtSloganStart3"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/sloganstart3"
+        android:textColor="#DA000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="202dp"
-        android:layout_height="40dp"
-        app:cardCornerRadius="20dp">
+        android:id="@+id/cardView3"
+        android:layout_width="269dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSloganStart3">
 
         <Button
             android:id="@+id/btnBatDau"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
             android:background="@color/Button"
             android:enabled="true"
             android:text="@string/start"
-            android:textColor="@color/TextButton"
-            app:layout_constraintBottom_toTopOf="@+id/indicator"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textColor="@color/TextButton" />
     </androidx.cardview.widget.CardView>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginBottom="20dp" />
 
     <com.pixelcan.inkpageindicator.InkPageIndicator
         android:id="@+id/indicator"
         android:layout_width="257dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="16dp"
         app:ipi_animationDuration="320"
         app:ipi_currentPageIndicatorColor="@android:color/black"
         app:ipi_dotDiameter="20dp"
         app:ipi_dotGap="20dp"
         app:ipi_pageIndicatorColor="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSloganStart3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

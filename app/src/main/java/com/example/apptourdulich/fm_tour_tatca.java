@@ -1,7 +1,5 @@
 package com.example.apptourdulich;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,14 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fmProfile#newInstance} factory method to
+ * Use the {@link fm_tour_tatca#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fmProfile extends Fragment {
+public class fm_tour_tatca extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class fmProfile extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public fmProfile() {
+    public fm_tour_tatca() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class fmProfile extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment fmProfile.
+     * @return A new instance of fragment fm_tour_tatca.
      */
     // TODO: Rename and change types and number of parameters
-    public static fmProfile newInstance(String param1, String param2) {
-        fmProfile fragment = new fmProfile();
+    public static fm_tour_tatca newInstance(String param1, String param2) {
+        fm_tour_tatca fragment = new fm_tour_tatca();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,29 +54,11 @@ public class fmProfile extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    TextView HoTen,Profile;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fm_profile, container, false);
-        HoTen=view.findViewById(R.id.tvHoTenProfile);
-        Profile=view.findViewById(R.id.tvProfile);
-        HoTen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(view.getContext(),Profile.class);
-                startActivity(i);
-            }
-        });
-        Profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(view.getContext(),Profile.class);
-                startActivity(i);
-            }
-        });
-        return view;
+        return inflater.inflate(R.layout.fragment_fm_tour_tatca, container, false);
     }
 }

@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,11 +26,16 @@ import java.util.concurrent.TimeUnit;
 
 public class Confirm_otp extends AppCompatActivity {
     Button btnXacNhan;
+
     TextView SoDienThoai;
     EditText otp;
     private String codeotp;
     TextView guilai;
     private FirebaseAuth mFirebaseAuth;
+
+
+    
+    NetworkChangeListener networkChangeListener=new NetworkChangeListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,5 +114,18 @@ public class Confirm_otp extends AppCompatActivity {
                 PhoneAuthProvider.verifyPhoneNumber(options);
             }
         });
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter filter=new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(networkChangeListener,filter);
+    }
+
+    @Override
+    protected void onStop() {
+
+        super.onStop();
+        unregisterReceiver(networkChangeListener);
     }
 }

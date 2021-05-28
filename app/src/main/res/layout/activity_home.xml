@@ -10,8 +10,8 @@
     <fragment
         android:id="@+id/fm_Container"
         android:name="com.example.apptourdulich.fm_container"
-        android:layout_width="423dp"
-        android:layout_height="755dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +38,9 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
 
-            app:itemIconTint="@color/light_blue_A400"
-            app:itemRippleColor="#8AB3FF"
-            app:itemTextColor="#3519D2"
+            app:itemIconTint="#0076F4"
+            app:itemRippleColor="#E8E8E8"
+            app:itemTextColor="#2F00B1"
             app:labelVisibilityMode="auto"
             app:menu="@menu/bottommenu">
 
