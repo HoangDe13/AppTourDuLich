@@ -103,12 +103,14 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_info_tour">MainActivity</string>
+    <!--info tour-->
     <string name="NgayKhoiHanh">Ngày Khởi Hành</string>
     <string name="NgayKetThuc">Ngày Kết Thúc</string>
     <string name="Khachsan">Khách Sạn</string>
     <string name="CMNN">CMNN/CCCD</string>
     <string name="GiaVe">Giá Vé</string>
     <string name="NoiKhoiHanh">Nơi Khởi Hành</string>
+    <!--Bill-->
 <string name="HoaDon">Hóa Đơn</string>
     <string name="SoNgay">Số Ngày</string>
     <string name="ThongTinKhachHang">Thông Tin Khách Hàng</string>
@@ -125,4 +127,5 @@
     <string name="TreEm">Trẻ Em</string>
     <string name="SoTien">Số Tiền</string>
     <string name="ThanhToan">Thanh Toán</string>
+    <string name="GuiLaiMa">Gửi lại</string>
 </resources>
