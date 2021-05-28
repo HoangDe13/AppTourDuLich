@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".Search">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/imageView17"
-            android:layout_width="78dp"
+            android:layout_width="41dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <EditText
             android:id="@+id/etTimKiem2"
-            android:layout_width="342dp"
+            android:layout_width="326dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
             android:background="?attr/editTextBackground"
             android:ems="10"
             android:hint="@string/Search"
@@ -35,7 +38,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="581dp" />
+        android:layout_width="348dp"
+        android:layout_height="656dp" />
 
 </LinearLayout>

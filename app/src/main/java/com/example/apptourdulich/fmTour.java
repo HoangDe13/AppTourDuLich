@@ -15,7 +15,7 @@ import android.widget.Button;
  * Use the {@link fmTour#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fmTour extends Fragment implements View.OnClickListener{
+public class fmTour extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,6 +60,7 @@ public class fmTour extends Fragment implements View.OnClickListener{
     Button btnMienBac;
     Button btnMientrung;
     Button btnMienNam;
+    Fragment fragment;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,40 +70,47 @@ public class fmTour extends Fragment implements View.OnClickListener{
         btnMientrung=view.findViewById(R.id.btnMienTrung);
         btnMienNam=view.findViewById(R.id.btnMienNam);
         btnTatCa=view.findViewById(R.id.btnTatCa);
-        loadFragment(new fragmentTour());
+        loadFragment(new fm_tour_tatca());
+        btnMienBac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment=new fm_tour_mien_bac();
+                loadFragment(fragment);
+
+            }
+        });
+        btnMienNam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment=new fm_tour_mien_nam();
+                loadFragment(fragment);
+
+            }
+        });
+        btnMientrung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment=new fm_tour_mien_trung();
+                loadFragment(fragment);
+
+            }
+        });
+        btnTatCa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment=new fm_tour_tatca();
+                loadFragment(fragment);
+
+            }
+        });
         return view;
     }
 
-    @Override
-    public void onClick(View v) {
-        Fragment fragment;
-        switch (v.getId()) {
-            case R.id.btnTatCa:
-                fragment=new fragmentTour();
-                loadFragment(fragment);
-                break;
-            case R.id.btnMienBac:
-                fragment=new fm_tour_mien_bac();
-                loadFragment(fragment);
-                break;
-            case R.id.btnMienTrung:
-                fragment=new fm_tour_mien_trung();
-                loadFragment(fragment);
-                break;
-            case R.id.btnMienNam:
-                fragment=new fm_tour_mien_nam();
-                loadFragment(fragment);
-                break;
-            default:
-                break;
-        }
-
-    }
     private void loadFragment(Fragment fragment) {
         // load Fragment
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment, fragment);
-        transaction.addToBackStack(null);
+        transaction.replace(R.id.fmTatCa, fragment);
+       // transaction.addToBackStack(null);
         transaction.commit();
     }
 }

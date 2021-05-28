@@ -1,5 +1,6 @@
 package com.example.apptourdulich;
 
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -8,6 +9,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+
+import android.content.Context;
+import android.content.Intent;
+
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -16,6 +21,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.TextView;
@@ -30,6 +36,9 @@ import io.grpc.internal.SharedResourceHolder;
 import static android.content.Context.MODE_PRIVATE;
 import static androidx.core.app.ActivityCompat.finishAffinity;
 import static androidx.core.app.ActivityCompat.recreate;
+
+import android.widget.TextView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -80,9 +89,14 @@ public class fmProfile extends Fragment {
         }
 
     }
+    TextView HoTen,Profile;
+
+
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view=inflater.inflate(R.layout.fragment_fm_profile, container, false);
         changeLang=(view).findViewById(R.id.changeMyLang);//
 
@@ -100,6 +114,26 @@ public class fmProfile extends Fragment {
             }
         });
 
+
+
+        // Inflate the layout for this fragment
+        View view= inflater.inflate(R.layout.fragment_fm_profile, container, false);
+        HoTen=view.findViewById(R.id.tvHoTenProfile);
+        Profile=view.findViewById(R.id.tvProfile);
+        HoTen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(view.getContext(),Profile.class);
+                startActivity(i);
+            }
+        });
+        Profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(view.getContext(),Profile.class);
+                startActivity(i);
+            }
+        });
 
         return view;
     }

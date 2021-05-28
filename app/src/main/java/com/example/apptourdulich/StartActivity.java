@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 
 import com.pixelcan.inkpageindicator.InkPageIndicator;
@@ -16,6 +18,7 @@ public class StartActivity extends FragmentActivity {
     private static final int NUM_PAGES = 3;
     private ViewPager mPager;
     private PagerAdapter pagerAdapter;
+    NetworkChangeListener networkChangeListener=new NetworkChangeListener();
 
     @Override
     public void onBackPressed() {
@@ -61,4 +64,16 @@ public class StartActivity extends FragmentActivity {
                 return NUM_PAGES;
             }
         }
+    @Override
+    protected void onStart(){
+        IntentFilter filter=new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(networkChangeListener,filter);
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        unregisterReceiver(networkChangeListener);
+        super.onStop();
+    }
     }
