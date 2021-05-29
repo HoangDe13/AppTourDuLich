@@ -6,6 +6,7 @@
     <string name="prompt_usename">Number Phone</string>
     <string name="prompt_password">PassWord</string>
     <string name="otp">ID OTP</string>
+    <string name="GuiLaiMa">Resend </string>
     <string name="dangnhap">Login</string>
     <string name="dangki">Sign Up</string>
     <string name="quenmatkhau">Forget Password</string>
@@ -32,16 +33,16 @@
     <string name="EmailContact">HouseTour@gmail.com</string>
     <string name="infoContact">House Tour</string>
     <string name="ContactByPhone">Telephone Consultation</string>
-    <string name="CCCD">CMNN/CCCD</string>
+    <string name="CCCD">Number ID</string>
     <string name="update">Update</string>
     <string name="phone">Number Phone </string>
-
+    <string name="NoInterNetConnection">No Internet Connection</string>
     <string name="Login">Login</string>
     <string name="Register">Sign Up</string>
     <string name="Birthday">Birthday</string>
     <string name="sloganstart1.2">Welcome to Vietnam tourism. Pick up the backpack and mark the footprints.</string>
     <string name="sloganstart2"> Each journey has secret destinations that even visitors can not expect.</string>
-
+    <string name="sloganstart3">Let us bring you the best.</string>
     <string name="feedback">Feedback</string>
     <string name="title_activity_profile">Profile</string>
     <!-- Strings used for fragments for navigation -->
@@ -134,5 +135,7 @@
 
     <!--Activiti ChangeLanguage -->
     <string name="haychonngonngu">Choose Language</string>
-
+    <string name="PleaseCheckYourConnection">Please Check Your Connection</string>
+    <string name="Retry">Retry</string>
+    <string name="LogOut">Log Out</string>
 </resources>

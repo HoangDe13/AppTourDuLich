@@ -8,27 +8,33 @@
     android:background="@drawable/uilogin"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imgProfile"
-        android:layout_width="148dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="53dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="109dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="112dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="7dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center" />
+    </androidx.cardview.widget.CardView>
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="408dp"
-        android:layout_height="518dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="53dp"
+        android:layout_width="406dp"
+        android:layout_height="473dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgProfile">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,14 +44,14 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="341dp"
-                android:layout_height="385dp"
+                android:layout_width="311dp"
+                android:layout_height="477dp"
                 android:padding="10dp"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:layout_width="317dp"
+                    android:layout_width="282dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
@@ -63,7 +69,7 @@
                     <TextView
                         android:id="@+id/tvHoTen"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="50dp"
                         android:background="?attr/editTextBackground"
                         android:gravity="center|right"
                         android:paddingEnd="10dp"
@@ -81,7 +87,7 @@
                     <TextView
                         android:id="@+id/tvGioiTinh"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="50dp"
                         android:background="?attr/editTextBackground"
                         android:gravity="center|right"
                         android:paddingEnd="10dp"
@@ -99,7 +105,7 @@
                     <TextView
                         android:id="@+id/tvNgaySinh"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="50dp"
                         android:background="?attr/editTextBackground"
                         android:gravity="center|right"
                         android:paddingEnd="10dp"
@@ -117,7 +123,7 @@
                     <TextView
                         android:id="@+id/tvSoDienThoai"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="50dp"
                         android:background="?attr/editTextBackground"
                         android:gravity="center|right"
                         android:paddingEnd="10dp"
@@ -134,7 +140,7 @@
                     <TextView
                         android:id="@+id/tvCMND"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="50dp"
                         android:background="?attr/editTextBackground"
                         android:gravity="center|right"
                         android:paddingEnd="10dp"
@@ -152,7 +158,7 @@
                     <TextView
                         android:id="@+id/tvDiaChi"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="50dp"
                         android:background="?attr/editTextBackground"
                         android:gravity="center|right"
                         android:paddingEnd="10dp"
@@ -163,7 +169,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="31dp" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -184,15 +190,15 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="61dp" />
+                android:layout_height="77dp" />
 
         </LinearLayout>
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatProfile"
-        android:layout_width="56dp"
-        android:layout_height="57dp"
+        android:layout_width="54dp"
+        android:layout_height="58dp"
         android:layout_gravity="center"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
