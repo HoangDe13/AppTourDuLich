@@ -55,7 +55,7 @@ public Uri uri;
         SoNgay=findViewById(R.id.SoNgay);
         ch=findViewById(R.id.btnChonAnh);
         up=findViewById(R.id.btnLuu);
-
+        imTour=findViewById(R.id.imageTrour);
         thongTinTour=new ThongTinTour();
         dbref= FirebaseDatabase.getInstance().getReference("Tour");
         dbref.addValueEventListener(new ValueEventListener() {
@@ -105,9 +105,12 @@ public Uri uri;
         thongTinTour.setNoiKhoiHanh(NoiKhoiHanh.getText().toString().trim());
         thongTinTour.setSoNgay(SoNgay.getText().toString().trim());
         thongTinTour.setKhuVuc(KhuVuc.getText().toString().trim());
-        thongTinTour.setImage(System.currentTimeMillis()+"."+getExtension(uri));
+        String i=System.currentTimeMillis()+"."+getExtension(uri);
+        thongTinTour.setImage(i);
         dbref.child(String.valueOf(maxid + 1)).setValue(thongTinTour);
-        StorageReference Ref=mStoreRef.child(System.currentTimeMillis()+"."+getExtension(uri));
+
+
+        StorageReference Ref=mStoreRef.child(i);
         Ref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {

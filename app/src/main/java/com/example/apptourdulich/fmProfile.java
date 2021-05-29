@@ -13,8 +13,10 @@ import android.content.res.Resources;
 import android.content.Context;
 import android.content.Intent;
 
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -24,9 +26,19 @@ import android.view.ViewGroup;
 
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.rpc.context.AttributeContext;
 
 import java.util.Locale;
@@ -90,16 +102,59 @@ public class fmProfile extends Fragment {
 
     }
     TextView HoTen,Profile;
+    DatabaseReference databaseReference;
+    ImageView imageProfile;
 
-
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view=inflater.inflate(R.layout.fragment_fm_profile, container, false);
         changeLang=(view).findViewById(R.id.changeMyLang);//
+        imageProfile= (ImageView) view.findViewById(R.id.imgProfilesetting);
+        HoTen=view.findViewById(R.id.tvHoTenProfile);
+        int id=3;
 
+        databaseReference= FirebaseDatabase.getInstance().getReference("KhachHang");
+
+        databaseReference.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()) {
+                    if (task.getResult().exists()) {
+                        DataSnapshot dataSnapshot = task.getResult();
+                        String Ten = String.valueOf(dataSnapshot.child("hoTen").getValue());
+//                        String gioitinh = String.valueOf(dataSnapshot.child("gioitinh").getValue());
+//                        String ngaySinh = String.valueOf(dataSnapshot.child("ngaySinh").getValue());
+//                        String cmnd = String.valueOf(dataSnapshot.child("cmnd").getValue());
+//                        String sdt = String.valueOf(dataSnapshot.child("sdt").getValue());
+//                        String dc = String.valueOf(dataSnapshot.child("diaChi").getValue());
+                        //String image = String.valueOf(dataSnapshot.child("imageid").getValue());
+                        HoTen.setText(Ten);
+
+                        String image = String.valueOf(dataSnapshot.child("imageid").getValue());
+
+                        Task<Uri> storageReference = FirebaseStorage.getInstance().getReference().child("Images/"+image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                // Got the download URL for 'users/me/profile.png'
+                                System.out.println(uri);
+                                Glide.with(view.getContext()).load(uri).into(imageProfile);
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception exception) {
+                                // Handle any errors
+                            }
+                        });
+//                        System.out.println(storageReference);
+
+
+                    }
+                }
+            }
+        });
         changeLang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,8 +171,7 @@ public class fmProfile extends Fragment {
 
 
 
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fm_profile, container, false);
+
         HoTen=view.findViewById(R.id.tvHoTenProfile);
         Profile=view.findViewById(R.id.tvProfile);
         HoTen.setOnClickListener(new View.OnClickListener() {
