@@ -138,6 +138,8 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                     Ref.child(String.valueOf(maxid + 1)).setValue(khachHang);
 
                     Toast.makeText(Register.this, "Đăng Ký Thành Công", Toast.LENGTH_SHORT).show();
+                    Intent i= new Intent(Register.this,SignLoginActivity.class);
+                    startActivity(i);
                 }
             }
         });

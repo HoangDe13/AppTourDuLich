@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.CompositePageTransformer;
@@ -13,11 +15,21 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +83,9 @@ public class fmHome extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
     private ViewPager viewPager;
     PhotoAdapter photoAdapter;
@@ -81,7 +96,10 @@ public class fmHome extends Fragment {
     List<Photo> mlisttour;
     ViewPager2 viewPager2;
     Handler handler=new Handler();
-
+    RecyclerView recyclerView;
+    ArrayList<ThongTinTour>thongTinTours;
+    AdapterTour adapterTour;
+    FirebaseFirestore db;
 
 
     TextView etTimKiem1;
@@ -93,6 +111,15 @@ public class fmHome extends Fragment {
         viewPager=view.findViewById(R.id.viewPager);
         viewPager2=view.findViewById(R.id.viewPagerImage);
         etTimKiem1=view.findViewById(R.id.etTimKiem);
+        recyclerView=view.findViewById(R.id.rcvTour);
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        FirebaseRecyclerOptions<ThongTinTour> thongTinTourFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinTour>()
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("Tour")
+                        , ThongTinTour.class).build();
+
+        adapterTour=new AdapterTour((thongTinTourFirebaseOptions));
+        recyclerView.setAdapter(adapterTour);
+
       //  viewPager3=view.findViewById(R.id.viewPagerImageNews);
         circleIndicator=view.findViewById(R.id.circleIndicator);
         mlisttour=getListPhotoTour();
@@ -137,8 +164,38 @@ public class fmHome extends Fragment {
                 startActivity(i);
             }
         });
+
         return view;
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapterTour.startListening();
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapterTour.stopListening();
+    }
+//
+//    private void EventChangeListener() {
+//        db.collection("Tour").addSnapshotListener(new EventListener<QuerySnapshot>() {
+//            @Override
+//            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+//                if(error==null){
+//                    Log.e("Null",error.getMessage());
+//                    return;
+//                }
+//                for (DocumentChange dc :value.getDocumentChanges()){
+//                    if(dc.getType()==DocumentChange.Type.ADDED){
+//                        thongTinTours.add(dc.getDocument().toObject(ThongTinTour.class));
+//                    }
+//                    adapterTour.notifyDataSetChanged();
+//
+//                }
+//            }
+//        });
+//    }
 
     private List<Photo> getListPhotoTour() {
         List<Photo> list=new ArrayList<>();
@@ -198,6 +255,9 @@ public class fmHome extends Fragment {
         }
 
     }
+
+
+
     public Runnable runnable=new Runnable() {
         @Override
         public void run() {

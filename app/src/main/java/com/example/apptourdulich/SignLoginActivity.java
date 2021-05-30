@@ -77,9 +77,11 @@ private static final  String Email="email";
         loginButton=findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList(Email));
 
+
         edtSoDienThoai=findViewById(R.id.edtSDT);
 
         dangki=findViewById(R.id.btnDangKi);
+
 
         callbackManager=CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {

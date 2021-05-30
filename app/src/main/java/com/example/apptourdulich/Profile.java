@@ -87,7 +87,7 @@ public class Profile extends AppCompatActivity {
                         DiaChi.setText(dc);
                         String image = String.valueOf(dataSnapshot.child("imageid").getValue());
                         ImageView imageProfile = (ImageView) findViewById(R.id.imgProfile);
-                        Task<Uri> storageReference = FirebaseStorage.getInstance().getReference().child(image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        Task<Uri> storageReference = FirebaseStorage.getInstance().getReference().child("Images/"+image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri uri) {
                                 // Got the download URL for 'users/me/profile.png'
