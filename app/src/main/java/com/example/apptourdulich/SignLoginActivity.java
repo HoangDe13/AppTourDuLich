@@ -129,7 +129,7 @@ private static final  String Email="email";
                 PhoneAuthOptions options;
                 options = PhoneAuthOptions.newBuilder(mFirebaseAuth)
                         .setPhoneNumber("+84"+edtSoDienThoai.getText().toString().trim())       // Phone number to verify
-                        .setTimeout(60l, TimeUnit.SECONDS) // Timeout and unit
+                        .setTimeout(40l, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(SignLoginActivity.this)                 // Activity (for callback binding)
                         .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
@@ -182,19 +182,7 @@ private static final  String Email="email";
     }
 
     private void updateUI(FirebaseUser user) {
-        String username,photo,Sodienthoai;
-        if(user != null){
-            username=user.getDisplayName();
-            Sodienthoai=user.getPhoneNumber();
-            if(user.getPhotoUrl()!=null)
-            {
-                photo=user.getPhotoUrl().toString();
-            }
-        }else{
-            username="user";
-            photo="no";
-
-        }
+       return;
     }
 
     @Override

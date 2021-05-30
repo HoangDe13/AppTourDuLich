@@ -82,7 +82,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnDangXuat"
         android:layout_width="119dp"
         android:layout_height="52dp"
         android:layout_marginTop="20dp"

@@ -34,7 +34,6 @@
     <string name="infoContact">House Tour</string>
     <string name="ContactByPhone">Tư Vấn Qua Điện Thoại</string>
 
-    
 
     <string name="CCCD">CMNN/CCCD</string>
     <string name="update">Cập Nhật
@@ -116,7 +115,7 @@
     <string name="GiaVe">Giá Vé</string>
     <string name="NoiKhoiHanh">Nơi Khởi Hành</string>
     <!--Bill-->
-<string name="HoaDon">Hóa Đơn</string>
+    <string name="HoaDon">Hóa Đơn</string>
     <string name="SoNgay">Số Ngày</string>
     <string name="ThongTinKhachHang">Thông Tin Khách Hàng</string>
     <string name="ThongTinTour">Thông Tin Tour</string>
@@ -133,7 +132,8 @@
     <string name="SoTien">Số Tiền</string>
     <string name="ThanhToan">Thanh Toán</string>
     <string name="GuiLaiMa">Gửi lại</string>
-
+    <string name="LichSu">Lịch Sử Thanh Toán</string>
+    <string name="YeuThich">Yêu Thích</string>
     <string name="DaLatThang1">Hoa Anh Đào Đà Lạt</string>
     <string name="HoaAnhDao1">Đầu tháng 12 năm nay mai anh đào nở sớm ở một số điểm tại Đà Lạt nhưng thời điểm rộ nhất phải kể tới là 1 - 2 tuần tính từ Tết Dương lịch. Hoa sẽ nở kéo dài cả tháng và mỗi thời điểm thì hoa lại trổ đẹp ở những khu vực khác nhau. </string>
     <string name="HoaAnhDao2">Mai anh đào sẽ nở rộ từ giữa tháng 1 đến giữa tháng 2 nên lưu ý những con đường đẹp để chụp hoa này là Trần Hưng Đạo, Triệu Việt Vương, đường đi Trại Mát, Trương Công Định, bờ hồ Xuân Hương, trường chuyên Thăng Long hoặc THCS Phan Chu Trinh. Nhưng nhìn chung thì vào mùa hoa nở, hầu hết mọi cung đường ở Đà Lạt đều sẽ không thiếu bóng dáng loài hoa này đâu.</string>
@@ -189,6 +189,7 @@ Còn gì tuyệt vời hơn khi được đứng ở độ cao 3143m vươn vai 
     <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
     <string name="Retry">Thử Lại</string>
     <string name="LogOut">Đăng Xuất</string>
-
+<string name="HuyTour">Hủy Tour</string>
+    <string name="ChiTietLichSu">Chi Tiết Lịch Sử</string>
 
 </resources>

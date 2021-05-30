@@ -1,5 +1,7 @@
-apply plugin: 'com.android.application'
 
+apply plugin: 'com.android.application'
+// Add this line
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -43,10 +45,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-
-    implementation 'androidx.navigation:navigation-fragment:2.2.2'
-    implementation 'androidx.navigation:navigation-ui:2.2.2'
-
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
@@ -91,6 +90,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     compile 'com.facebook.android:facebook-android-sdk:4.12.0'
     implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
     implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
     def multidex_version = "2.0.1"
     implementation "androidx.multidex:multidex:$multidex_version"
@@ -98,10 +98,9 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation "androidx.multidex:multidex:2.0.1"
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'nl.joery.animatedbottombar:library:1.0.9'
-    implementation "androidx.recyclerview:recyclerview:1.1.0"
+
     // For control over item selection of both touch and mouse driven selection
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
     //screen-load
@@ -113,7 +112,4 @@ dependencies {
 
 
 
-apply plugin: 'com.android.application'
-// Add this line
-apply plugin: 'com.google.gms.google-services'
 
