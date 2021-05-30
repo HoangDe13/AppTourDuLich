@@ -180,7 +180,7 @@
                 app:cardElevation="10dp">
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btnDangXuat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/holo_blue_dark"

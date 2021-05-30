@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.apptourdulich">
 
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,18 +14,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".infoHistory"></activity>
+        <activity android:name=".History" />
+        <activity android:name=".Like" />
+       
+
+
         <activity android:name=".ChangeLanguage"></activity>
         <activity android:name=".Bill" />
+
 
         <activity
             android:name=".InfoTour"
             android:label="@string/title_activity_info_tour" />
         <activity android:name=".Rules" />
         <activity android:name=".Contact" />
-
-        <activity android:name=".tour"></activity>
+        <activity android:name=".tour" />
         <activity android:name=".Register" />
-
         <activity
             android:name=".Search"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />

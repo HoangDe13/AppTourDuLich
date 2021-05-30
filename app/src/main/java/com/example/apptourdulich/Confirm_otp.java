@@ -1,6 +1,7 @@
 package com.example.apptourdulich;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -114,8 +116,19 @@ public class Confirm_otp extends AppCompatActivity {
                         } )          // OnVerificationStateChangedCallbacks
                         .build();
                 PhoneAuthProvider.verifyPhoneNumber(options);
+                updateUI(null);
             }
+
         });
+    }
+    private void updateUI(FirebaseUser user) {
+        return;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
     @Override
     protected void onStart() {

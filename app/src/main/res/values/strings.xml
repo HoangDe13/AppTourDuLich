@@ -34,7 +34,6 @@
     <string name="infoContact">House Tour</string>
     <string name="ContactByPhone">Tư Vấn Qua Điện Thoại</string>
 
-    
 
     <string name="CCCD">CMNN/CCCD</string>
     <string name="update">Cập Nhật
@@ -115,6 +114,7 @@
     <string name="GiaVe">Giá Vé</string>
     <string name="NoiKhoiHanh">Nơi Khởi Hành</string>
 
+    <!--Bill-->
     <string name="HoaDon">Hóa Đơn</string>
 
     <string name="SoNgay">Số Ngày</string>
@@ -132,6 +132,10 @@
     <string name="TreEm">Trẻ Em</string>
     <string name="SoTien">Số Tiền</string>
     <string name="ThanhToan">Thanh Toán</string>
+
+    <string name="LichSu">Lịch Sử Thanh Toán</string>
+    <string name="YeuThich">Yêu Thích</string>
+   
 
 
     <!--Profile -->
@@ -199,10 +203,12 @@
 <!--    <string name="QuangNinh2">Các tàu du lịch trên Vịnh Hạ Long đều được lắp đặt hệ thống định vị GPS để nâng cao hệ số an toàn cho khách du lịch. Hệ thống camera giám sát ở một số hang động lớn như: Hang Ðầu Gỗ, động Thiên Cung, bảo đảm liên tục truyền dữ liệu về cho bộ phận giám sát.</string>-->
 <!--    <string name="QuangNinh3">Đặc biệt, chỉ với 1 chiếc điện thoại thông minh, du khách có thể tiếp cận với các tiện ích, ứng dụng thông minh về du lịch, như tìm kiếm thông tin bằng giọng nói, dịch chuyển ngôn ngữ, hệ thống thuyết minh tự động tại các điểm đến với hướng dẫn viên ảo, hay tham quan 3D... trên nền tảng điện thoại di động.</string>-->
    <string name="NoInterNetConnection">Không Có Kết Nối Internet</string>
+
     <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
     <string name="Retry">Thử Lại</string>
     <string name="LogOut">Đăng Xuất</string>
-
+<string name="HuyTour">Hủy Tour</string>
+    <string name="ChiTietLichSu">Chi Tiết Lịch Sử</string>
 
 
 </resources>
