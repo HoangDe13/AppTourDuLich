@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
     NetworkChangeListener networkChangeListener=new NetworkChangeListener();
     Uri uri;
     StorageReference storageRef;
-
+    String gt;
 
 
     @Override
@@ -94,7 +94,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
             @Override
             public void onClick(View v) {
                 String ten = HoTen.getText().toString().trim();
-                String gt = "Nữ";
+               gt = "Nữ";
 
                 String NS = NgaySinh.getText().toString().trim();
                 String dt = SDT.getText().toString().trim();
@@ -115,7 +115,8 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                     Toast.makeText(getApplicationContext(),
                             "Vui Lòng Nhập Số Điện Thoại !!", Toast.LENGTH_LONG).show();
                     return;
-                } else if (cm.equals("")) {
+                }
+                else if (cm.equals("")) {
                     Toast.makeText(getApplicationContext(),
                             "Vui Lòng Nhập CMND !!", Toast.LENGTH_LONG).show();
                     return;
@@ -128,18 +129,36 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                             "Vui Lòng Nhập Địa Chỉ !!", Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    khachHang.setHoTen(ten);
-                    khachHang.setGioitinh(gt);
-                    khachHang.setNgaySinh(NS);
-                    khachHang.setSDT(dt);
-                    khachHang.setImageid("man_user.png");
-                    khachHang.setCMND(cm);
-                    khachHang.setDiaChi(dc);
-                    Ref.child(String.valueOf(maxid + 1)).setValue(khachHang);
+                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("KhachHang");
+                    String finalGt = gt;
+                    userRef.orderByChild("sdt").equalTo(dt).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.getValue() == null) {
+                                khachHang.setHoTen(ten);
+                                khachHang.setGioitinh(gt);
+                                khachHang.setNgaySinh(NS);
+                                khachHang.setSDT(dt);
+                                khachHang.setImageid("man_user.png");
+                                khachHang.setCMND(cm);
+                                khachHang.setDiaChi(dc);
+                                Ref.child(String.valueOf(maxid + 1)).setValue(khachHang);
 
-                    Toast.makeText(Register.this, "Đăng Ký Thành Công", Toast.LENGTH_SHORT).show();
-                    Intent i= new Intent(Register.this,SignLoginActivity.class);
-                    startActivity(i);
+                                Toast.makeText(Register.this, "Đăng Ký Thành Công", Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(Register.this, SignLoginActivity.class);
+                                startActivity(i);
+                                //it means user already registered
+                                //Add code to show your prompt
+
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Phone Number Unregistered", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
                 }
             }
         });
