@@ -201,11 +201,13 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btnCongTreEm"
+                        android:id="@+id/btnTruTreEm"
                         android:layout_width="0dp"
+
                         android:layout_height="20dp"
+
                         android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_add_24"
+                        android:background="@drawable/ic_baseline_horizontal_rule_24"
                         android:textSize="12sp"
                         app:backgroundTint="#0097A7" />
 
@@ -222,13 +224,17 @@
                         android:textSize="16sp" />
 
                     <Button
-                        android:id="@+id/btnTruTreEm"
-                        android:layout_width="0sp"
+
+                        android:id="@+id/btnCongTreEm"
+                        android:layout_width="0dp"
+ 
                         android:layout_height="20dp"
+
                         android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_horizontal_rule_24"
+                        android:background="@drawable/ic_baseline_add_24"
                         android:textSize="12sp"
                         app:backgroundTint="#0097A7" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -256,12 +262,13 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btnCongNguoiLon"
-                        android:layout_width="0dp"
+
+                        android:id="@+id/btnTruNguoiLon"
+                        android:layout_width="0sp"
                         android:layout_height="20dp"
+
                         android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_add_24"
-                        android:textSize="12sp"
+                        android:background="@drawable/ic_baseline_horizontal_rule_24"
                         app:backgroundTint="#0097A7" />
 
                     <EditText
@@ -277,11 +284,15 @@
                         android:textSize="16sp" />
 
                     <Button
-                        android:id="@+id/btnTruNguoiLon"
-                        android:layout_width="0sp"
+
+                        android:id="@+id/btnCongNguoiLon"
+                        android:layout_width="0dp"
                         android:layout_height="20dp"
+
+
                         android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_horizontal_rule_24"
+                        android:background="@drawable/ic_baseline_add_24"
+                        android:textSize="12sp"
                         app:backgroundTint="#0097A7" />
 
                 </LinearLayout>

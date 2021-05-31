@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailTinTucActivity">
+
+    <ImageView
+        android:id="@+id/imageDetailTinTuc"
+        android:layout_width="413dp"
+        android:layout_height="358dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/camnangsapa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="412dp"
+        android:layout_height="714dp"
+        android:layout_marginTop="200dp"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageDetailTinTuc">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="514dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTenDetaiTinTuc"
+                    android:layout_width="386dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="TextView"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvThongTin"
+                    android:layout_width="369dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgBacDetailtintuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

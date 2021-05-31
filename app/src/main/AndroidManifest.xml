@@ -14,6 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".DetailTinTucActivity"></activity>
+       
+
+
 
         <activity android:name=".infoHistory"></activity>
         <activity android:name=".History" />
@@ -23,6 +27,7 @@
 
         <activity android:name=".ChangeLanguage"></activity>
         <activity android:name=".Bill" />
+
 
 
         <activity
