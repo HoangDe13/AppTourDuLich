@@ -28,7 +28,9 @@ public class LoadScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 Intent i=new Intent(LoadScreen.this,Home.class);
+
                 startActivity(i);
             }
         },4000);

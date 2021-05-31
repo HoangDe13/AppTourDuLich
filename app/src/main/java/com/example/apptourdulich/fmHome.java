@@ -20,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -102,7 +103,7 @@ public class fmHome extends Fragment {
     FirebaseFirestore db;
 
 
-    TextView etTimKiem1;
+    ImageView etTimKiem1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -110,7 +111,7 @@ public class fmHome extends Fragment {
         View view= inflater.inflate(R.layout.fragment_fm_home, container, false);
         viewPager=view.findViewById(R.id.viewPager);
         viewPager2=view.findViewById(R.id.viewPagerImage);
-        etTimKiem1=view.findViewById(R.id.etTimKiem);
+        etTimKiem1=view.findViewById(R.id.imgSearch);
         recyclerView=view.findViewById(R.id.rcvTour);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         FirebaseRecyclerOptions<ThongTinTour> thongTinTourFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinTour>()

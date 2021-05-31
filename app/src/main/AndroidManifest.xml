@@ -13,9 +13,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".DetailTinTucActivity"></activity>
-        <activity android:name=".ChangeLanguage" />
+       
+
+
+
+        <activity android:name=".infoHistory"></activity>
+        <activity android:name=".History" />
+        <activity android:name=".Like" />
+       
+
+
+        <activity android:name=".ChangeLanguage"></activity>
         <activity android:name=".Bill" />
+
+
+
         <activity
             android:name=".InfoTour"
             android:label="@string/title_activity_info_tour" />

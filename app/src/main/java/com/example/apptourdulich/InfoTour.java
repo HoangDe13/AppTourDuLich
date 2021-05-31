@@ -35,7 +35,9 @@ public class InfoTour extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_tour);
+
         tvTen=findViewById(R.id.tvTenTour);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_info, R.id.navigation_details)
