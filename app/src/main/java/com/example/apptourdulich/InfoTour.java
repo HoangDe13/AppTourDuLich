@@ -17,14 +17,13 @@ public class InfoTour extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_tour);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_info, R.id.navigation_details)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.navkhoanchi);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
         NavigationUI.setupWithNavController(navView, navController);
 
     }

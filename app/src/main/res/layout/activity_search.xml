@@ -6,39 +6,29 @@
     android:layout_height="match_parent"
     android:gravity="center|top"
     android:orientation="vertical"
-    tools:context=".Search">
+    tools:context=".Search"
 
-    <LinearLayout
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mytoolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="?attr/actionBarSize"
 
-        <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="41dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="?attr/actionModeCloseDrawable" />
+        android:background="#856BB3FA"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <EditText
-            android:id="@+id/edtTimKiem"
-            android:layout_width="326dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:background="?attr/editTextBackground"
-            android:ems="10"
-            android:hint="@string/Search"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:textSize="18sp" />
-
-    </LinearLayout>
+    <Space
+        android:layout_width="444dp"
+        android:layout_height="100dp"
+        android:layout_weight="1" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="348dp"
-        android:layout_height="656dp" />
+        android:id="@+id/recycleviewSearch"
+        android:layout_width="390dp"
+        android:layout_height="760dp" />
 
 </LinearLayout>

@@ -50,7 +50,7 @@ public class Confirm_otp extends AppCompatActivity {
         guilai=findViewById(R.id.tvGuiLai);
         Bundle b= getIntent().getExtras();
         String sdt=(b.getString("SoDienThoai"));
-
+String key= (b.getString("KeyKhach"));
         SoDienThoai.setText(sdt);
         codeotp=getIntent().getStringExtra("codeotp");
 
@@ -74,6 +74,7 @@ public class Confirm_otp extends AppCompatActivity {
                             if(task.isSuccessful())
                             {
                                 Intent intent= new Intent(getApplicationContext(),Home.class);
+                                intent.putExtra("KeyKhach",key);
                                 startActivity(intent);
                             }
                             else
