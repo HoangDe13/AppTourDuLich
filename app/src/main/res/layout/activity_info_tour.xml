@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/imgHinhNen"
-        android:layout_width="467dp"
-        android:layout_height="359dp"
+        android:layout_width="418dp"
+        android:layout_height="309dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/huechu1" />
 
     <androidx.cardview.widget.CardView
@@ -40,7 +41,7 @@
             <TextView
                 android:id="@+id/tvTenTour"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_marginTop="-80dp"
                 android:fontFamily="@font/baloo"
                 android:gravity="center"

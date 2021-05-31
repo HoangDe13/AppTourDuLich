@@ -21,7 +21,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="340dp"
         android:layout_height="68dp"
+        android:background="#9EFFFFFF"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
+        app:cardElevation="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +37,6 @@
             android:layout_height="match_parent"
 
             android:background="#FFFFFF"
-            android:foreground="?attr/selectableItemBackground"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
 
