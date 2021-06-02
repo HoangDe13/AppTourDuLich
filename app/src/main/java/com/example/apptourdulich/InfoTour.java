@@ -27,5 +27,9 @@ public class InfoTour extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+//        Bundle b=getIntent().getExtras();
+//        int idt=b.getInt("IDTour");
+
+
     }
 }

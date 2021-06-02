@@ -110,7 +110,6 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-
         super.onStop();
         unregisterReceiver(networkChangeListener);
     }

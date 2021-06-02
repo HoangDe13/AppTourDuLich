@@ -138,4 +138,5 @@
     <string name="PleaseCheckYourConnection">Please Check Your Connection</string>
     <string name="Retry">Retry</string>
     <string name="LogOut">Log Out</string>
+    <string name="listlike">Like List</string>
 </resources>
