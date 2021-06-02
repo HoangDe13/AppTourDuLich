@@ -106,4 +106,11 @@ public class InfoTour extends AppCompatActivity {
         });
     }
 
+
+//        Bundle b=getIntent().getExtras();
+//        int idt=b.getInt("IDTour");
+
+
+    }
+
 }

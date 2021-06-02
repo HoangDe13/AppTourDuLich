@@ -20,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,8 +37,10 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.rpc.context.AttributeContext;
 
@@ -57,6 +60,7 @@ import android.widget.TextView;
  * Use the {@link fmProfile#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class fmProfile extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -68,8 +72,8 @@ public class fmProfile extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    CardView changeLang;//
-
+    CardView changeLang;//thay doi ngon ngu
+    CardView lovee;
     public fmProfile() {
         // Required empty public constructor
     }
@@ -111,50 +115,48 @@ public class fmProfile extends Fragment {
 
         View view=inflater.inflate(R.layout.fragment_fm_profile, container, false);
         changeLang=(view).findViewById(R.id.changeMyLang);//
+        lovee=(view).findViewById(R.id.love);
         imageProfile= (ImageView) view.findViewById(R.id.imgProfilesetting);
         HoTen=view.findViewById(R.id.tvHoTenProfile);
-        int id=3;
+        Bundle b= getActivity().getIntent().getExtras();
+        String sdt=b.getString("SoDienThoai");
+
+
 
         databaseReference= FirebaseDatabase.getInstance().getReference("KhachHang");
-
-        databaseReference.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        databaseReference.orderByChild("sdt").equalTo(sdt).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if (task.isSuccessful()) {
-                    if (task.getResult().exists()) {
-                        DataSnapshot dataSnapshot = task.getResult();
-                        String Ten = String.valueOf(dataSnapshot.child("hoTen").getValue());
-//                        String gioitinh = String.valueOf(dataSnapshot.child("gioitinh").getValue());
-//                        String ngaySinh = String.valueOf(dataSnapshot.child("ngaySinh").getValue());
-//                        String cmnd = String.valueOf(dataSnapshot.child("cmnd").getValue());
-//                        String sdt = String.valueOf(dataSnapshot.child("sdt").getValue());
-//                        String dc = String.valueOf(dataSnapshot.child("diaChi").getValue());
-                        //String image = String.valueOf(dataSnapshot.child("imageid").getValue());
-                        HoTen.setText(Ten);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot child : snapshot.getChildren()) {
+                KhachHang kh= child.getValue(KhachHang.class);
 
-                        String image = String.valueOf(dataSnapshot.child("imageid").getValue());
 
-                        Task<Uri> storageReference = FirebaseStorage.getInstance().getReference().child("Images/"+image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                // Got the download URL for 'users/me/profile.png'
-                                System.out.println(uri);
-                                Glide.with(view.getContext()).load(uri).into(imageProfile);
-
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception exception) {
-                                // Handle any errors
-                            }
-                        });
-//                        System.out.println(storageReference);
-
+                HoTen.setText(kh.getHoTen());
+                String img= String.valueOf(kh.getImageid());
+                Task<Uri> task=FirebaseStorage.getInstance().getReference().child("Images/"+img).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        System.out.println(uri);
+                        Glide.with(view.getContext()).load(uri).into(imageProfile);
 
                     }
-                }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+            }}
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
+
+
+
         changeLang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,6 +170,13 @@ public class fmProfile extends Fragment {
                 startActivity(i);
             }
         });
+        lovee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getContext(),lovelist.class);
+                startActivity(i);
+            }
+        });
 
 
 
@@ -178,6 +187,8 @@ public class fmProfile extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(view.getContext(),Profile.class);
+                i.putExtra("SoDienThoai",sdt);
+
                 startActivity(i);
             }
         });
@@ -185,6 +196,7 @@ public class fmProfile extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(view.getContext(),Profile.class);
+                i.putExtra("SoDienThoai",sdt);
                 startActivity(i);
             }
         });

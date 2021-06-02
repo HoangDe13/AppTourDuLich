@@ -69,6 +69,14 @@ private static final  String Email="email";
         loginButton=findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList(Email));
 
+        TextView tvor=findViewById(R.id.textView16);
+        tvor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(SignLoginActivity.this,Home.class);
+                startActivity(i);
+            }
+        });
 
         edtSoDienThoai=findViewById(R.id.edtSDT);
 
@@ -151,7 +159,7 @@ private static final  String Email="email";
                                                                    @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                                                 dangnhap.setVisibility(View.VISIBLE);
                                                 Intent i = new Intent(SignLoginActivity.this, Confirm_otp.class);
-                                                i.putExtra("keyKhach",userRef.getKey());
+
                                                 i.putExtra("SoDienThoai", edtSoDienThoai.getText().toString());
                                                 i.putExtra("codeotp", s);
                                                 startActivity(i);

@@ -13,15 +13,14 @@ public class ThongTinTour {
     private String khuVuc;
     private String noiKhoiHanh;
     private String soNgay;
-    private String Image;
+    private String image;
     public ThongTinTour(){}
+
     public String getImage() {
-        return Image;
+        return image;
     }
 
-    public void setImage(String image) {
-        Image = image;
-    }
+    public void setImage(String image) { this.image = image; }
 
     public String getSoNgay() {
         return soNgay;

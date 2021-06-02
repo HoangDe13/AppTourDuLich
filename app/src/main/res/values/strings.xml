@@ -207,7 +207,17 @@
     <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
     <string name="Retry">Thử Lại</string>
     <string name="LogOut">Đăng Xuất</string>
-    <string name="HuyTour">Hủy Tour</string>
+
+    <string name="listlike">Danh Sách Yêu Thích</string>
+
+
+
+    <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
+    <string name="Retry">Thử Lại</string>
+    <string name="LogOut">Đăng Xuất</string>
+<string name="HuyTour">Hủy Tour</string>
+
     <string name="ChiTietLichSu">Chi Tiết Lịch Sử</string>
+
 
 </resources>
