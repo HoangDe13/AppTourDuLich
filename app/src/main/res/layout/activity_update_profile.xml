@@ -9,21 +9,30 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imgProfile"
-        android:layout_width="180dp"
-        android:layout_height="172dp"
-        android:layout_marginTop="-75dp"
-        android:background="@drawable/ic_baseline_account_circle_24" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="158dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="112dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="104dp"
-        android:background="@android:drawable/menu_full_frame" />
+        <ImageView
+            android:id="@+id/imgCapNhat"
+            android:layout_width="151dp"
+            android:layout_height="151dp"
+            android:scaleType="centerInside" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="347dp"
-        android:layout_height="352dp">
+        android:layout_width="366dp"
+        android:layout_height="349dp"
+        android:layout_marginTop="40dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -32,7 +41,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="335dp"
@@ -92,7 +103,7 @@
                         android:textSize="16sp" />
 
                     <EditText
-                        android:id="@+id/edtGioiTinh2"
+                        android:id="@+id/edtNgaySinh"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -112,14 +123,13 @@
                         android:textColor="#000000"
                         android:textSize="16sp" />
 
-                    <EditText
-                        android:id="@+id/editTextPhone"
+                    <TextView
+                        android:id="@+id/edtSoDienThoai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
                         android:gravity="right"
-                        android:inputType="phone"
-                        android:textColor="#C9000000" />
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
                     <Space
                         android:layout_width="match_parent"
