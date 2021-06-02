@@ -151,7 +151,7 @@ private static final  String Email="email";
                                                                    @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                                                 dangnhap.setVisibility(View.VISIBLE);
                                                 Intent i = new Intent(SignLoginActivity.this, Confirm_otp.class);
-                                                i.putExtra("keyKhach",userRef.getKey());
+
                                                 i.putExtra("SoDienThoai", edtSoDienThoai.getText().toString());
                                                 i.putExtra("codeotp", s);
                                                 startActivity(i);

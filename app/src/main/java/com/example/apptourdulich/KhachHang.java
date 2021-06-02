@@ -15,7 +15,16 @@ public class KhachHang {
     private String Imageid;
     public KhachHang(){
     }
-
+public KhachHang(String hoTen,String gioitinh,String cMND,String sdt,String ngaySinh,String diaChi,String imageid)
+{
+    this.HoTen=hoTen;
+    this.DiaChi=diaChi;
+    this.CMND=cMND;
+    this.Gioitinh=gioitinh;
+    this.NgaySinh=ngaySinh;
+    this.SDT=sdt;
+    this.Imageid=imageid;
+}
     public String getImageid() {
         return Imageid;
     }

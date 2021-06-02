@@ -10,8 +10,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
-        android:layout_width="109dp"
-        android:layout_height="101dp"
+        android:layout_width="163dp"
+        android:layout_height="150dp"
         android:layout_marginStart="117dp"
         android:layout_marginEnd="112dp"
         app:cardCornerRadius="100dp"
@@ -22,10 +22,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imgProfile"
+            android:id="@+id/imgCapNhat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="center" />
+            android:scaleType="centerInside" />
     </androidx.cardview.widget.CardView>
 
     <ScrollView
