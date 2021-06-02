@@ -1,6 +1,8 @@
 package com.example.apptourdulich;
 
 import android.content.Intent;
+import android.icu.util.LocaleData;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,16 +25,28 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.type.DateTime;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -86,8 +100,8 @@ public class fmHome extends Fragment {
         }
 
 
-
     }
+
     private ViewPager viewPager;
     PhotoAdapter photoAdapter;
     SlideListTourAdapter slideListTourAdapter;
@@ -96,55 +110,56 @@ public class fmHome extends Fragment {
     Timer timer;
     List<Photo> mlisttour;
     ViewPager2 viewPager2;
-    Handler handler=new Handler();
+    Handler handler = new Handler();
     RecyclerView recyclerView;
-    ArrayList<ThongTinTour>thongTinTours;
+    ArrayList<ThongTinTour> thongTinTours;
     AdapterTour adapterTour;
     FirebaseFirestore db;
-
+    DatabaseReference databaseReference;
 
     ImageView etTimKiem1;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fm_home, container, false);
-        viewPager=view.findViewById(R.id.viewPager);
-        viewPager2=view.findViewById(R.id.viewPagerImage);
-        etTimKiem1=view.findViewById(R.id.imgSearch);
-        recyclerView=view.findViewById(R.id.rcvTour);
+        View view = inflater.inflate(R.layout.fragment_fm_home, container, false);
+        viewPager = view.findViewById(R.id.viewPager);
+        viewPager2 = view.findViewById(R.id.viewPagerImage);
+        etTimKiem1 = view.findViewById(R.id.imgSearch);
+        recyclerView = view.findViewById(R.id.rcvTour);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        FirebaseRecyclerOptions<ThongTinTour> thongTinTourFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinTour>()
-                .setQuery(FirebaseDatabase.getInstance().getReference().child("Tour")
+        FirebaseRecyclerOptions<ThongTinTour> thongTinTourFirebaseOptions = new FirebaseRecyclerOptions.Builder<ThongTinTour>()
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("Tour").orderByChild("TinhTrang").equalTo("ChuaKhoiHanh")
                         , ThongTinTour.class).build();
 
-        adapterTour=new AdapterTour((thongTinTourFirebaseOptions));
+        adapterTour = new AdapterTour((thongTinTourFirebaseOptions));
         recyclerView.setAdapter(adapterTour);
 
-      //  viewPager3=view.findViewById(R.id.viewPagerImageNews);
-        circleIndicator=view.findViewById(R.id.circleIndicator);
-        mlisttour=getListPhotoTour();
-        mList=getListPhoto();
+        //  viewPager3=view.findViewById(R.id.viewPagerImageNews);
+        circleIndicator = view.findViewById(R.id.circleIndicator);
+        mlisttour = getListPhotoTour();
+        mList = getListPhoto();
 
-        photoAdapter=new PhotoAdapter(getContext(),mList);
+        photoAdapter = new PhotoAdapter(getContext(), mList);
 
         viewPager.setAdapter(photoAdapter);
         circleIndicator.setViewPager(viewPager);
         photoAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
         autoSlideImage();
 
-        viewPager2.setAdapter(new SlideListTourAdapter(mlisttour,viewPager2));
+        viewPager2.setAdapter(new SlideListTourAdapter(mlisttour, viewPager2));
         viewPager2.setClipToPadding(false);
         viewPager2.setClipChildren(false);
         viewPager2.setOffscreenPageLimit(3);
         viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
-        CompositePageTransformer compositePageTransformer=new CompositePageTransformer();
+        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
         compositePageTransformer.addTransformer(new MarginPageTransformer(40));
         compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
             @Override
             public void transformPage(@NonNull View page, float position) {
-                float r=1-Math.abs(position);
-                page.setScaleY(0.85f+r*0.15f);
+                float r = 1 - Math.abs(position);
+                page.setScaleY(0.85f + r * 0.15f);
 
             }
         });
@@ -154,31 +169,34 @@ public class fmHome extends Fragment {
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 handler.removeCallbacks(runnable);
-                handler.postDelayed(runnable,6000);
+                handler.postDelayed(runnable, 6000);
             }
         });
 
         etTimKiem1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getContext(),Search.class);
+                Intent i = new Intent(getContext(), Search.class);
                 startActivity(i);
             }
         });
 
         return view;
     }
+
     @Override
     public void onStart() {
         super.onStart();
         adapterTour.startListening();
     }
+
     @Override
     public void onStop() {
         super.onStop();
         adapterTour.stopListening();
     }
-//
+
+    //
 //    private void EventChangeListener() {
 //        db.collection("Tour").addSnapshotListener(new EventListener<QuerySnapshot>() {
 //            @Override
@@ -197,6 +215,32 @@ public class fmHome extends Fragment {
 //            }
 //        });
 //    }
+    public boolean CheckDate(int id) {
+        databaseReference = FirebaseDatabase.getInstance().getReference("Tour");
+        databaseReference.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()) {
+                    if (task.getResult().exists()) {
+                        DataSnapshot dataSnapshot = task.getResult();
+
+                        String ngayKhoiHanh = String.valueOf(dataSnapshot.child("ngayKhoiHanh").getValue());
+                        try {
+                            Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(ngayKhoiHanh);
+                            Date date = new Date();
+
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                }
+            }
+        });
+        return false;
+    }
+
 
     private List<Photo> getListPhotoTour() {
         List<Photo> list=new ArrayList<>();

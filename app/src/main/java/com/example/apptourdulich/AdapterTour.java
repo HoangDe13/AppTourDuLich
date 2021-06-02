@@ -80,8 +80,8 @@ public  class AdapterTour extends FirebaseRecyclerAdapter<ThongTinTour,AdapterTo
                 AppCompatActivity appCompatActivity = (AppCompatActivity) v.getContext();
                 Intent i = new Intent(appCompatActivity, InfoTour.class);
                 Bundle b = new Bundle();
-                b.putString("Ten", thongTinTour.getTenTour());
-                b.putString("Image",thongTinTour.getImage());
+                b.putInt("IDTour", thongTinTour.getMaTour());
+
                 i.putExtras(b);
                 appCompatActivity.startActivity(i);
 
