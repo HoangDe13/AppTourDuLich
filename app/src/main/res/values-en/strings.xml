@@ -139,11 +139,15 @@
     <string name="Retry">Retry</string>
     <string name="LogOut">Log Out</string>
 
+    <string name="listlike">Like List</string>
+
+
     <string name="HuyTour">Cancel Tour</string>
     <string name="ChiTietLichSu">History Information</string>
 
     <string name="LichSu">History Payment</string>
     <string name="YeuThich">Like</string>
+
 
 
 </resources>

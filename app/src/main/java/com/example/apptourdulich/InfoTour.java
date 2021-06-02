@@ -93,5 +93,9 @@ public class InfoTour extends AppCompatActivity {
     }
     private void ReadData(int id) {
 
+//        Bundle b=getIntent().getExtras();
+//        int idt=b.getInt("IDTour");
+
+
     }
 }

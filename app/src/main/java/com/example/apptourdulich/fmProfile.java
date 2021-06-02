@@ -72,8 +72,8 @@ public class fmProfile extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    CardView changeLang;//
-
+    CardView changeLang;//thay doi ngon ngu
+    CardView lovee;
     public fmProfile() {
         // Required empty public constructor
     }
@@ -115,6 +115,7 @@ public class fmProfile extends Fragment {
 
         View view=inflater.inflate(R.layout.fragment_fm_profile, container, false);
         changeLang=(view).findViewById(R.id.changeMyLang);//
+        lovee=(view).findViewById(R.id.love);
         imageProfile= (ImageView) view.findViewById(R.id.imgProfilesetting);
         HoTen=view.findViewById(R.id.tvHoTenProfile);
         Bundle b= getActivity().getIntent().getExtras();
@@ -166,6 +167,13 @@ public class fmProfile extends Fragment {
                 mAnimationm.setRepeatCount(Animation.INFINITE);
                 mAnimationm.setRepeatMode(Animation.REVERSE);
                 changeLang.startAnimation(mAnimationm);
+                startActivity(i);
+            }
+        });
+        lovee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getContext(),lovelist.class);
                 startActivity(i);
             }
         });
