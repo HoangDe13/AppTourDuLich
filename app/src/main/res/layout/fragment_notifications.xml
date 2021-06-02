@@ -11,6 +11,7 @@
         android:layout_width="325dp"
         android:layout_height="622dp"
         android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,13 +23,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tvKhachSanDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Khachsan" />
 
                 <TextView
                     android:id="@+id/tvMoTa"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="TextView" />
+                    android:text="Mô tả" />
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>

@@ -1,6 +1,9 @@
 package com.example.apptourdulich;
 
 import android.content.Intent;
+
+import android.icu.util.LocaleData;
+
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -27,16 +30,25 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseOptions;
+
+import com.google.firebase.database.DataSnapshot;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
@@ -47,9 +59,16 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
+
+import com.google.type.DateTime;
+
 import com.squareup.picasso.Picasso;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -108,8 +127,8 @@ public class fmHome extends Fragment {
         }
 
 
-
     }
+
     private ViewPager viewPager;
     PhotoAdapter photoAdapter;
     SlideListTourAdapter slideListTourAdapter;
@@ -118,13 +137,17 @@ public class fmHome extends Fragment {
     Timer timer;
     List<Photo> mlisttour;
     ViewPager2 viewPager2;
+
     Handler handler=new Handler();
 
+
     ImageView etTimKiem1;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view= inflater.inflate(R.layout.fragment_fm_home, container, false);
         viewPager=view.findViewById(R.id.viewPager);
         viewPager2=view.findViewById(R.id.viewPagerImage);
@@ -274,25 +297,26 @@ public class fmHome extends Fragment {
         mlisttour=getListPhotoTour();
         mList=getListPhoto();
 
-        photoAdapter=new PhotoAdapter(getContext(),mList);
+
+        photoAdapter = new PhotoAdapter(getContext(), mList);
 
         viewPager.setAdapter(photoAdapter);
         circleIndicator.setViewPager(viewPager);
         photoAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
         autoSlideImage();
 
-        viewPager2.setAdapter(new SlideListTourAdapter(mlisttour,viewPager2));
+        viewPager2.setAdapter(new SlideListTourAdapter(mlisttour, viewPager2));
         viewPager2.setClipToPadding(false);
         viewPager2.setClipChildren(false);
         viewPager2.setOffscreenPageLimit(3);
         viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
-        CompositePageTransformer compositePageTransformer=new CompositePageTransformer();
+        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
         compositePageTransformer.addTransformer(new MarginPageTransformer(40));
         compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
             @Override
             public void transformPage(@NonNull View page, float position) {
-                float r=1-Math.abs(position);
-                page.setScaleY(0.85f+r*0.15f);
+                float r = 1 - Math.abs(position);
+                page.setScaleY(0.85f + r * 0.15f);
 
             }
         });
@@ -302,20 +326,21 @@ public class fmHome extends Fragment {
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 handler.removeCallbacks(runnable);
-                handler.postDelayed(runnable,6000);
+                handler.postDelayed(runnable, 6000);
             }
         });
 
         etTimKiem1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getContext(),Search.class);
+                Intent i = new Intent(getContext(), Search.class);
                 startActivity(i);
             }
         });
 
         return view;
     }
+
 
 
     void delete(int idT){
@@ -335,6 +360,7 @@ public class fmHome extends Fragment {
             }
         });
     }
+
 
     private List<Photo> getListPhotoTour() {
         List<Photo> list=new ArrayList<>();

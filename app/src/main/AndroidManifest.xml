@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".DetailKhuyenMaiActivity"></activity>
+        <activity android:name=".DetailTinTucActivity" />
+        <activity android:name=".infoHistory" />
+
+
         <activity android:name=".lovelist"></activity>
       
 
@@ -24,16 +29,11 @@
 
 
         <activity android:name=".infoHistory"></activity>
+
         <activity android:name=".History" />
         <activity android:name=".Like" />
-       
-
-
-        <activity android:name=".ChangeLanguage"></activity>
+        <activity android:name=".ChangeLanguage" />
         <activity android:name=".Bill" />
-
-
-
 
         <activity
             android:name=".InfoTour"

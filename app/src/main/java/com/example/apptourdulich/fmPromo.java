@@ -3,10 +3,15 @@ package com.example.apptourdulich;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,12 +59,30 @@ public class fmPromo extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    RecyclerView rcvKhuyenMai;
+    AdapterKhuyenMai adapterKhuyenMai;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_fm_promo, container, false);
+        View view= inflater.inflate(R.layout.fragment_fm_promo, container, false);
+        rcvKhuyenMai=view.findViewById(R.id.rcvKhuyenMai);
+        rcvKhuyenMai.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        FirebaseRecyclerOptions<ThongTinKhuyenMai> thongTinKhuyenMaiFirebaseRecyclerOptionsFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinKhuyenMai>().setQuery(FirebaseDatabase.getInstance().getReference().child("KhuyenMai"),ThongTinKhuyenMai.class).build();
+
+        adapterKhuyenMai=new AdapterKhuyenMai(thongTinKhuyenMaiFirebaseRecyclerOptionsFirebaseOptions);
+        rcvKhuyenMai.setAdapter(adapterKhuyenMai);
+        return view;
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapterKhuyenMai.startListening();
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapterKhuyenMai.stopListening();
     }
 }

@@ -94,7 +94,9 @@ public  class AdapterTour extends RecyclerView.ViewHolder{
             }
 
             @Override
+
             public void onCancelled(@NonNull DatabaseError error) {
+
 
             }
         });
