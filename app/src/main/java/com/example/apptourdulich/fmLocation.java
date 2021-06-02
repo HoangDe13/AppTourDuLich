@@ -1,12 +1,18 @@
 package com.example.apptourdulich;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,11 +60,30 @@ public class fmLocation extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    RecyclerView rcvTinTuc;
+    AdapterTinTuc adapterTinTuc;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fm_location, container, false);
+        View view= inflater.inflate(R.layout.fragment_fm_location, container, false);
+        rcvTinTuc=view.findViewById(R.id.rclTinTuc);
+        rcvTinTuc.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        FirebaseRecyclerOptions<ThongTinTinTuc> thongTinTinTucFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinTinTuc>().setQuery(FirebaseDatabase.getInstance().getReference().child("TinTuc"),ThongTinTinTuc.class).build();
+
+        adapterTinTuc=new AdapterTinTuc(thongTinTinTucFirebaseOptions);
+        rcvTinTuc.setAdapter(adapterTinTuc);
+
+        return view;
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapterTinTuc.startListening();
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapterTinTuc.stopListening();
     }
 }

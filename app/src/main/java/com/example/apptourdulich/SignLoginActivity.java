@@ -6,18 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-
 import android.content.IntentFilter;
 
-import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
-import android.nfc.Tag;
+
 import android.os.Bundle;
-import android.util.Base64;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,14 +20,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
-import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-import com.google.android.gms.tasks.OnCanceledListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -45,13 +37,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.squareup.picasso.Picasso;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Pattern;
 
 public class SignLoginActivity extends AppCompatActivity {
  Button dangnhap;
@@ -126,52 +118,74 @@ private static final  String Email="email";
         dangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String SoDienThoai= edtSoDienThoai.getText().toString().trim();
-                if(SoDienThoai.isEmpty())
-                {
-                    edtSoDienThoai.setError("Phone is requied");
-                    edtSoDienThoai.requestFocus();
-                    return;
-                }
-               else{
-               dangnhap.setVisibility(View.VISIBLE);
-
-                PhoneAuthOptions options;
-                options = PhoneAuthOptions.newBuilder(mFirebaseAuth)
-                        .setPhoneNumber("+84"+edtSoDienThoai.getText().toString().trim())       // Phone number to verify
-                        .setTimeout(60l, TimeUnit.SECONDS) // Timeout and unit
-                        .setActivity(SignLoginActivity.this)                 // Activity (for callback binding)
-                        .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
-                            @Override
-                            public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
+                DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("KhachHang");
+                userRef.orderByChild("sdt").equalTo(edtSoDienThoai.getText().toString().trim()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.getValue() == null) {
+                            //it means user already registered
+                            //Add code to show your prompt
+                      edtSoDienThoai.setError("Phone Number Unregistered");
+                        } else {
+                            String SoDienThoai = edtSoDienThoai.getText().toString().trim();
+                            if (SoDienThoai.isEmpty()) {
+                                edtSoDienThoai.setError("Phone is requied");
+                                edtSoDienThoai.requestFocus();
+                                return;
+                            } else {
                                 dangnhap.setVisibility(View.VISIBLE);
 
+                                PhoneAuthOptions options;
+                                options = PhoneAuthOptions.newBuilder(mFirebaseAuth)
+                                        .setPhoneNumber("+84" + edtSoDienThoai.getText().toString().trim())       // Phone number to verify
+                                        .setTimeout(60l, TimeUnit.SECONDS) // Timeout and unit
+                                        .setActivity(SignLoginActivity.this)                 // Activity (for callback binding)
+                                        .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+                                            @Override
+                                            public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
+                                                dangnhap.setVisibility(View.VISIBLE);
+
+
+                                            }
+
+                                            @Override
+                                            public void onVerificationFailed(@NonNull FirebaseException e) {
+                                                dangnhap.setVisibility(View.VISIBLE);
+                                            }
+
+                                            @Override
+                                            public void onCodeSent(@NonNull String s,
+                                                                   @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                                dangnhap.setVisibility(View.VISIBLE);
+                                                Intent i = new Intent(SignLoginActivity.this, Confirm_otp.class);
+
+                                                i.putExtra("SoDienThoai", edtSoDienThoai.getText().toString());
+                                                i.putExtra("codeotp", s);
+                                                startActivity(i);
+                                            }
+                                        })          // OnVerificationStateChangedCallbacks
+                                        .build();
+                                PhoneAuthProvider.verifyPhoneNumber(options);
+
 
                             }
+                        }
+                    }
 
-                            @Override
-                            public void onVerificationFailed(@NonNull FirebaseException e) {
-                                dangnhap.setVisibility(View.VISIBLE);
-                            }
-                            @Override
-                            public void onCodeSent(@NonNull String s,
-                                                   @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                               dangnhap.setVisibility(View.VISIBLE);
-                                Intent i=new Intent(SignLoginActivity.this,Confirm_otp.class);
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
 
-                                i.putExtra("SoDienThoai",edtSoDienThoai.getText().toString());
-                                i.putExtra("codeotp",s);
-                                startActivity(i);
-                            }
-                        } )          // OnVerificationStateChangedCallbacks
-                        .build();
-                PhoneAuthProvider.verifyPhoneNumber(options);
+                    }
+                });
 
-
-            }}
+            }
         });
+
     }
+
+
+
 
     private void handleFacebookToken(AccessToken accessToken) {
         AuthCredential credential=FacebookAuthProvider.getCredential(accessToken.getToken());
@@ -192,19 +206,7 @@ private static final  String Email="email";
     }
 
     private void updateUI(FirebaseUser user) {
-        String username,photo,Sodienthoai;
-        if(user != null){
-            username=user.getDisplayName();
-            Sodienthoai=user.getPhoneNumber();
-            if(user.getPhotoUrl()!=null)
-            {
-                photo=user.getPhotoUrl().toString();
-            }
-        }else{
-            username="user";
-            photo="no";
-
-        }
+       return;
     }
 
     @Override

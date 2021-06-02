@@ -22,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -119,7 +120,7 @@ public class fmHome extends Fragment {
     ViewPager2 viewPager2;
     Handler handler=new Handler();
 
-    TextView etTimKiem1;
+    ImageView etTimKiem1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -127,11 +128,13 @@ public class fmHome extends Fragment {
         View view= inflater.inflate(R.layout.fragment_fm_home, container, false);
         viewPager=view.findViewById(R.id.viewPager);
         viewPager2=view.findViewById(R.id.viewPagerImage);
+
         etTimKiem1=view.findViewById(R.id.etTimKiem);
 
         //todo: xử lý get data đưa vào recycleview
         recyclerView= view.findViewById(R.id.rcvTour);
         //recyclerView.setHasFixedSize(true);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         reference=database.getReference("Tour");
 

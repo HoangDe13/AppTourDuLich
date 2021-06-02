@@ -11,6 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="327dp"
         android:layout_height="123dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -19,20 +20,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="78dp"
-            android:layout_height="78dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             app:cardCornerRadius="50dp">
 
             <ImageView
                 android:id="@+id/imgProfilesetting"
                 android:layout_width="match_parent"
-                android:layout_height="99dp"
-                android:scaleType="center"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
                 android:src="@drawable/user__3_" />
         </androidx.cardview.widget.CardView>
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 

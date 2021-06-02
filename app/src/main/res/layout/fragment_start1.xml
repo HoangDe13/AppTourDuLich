@@ -12,13 +12,12 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="413dp"
-        android:layout_height="500dp"
-        android:layout_marginBottom="13dp"
+        android:layout_width="439dp"
+        android:layout_height="211dp"
         android:scaleType="fitXY"
         android:src="@drawable/kayak"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,16 +25,15 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
         android:text="@string/Haytanhuong"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtSloganStart1.2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
@@ -46,13 +44,11 @@
         android:layout_marginStart="95dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="66dp"
-        android:layout_marginBottom="17dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="@string/sloganstart1.2"
         android:textColor="#E9000000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/indicator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />

@@ -1,7 +1,13 @@
 package com.example.apptourdulich;
 
+
 import android.app.Application;
+
+import android.content.Context;
+import android.content.Intent;
+
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
 import androidx.fragment.app.FragmentActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -89,7 +99,7 @@ public  class AdapterTour extends RecyclerView.ViewHolder{
             }
         });
 
-    }
+
 
 
     public void setLikeList(Application activity, int maTour, String tenTour,
