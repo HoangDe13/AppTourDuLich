@@ -7,7 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import android.widget.ImageView;
+
 import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -21,7 +25,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class DashboardFragment extends Fragment {
+
+    Button CongLon, TruLon,CongTre,TruTre;
+    int slnguoilon,sltreem;
+    EditText NguoiLon,TreEm;
+
     DatabaseReference databaseReference;
+
     private DashboardViewModel dashboardViewModel;
     TextView ngayKhoiHanh,ngayKetThuc,noiKhoiHanh,phuongTien,giaVe;
     EditText edtSLNguoiLon,edtSLTreEm;
@@ -42,6 +52,46 @@ public class DashboardFragment extends Fragment {
         edtSLTreEm=root.findViewById(R.id.edtSoLuongTreEm);
         btnDatTour=root.findViewById(R.id.btnDatTour);
         //khai báo
+
+        CongLon=root.findViewById(R.id.btnCongNguoiLon);
+        CongTre=root.findViewById(R.id.btnCongTreEm);
+        TruLon=root.findViewById(R.id.btnTruNguoiLon);
+        TruTre= root.findViewById(R.id.btnTruTreEm);
+        NguoiLon=root.findViewById(R.id.edtSoLuongNguoiLon);
+        TreEm=root.findViewById(R.id.edtSoLuongTreEm);
+//        slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
+//        sltreem=Integer.parseInt(TreEm.getText().toString().trim());
+        CongLon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
+                slnguoilon=slnguoilon+1;
+                NguoiLon.setText(slnguoilon);
+            }
+        });
+        TruLon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
+                slnguoilon=slnguoilon-1;
+                NguoiLon.setText(slnguoilon);
+            }
+        });
+        CongTre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sltreem=Integer.parseInt(TreEm.getText().toString().trim());
+                sltreem=sltreem+1;
+                TreEm.setText(sltreem);
+            }
+        });
+        TruTre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sltreem=Integer.parseInt(TreEm.getText().toString().trim());
+                sltreem=sltreem-1;
+                TreEm.setText(sltreem);
+
 
         Bundle i= getActivity().getIntent().getExtras();
         id=i.getInt("IDTour");

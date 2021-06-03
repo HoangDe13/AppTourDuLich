@@ -187,6 +187,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvDieuKhoan"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="25dp"
@@ -231,6 +232,7 @@
             android:gravity="center">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvLienHe"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="25dp"
