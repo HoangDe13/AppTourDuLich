@@ -9,20 +9,21 @@
 
     <ImageView
         android:id="@+id/imgHinhNen"
-        android:layout_width="536dp"
-        android:layout_height="308dp"
+        android:layout_width="418dp"
+        android:layout_height="309dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/huechu1" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="439dp"
-        android:layout_height="629dp"
+        android:layout_width="413dp"
+        android:layout_height="758dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="190dp"
         android:layout_marginEnd="20dp"
@@ -31,41 +32,65 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="423dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tvTenTour"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/baloo"
-                android:gravity="center"
-                android:text="Phú Quốc"
-                android:textSize="30sp" />
+                android:orientation="vertical">
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/nav_view"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="?android:attr/windowBackground"
-                app:menu="@menu/bottom_nav_menu">
+                <LinearLayout
+                    android:layout_width="414dp"
+                    android:layout_height="680dp"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
 
-            </com.google.android.material.bottomnavigation.BottomNavigationView>
+                    <TextView
+                        android:id="@+id/tvTenTour"
+                        android:layout_width="match_parent"
+                        android:layout_height="73dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Phú Quốc"
+                        android:textColor="#0078C8"
+                        android:textSize="30sp" />
 
-            <fragment
-                android:id="@+id/navkhoanchi"
-                android:name="androidx.navigation.fragment.NavHostFragment"
-                android:layout_width="436dp"
-                android:layout_height="492dp"
-                android:visibility="visible"
-                app:defaultNavHost="true"
-                app:navGraph="@navigation/mobile_navigation" />
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/nav_view"
+                        android:layout_width="293dp"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/windowBackground"
+                        app:itemIconTint="?attr/colorSecondaryVariant"
+                        app:itemTextColor="#0086C3"
+                        app:menu="@menu/bottom_nav_menu">
 
-        </LinearLayout>
+                    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+                    <fragment
+                        android:id="@+id/navkhoanchi"
+                        android:name="androidx.navigation.fragment.NavHostFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="551dp"
+                        android:visibility="visible"
+                        app:defaultNavHost="true"
+                        app:navGraph="@navigation/mobile_navigation" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageBackDetailTour"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

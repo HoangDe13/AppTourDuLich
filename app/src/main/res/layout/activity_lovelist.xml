@@ -5,28 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/nendangnhapdangky"
-    android:orientation="vertical"
-    tools:context=".fmPromo">
+    tools:context=".lovelist">
 
     <TextView
-        android:id="@+id/textView19"
-        android:layout_width="match_parent"
-        android:layout_height="117dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center"
-        android:text="@string/Promotion"
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/listlike"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/rcvLove"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvKhuyenMai"
-        android:layout_width="379dp"
-        android:layout_height="533dp"
-        android:layout_marginBottom="10dp"
+        android:id="@+id/rcvLove"
+        android:layout_width="412dp"
+        android:layout_height="453dp"
+        android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

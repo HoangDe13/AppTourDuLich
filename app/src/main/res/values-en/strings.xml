@@ -20,6 +20,7 @@
     <string name="guilaimaotp">Resend Code</string>
     <string name="Confirm">Confirm</string>
     <string name="start">Start</string>
+    <string name="Copy">Copy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook">Login Facebook</string>
@@ -139,11 +140,15 @@
     <string name="Retry">Retry</string>
     <string name="LogOut">Log Out</string>
 
+    <string name="listlike">Like List</string>
+
+
     <string name="HuyTour">Cancel Tour</string>
     <string name="ChiTietLichSu">History Information</string>
 
     <string name="LichSu">History Payment</string>
     <string name="YeuThich">Like</string>
+
 
 
 </resources>
