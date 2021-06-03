@@ -17,11 +17,14 @@ import com.example.apptourdulich.ui.dashboard.DashboardViewModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class DashboardFragment extends Fragment {
     DatabaseReference databaseReference;
+
     private DashboardViewModel dashboardViewModel;
     TextView ngayKhoiHanh,ngayKetThuc,noiKhoiHanh,phuongTien,giaVe;
     EditText edtSLNguoiLon,edtSLTreEm;
@@ -45,6 +48,7 @@ public class DashboardFragment extends Fragment {
 
         Bundle i= getActivity().getIntent().getExtras();
         id=i.getInt("IDTour");
+        String SoDienThoai=i.getString("SoDienThoai");
         databaseReference= FirebaseDatabase.getInstance().getReference("Tour");
         databaseReference.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -73,14 +77,15 @@ public class DashboardFragment extends Fragment {
                 }
             }
         });
-        btnDatTour.setOnClickListener(new View.OnClickListener() {
+
+                    btnDatTour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(root.getContext(),Bill.class);
                 Bundle b=new Bundle();
                 int NL=Integer.parseInt(edtSLNguoiLon.getText().toString());
                 int TE=Integer.parseInt(edtSLTreEm.getText().toString());
-
+                b.putString("SoDienThoai",SoDienThoai);
                 b.putInt("IDTour",id);
                 b.putInt("NguoiLon",NL);
                 b.putInt("TreEm",TE);
