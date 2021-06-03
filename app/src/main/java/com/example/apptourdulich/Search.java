@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Search extends AppCompatActivity {
 RecyclerView recyclerView;
-    AdapterTour adapterTour;
+    AdapterTour2 adapterTour;
    Toolbar myToolbar;
 
     @Override
@@ -33,7 +33,7 @@ RecyclerView recyclerView;
                 .setQuery(FirebaseDatabase.getInstance().getReference().child("Tour")
                         , ThongTinTour.class).build();
 
-        adapterTour=new AdapterTour((thongTinTourFirebaseOptions));
+        adapterTour=new AdapterTour2((thongTinTourFirebaseOptions));
         recyclerView.setAdapter(adapterTour);
 
     }
@@ -74,7 +74,7 @@ RecyclerView recyclerView;
                 .setQuery(FirebaseDatabase.getInstance().getReference().child("Tour").orderByChild("tenTour").startAt(query).endAt(query+"\uf8ff")
                         , ThongTinTour.class).build();
 
-       adapterTour=new AdapterTour(thongTinTourFirebaseOptions);
+       adapterTour=new AdapterTour2(thongTinTourFirebaseOptions);
        adapterTour.startListening();
        recyclerView.setAdapter(adapterTour);
 

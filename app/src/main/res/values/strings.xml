@@ -96,10 +96,10 @@
 
     <string name="Rules">Điều Khoản</string>
     <string name="DetailRules1"> 1. Bạn cam kết và đảm bảo rằng bạn là một cá nhân về mặt pháp lý có toàn quyền tham gia giao kết thỏa thuận theo pháp luật nước Cộng hòa xã hội chủ nghĩa Việt Nam.</string>
-    <string name="DetailRules2"> 2. Chúng tôi thu thập và xử lý các thông tin của bạn, như là tên, địa chỉ email khi bạn đăng ký. Bạn phải cung cấp chính xác và đầy đủ thông tin, cập nhật thông tin và đồng ý cung cấp cho chúng tôi bất kỳ bằng chứng nào về danh tính theo yêu cầu hợp lý của chúng tôi. </string>
+    <string name="DetailRules2"> 2. Chúng tôi thu thập và xử lý các thông tin của bạn, như là tên, địa chỉ, số điện thoại khi bạn đăng ký. Bạn phải cung cấp chính xác và đầy đủ thông tin, cập nhật thông tin và đồng ý cung cấp cho chúng tôi bất kỳ bằng chứng nào về danh tính theo yêu cầu hợp lý của chúng tôi. </string>
     <string name="DetailRules3"> 3. Nếu các thông tin mà bạn cung cấp cho chúng tôi thay đổi, ví dụ, nếu bạn thay đổi địa chỉ email, hoặc nếu bạn muốn hủy tài khoản, xin vui lòng cập nhật chi tiết bằng cách gửi yêu cầu đến chúng tôi. Chúng tôi, trong khả năng của mình, sẽ nỗ lực thực hiện thay đổi theo yêu cầu trong ba mươi (30) ngày làm việc kể từ khi nhận được thông báo về thay đổi.</string>
-    <string name="DetailRules4"> 4. Bạn có thể chọn mua một phần hoặc toàn bộ các nội dung của Ứng dụng bằng cách thanh toán cho chúng tôi.
-        5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
+    <string name="DetailRules4"> 4. Bạn có thể chọn mua một phần hoặc toàn bộ các nội dung của Ứng dụng bằng cách thanh toán cho chúng tôi.</string>
+       <string name="DetailRules6">6. Người từ 11 tuổi trở lên sẽ tính vé bình thường. Phụ thu vé trẻ em từ 2 tuổi đến 11 tuổi sẽ tính bằng 50% vé và trẻ em dưới 2 tuổi sẽ được miễn phí </string>
     <string name="DetailRules5">5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 15 ngày....</string>
     <string name="close">Đóng</string>
     <string name="title_activity_infor_tour">InforTour</string>
@@ -149,7 +149,7 @@
     <string name="haychonngonngu">Chọn ngôn ngữ</string>
 
    <string name="GuiLaiMa">Gửi lại</string>
-
+<string name="housetour">House Tour</string>
 
 <!--    <string name="DaLatThang1">Hoa Anh Đào Đà Lạt</string>-->
 <!--    <string name="HoaAnhDao1">Đầu tháng 12 năm nay mai anh đào nở sớm ở một số điểm tại Đà Lạt nhưng thời điểm rộ nhất phải kể tới là 1 - 2 tuần tính từ Tết Dương lịch. Hoa sẽ nở kéo dài cả tháng và mỗi thời điểm thì hoa lại trổ đẹp ở những khu vực khác nhau. </string>-->

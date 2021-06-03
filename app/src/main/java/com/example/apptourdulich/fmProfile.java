@@ -108,6 +108,7 @@ public class fmProfile extends Fragment {
     TextView HoTen,Profile;
     DatabaseReference databaseReference;
     ImageView imageProfile;
+    CardView DieuKhoan, LienHe;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -119,9 +120,22 @@ public class fmProfile extends Fragment {
         HoTen=view.findViewById(R.id.tvHoTenProfile);
         Bundle b= getActivity().getIntent().getExtras();
         String sdt=b.getString("SoDienThoai");
-
-
-
+        DieuKhoan=view.findViewById(R.id.cvDieuKhoan);
+        LienHe= view.findViewById(R.id.cvLienHe);
+        DieuKhoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(getActivity().getApplicationContext(),Rules.class);
+                startActivity(i);
+            }
+        });
+        LienHe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity().getApplicationContext(),Contact.class);
+                startActivity(i);
+            }
+        });
         databaseReference= FirebaseDatabase.getInstance().getReference("KhachHang");
         databaseReference.orderByChild("sdt").equalTo(sdt).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

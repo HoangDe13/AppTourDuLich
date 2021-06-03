@@ -37,7 +37,7 @@
             android:name=".Search"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity android:name=".UpdateProfile" />
-        <activity android:name=".Profile" />
+         <activity android:name=".Profile" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"

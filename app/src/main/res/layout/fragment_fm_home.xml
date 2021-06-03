@@ -8,6 +8,22 @@
     android:orientation="vertical"
     tools:context=".fmHome">
 
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="193dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/artifika"
+        android:text="@string/housetour"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="121dp"
