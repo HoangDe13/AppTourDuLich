@@ -26,7 +26,7 @@
         android:id="@+id/cardView3"
         android:layout_width="397dp"
         android:layout_height="315dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="170dp"
         android:background="?android:attr/listChoiceIndicatorMultiple"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,17 +115,16 @@
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/ContactByPhone"
-        android:textSize="18sp"
-        app:backgroundTint="#0097A7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+    <ImageView
+        android:id="@+id/backLenHe"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView20"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

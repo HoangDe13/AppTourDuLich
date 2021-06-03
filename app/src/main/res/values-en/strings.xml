@@ -56,8 +56,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="facebook_app_id">498471527958027</string>
     <string name="fb_login_protocol_scheme">fb498471527958027</string>
-
-
+    <string name="housetour">House Tour</string>
+    <string name="DetailRules6">People aged 11 and over will be charged a normal ticket. Surcharge for children from 2 years old to 11 years old will be 50% of the ticket and children under 2 years old will be free</string>
     <string name="Loginwithfacebook">Login Facebook</string>
     <string name="Boy">Male</string>
     <string name="Girl">Female</string>
