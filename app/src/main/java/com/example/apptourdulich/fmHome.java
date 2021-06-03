@@ -151,16 +151,15 @@ public class fmHome extends Fragment {
         View view= inflater.inflate(R.layout.fragment_fm_home, container, false);
         viewPager=view.findViewById(R.id.viewPager);
         viewPager2=view.findViewById(R.id.viewPagerImage);
-
-        etTimKiem1=view.findViewById(R.id.etTimKiem);
-
+        etTimKiem1=view.findViewById(R.id.imgSearch);
         //todo: xử lý get data đưa vào recycleview
         recyclerView= view.findViewById(R.id.rcvTour);
         //recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         reference=database.getReference("Tour");
-
+        Bundle bundle=getActivity().getIntent().getExtras();
+        String SoDienThoai=bundle.getString("SoDienThoai");
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         String currentUserid=user.getPhoneNumber();///
         thongTinTour=new ThongTinTour();
@@ -264,19 +263,19 @@ public class fmHome extends Fragment {
 
                             }
                         });
-                        //todo: chỗ này xử lý bundle qua chi tiết tour nè
-//                        holder.imageItemTour.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View v) {
-//                                AppCompatActivity appCompatActivity=(AppCompatActivity) v.getContext();
-//                                Intent i=new Intent(appCompatActivity,InfoTour.class);
-//                                Bundle b=new Bundle();
-//                                b.putInt("IDTour",thongTinTour.getMaTour());
-//
-//                                i.putExtras(b);
-//                                appCompatActivity.startActivity(i);
-//                            }
-//                        });
+                       // todo: chỗ này xử lý bundle qua chi tiết tour nè
+                        holder.imageItemTour.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                AppCompatActivity appCompatActivity=(AppCompatActivity) v.getContext();
+                                Intent i=new Intent(appCompatActivity,InfoTour.class);
+                                Bundle b=new Bundle();
+                                b.putInt("IDTour",thongTinTour.getMaTour());
+                                b.putString("SoDienThoai",SoDienThoai);
+                                i.putExtras(b);
+                                startActivity(i);
+                            }
+                        });
 
                     }
 

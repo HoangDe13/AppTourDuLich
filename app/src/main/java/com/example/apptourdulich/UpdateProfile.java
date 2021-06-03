@@ -154,8 +154,6 @@ CapNhat=findViewById(R.id.btnUpdate);
                             khachHang.setImageid(i);
                             userRef.child(id).setValue(khachHang);
                             Toast.makeText(getApplicationContext(),"Update Success",Toast.LENGTH_SHORT).show();
-                            Intent intent= new Intent(getApplicationContext(),fmProfile.class);
-                            startActivity(intent);
 
                             StorageReference Ref=mStoreRef.child(i);
                             Ref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -169,6 +167,9 @@ CapNhat=findViewById(R.id.btnUpdate);
 
                                 }
                             });
+//                            Intent intent= new Intent(getApplicationContext(),fmProfile.class);
+//                            startActivity(intent);
+
                         }
                     };
                     @Override

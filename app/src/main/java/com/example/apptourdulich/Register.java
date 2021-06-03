@@ -147,6 +147,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                                 Toast.makeText(Register.this, "Đăng Ký Thành Công", Toast.LENGTH_SHORT).show();
                                 Intent i = new Intent(Register.this, SignLoginActivity.class);
                                 startActivity(i);
+
                                 //it means user already registered
                                 //Add code to show your prompt
 

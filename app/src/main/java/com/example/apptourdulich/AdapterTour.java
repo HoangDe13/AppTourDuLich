@@ -77,18 +77,17 @@ public  class AdapterTour extends RecyclerView.ViewHolder{
 
     //todo: xử lý thay đổi trạng thái like
     public void favoriteChecker(String postkey) {
-        imgBtnfav=itemView.findViewById(R.id.btnFavoriteFav);
-        favoriteref=database.getReference("Likes");
-        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
-        String uid=user.getPhoneNumber();
+        imgBtnfav = itemView.findViewById(R.id.btnFavoriteFav);
+        favoriteref = database.getReference("Likes");
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getPhoneNumber();
 
         favoriteref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.child(postkey).hasChild(uid)){
+                if (snapshot.child(postkey).hasChild(uid)) {
                     imgBtnfav.setImageResource(R.drawable.ic_baseline_favorite_24);
-                }
-                else {
+                } else {
                     imgBtnfav.setImageResource(R.drawable.ic_baseline_favoritee_24);
                 }
             }
@@ -102,7 +101,7 @@ public  class AdapterTour extends RecyclerView.ViewHolder{
         });
 
 
-
+    }
 
     public void setLikeList(Application activity, int maTour, String tenTour,
                         String phuongTien, String khachSan, int donGia, String ngayKhoiHanh,

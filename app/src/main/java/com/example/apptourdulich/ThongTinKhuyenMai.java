@@ -1,13 +1,21 @@
 package com.example.apptourdulich;
 
 public class ThongTinKhuyenMai {
-    String maKhuyenMai;
-    String tenKhuyenMai;
-    String ngayBatDau;
-    String ngayKetThuc;
-    String thongTin;
-    String image;
-    String tinhTrang;
+    private String maKhuyenMai;
+    private String tenKhuyenMai;
+    private int chietKhau;//kiểu int mà ??? ờ hee
+    private String ngayBatDau;
+    private String ngayKetThuc;
+    private String thongTin;
+    private String image;
+
+    public int getChietKhau() {
+        return chietKhau;
+    }
+
+    public void setChietKhau(int chietKhau) {
+        this.chietKhau = chietKhau;
+    }
 
     public String getMaKhuyenMai() {
         return maKhuyenMai;

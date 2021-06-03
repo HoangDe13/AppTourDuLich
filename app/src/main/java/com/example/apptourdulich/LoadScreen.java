@@ -29,7 +29,7 @@ public class LoadScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent i=new Intent(LoadScreen.this,Home.class);
+                Intent i=new Intent(LoadScreen.this,SignLoginActivity.class);
 
                 startActivity(i);
             }

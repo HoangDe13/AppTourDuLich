@@ -57,10 +57,7 @@ public class InfoTour extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
         Bundle b=getIntent().getExtras();
 
-        Bundle bundle = new Bundle();
-        bundle.putInt("edttext", b.getInt("IDTour"));
-        DashboardFragment fragobj = new DashboardFragment();
-        fragobj.setArguments(bundle);
+
 
         int id=b.getInt("IDTour");
         databaseReference= FirebaseDatabase.getInstance().getReference("Tour");
@@ -113,4 +110,3 @@ public class InfoTour extends AppCompatActivity {
 
     }
 
-}

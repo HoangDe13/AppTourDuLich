@@ -24,6 +24,7 @@ RecyclerView recyclerView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
          myToolbar =findViewById(R.id.mytoolbar);
          myToolbar.setTitle("");
          setSupportActionBar(myToolbar);
@@ -79,5 +80,6 @@ RecyclerView recyclerView;
        recyclerView.setAdapter(adapterTour);
 
     }
+
 
 }

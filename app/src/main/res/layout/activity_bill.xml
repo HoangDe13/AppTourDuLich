@@ -86,7 +86,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/NgayKhoiHanh" />
+                            android:text="@string/NgayKhoiHanh"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -106,7 +107,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/NoiKhoiHanh" />
+                            android:text="@string/NoiKhoiHanh"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -126,7 +128,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/SoNgay" />
+                            android:text="@string/SoNgay"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <Space
@@ -170,7 +173,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/PhoneNumber" />
+                            android:text="@string/PhoneNumber"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -190,7 +194,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/diachi" />
+                            android:text="@string/diachi"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <Space
@@ -340,7 +345,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:text="@string/ChietKhau" />
+                            android:text="0" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -387,7 +392,7 @@
 
                         <ImageView
                             android:id="@+id/imageView16"
-                            android:layout_width="193dp"
+                            android:layout_width="169dp"
                             android:layout_height="54dp"
                             app:srcCompat="@drawable/momo" />
 

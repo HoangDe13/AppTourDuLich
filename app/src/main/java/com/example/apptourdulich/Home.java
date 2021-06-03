@@ -46,6 +46,7 @@ public class Home extends AppCompatActivity {
 
 
 
+
         toolbar = getSupportActionBar();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
