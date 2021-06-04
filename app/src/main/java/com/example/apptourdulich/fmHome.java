@@ -333,6 +333,7 @@ public class fmHome extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getContext(), Search.class);
+                i.putExtra("SoDienThoai",SoDienThoai);
                 startActivity(i);
             }
         });

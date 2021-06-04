@@ -192,7 +192,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btnTruTreEm"
+                        android:id="@+id/btnTruNguoiLon"
                         android:layout_width="0dp"
 
                         android:layout_height="20dp"
@@ -216,7 +216,7 @@
 
                     <Button
 
-                        android:id="@+id/btnCongTreEm"
+                        android:id="@+id/btnCongNguoiLon"
                         android:layout_width="0dp"
 
                         android:layout_height="20dp"
@@ -254,7 +254,7 @@
 
                     <Button
 
-                        android:id="@+id/btnTruNguoiLon"
+                        android:id="@+id/btnTruTreEm"
                         android:layout_width="0sp"
                         android:layout_height="20dp"
 
@@ -276,7 +276,7 @@
 
                     <Button
 
-                        android:id="@+id/btnCongNguoiLon"
+                        android:id="@+id/btnCongTreEm"
                         android:layout_width="0dp"
                         android:layout_height="20dp"
 
