@@ -44,6 +44,8 @@ public class Home extends AppCompatActivity {
 
 
 
+Bundle b= getIntent().getExtras();
+String sdt= b.getString("SoDienThoai");
 
 
 

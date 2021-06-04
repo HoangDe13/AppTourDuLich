@@ -66,17 +66,7 @@ private static final  String Email="email";
         mFirebaseAuth=FirebaseAuth.getInstance();
         FacebookSdk.sdkInitialize(getApplicationContext());
         dangnhap=findViewById(R.id.btndn);
-        loginButton=findViewById(R.id.login_button);
-        loginButton.setReadPermissions(Arrays.asList(Email));
 
-        TextView tvor=findViewById(R.id.textView16);
-        tvor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(SignLoginActivity.this,Home.class);
-                startActivity(i);
-            }
-        });
 
         edtSoDienThoai=findViewById(R.id.edtSDT);
 
@@ -84,26 +74,26 @@ private static final  String Email="email";
 
 
         callbackManager=CallbackManager.Factory.create();
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Toast.makeText(SignLoginActivity.this,"Login Successfull",Toast.LENGTH_SHORT).show();
-                handleFacebookToken(loginResult.getAccessToken());
-                Intent i=new Intent(SignLoginActivity.this,Home.class);
-                startActivity(i);
-            }
-
-            @Override
-            public void onCancel() {
-                Toast.makeText(SignLoginActivity.this,"Login Cancel",Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Toast.makeText(SignLoginActivity.this,"Login error"+error.getMessage(),Toast.LENGTH_SHORT).show();
-            }
-        });
+//        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//            @Override
+//            public void onSuccess(LoginResult loginResult) {
+//                Toast.makeText(SignLoginActivity.this,"Login Successfull",Toast.LENGTH_SHORT).show();
+//                handleFacebookToken(loginResult.getAccessToken());
+//                Intent i=new Intent(SignLoginActivity.this,Home.class);
+//                startActivity(i);
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//                Toast.makeText(SignLoginActivity.this,"Login Cancel",Toast.LENGTH_SHORT).show();
+//
+//            }
+//
+//            @Override
+//            public void onError(FacebookException error) {
+//                Toast.makeText(SignLoginActivity.this,"Login error"+error.getMessage(),Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         dangki=findViewById(R.id.btnDangKi);
 

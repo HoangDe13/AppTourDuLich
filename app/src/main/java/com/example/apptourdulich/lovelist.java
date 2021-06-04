@@ -116,7 +116,7 @@ public class lovelist extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     dataSnapshot.getRef().removeValue();
-
+                     
                 }
             }
 
