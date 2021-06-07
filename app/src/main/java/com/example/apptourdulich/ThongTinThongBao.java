@@ -1,10 +1,13 @@
 package com.example.apptourdulich;
 
 public class ThongTinThongBao {
-    int maThongBao;
-    String noidung;
-    String Sodienthoaithongbao;
-    String ngaythongbao;
+
+    private int maThongBao;
+    private String noiDung;
+    private String soDienThoai;
+    private String ngayThongBao;
+
+
     public int getMaThongBao() {
         return maThongBao;
     }
@@ -13,30 +16,29 @@ public class ThongTinThongBao {
         this.maThongBao = maThongBao;
     }
 
-    public String getNoidung() {
-        return noidung;
+
+    public String getNoiDung() {
+        return noiDung;
     }
 
-    public void setNoidung(String noidung) {
-        this.noidung = noidung;
+    public void setNoiDung(String noiDung) {
+        this.noiDung = noiDung;
     }
 
-    public String getSodienthoaithongbao() {
-        return Sodienthoaithongbao;
+    public String getSoDienThoai() {
+        return soDienThoai;
     }
 
-    public void setSodienthoaithongbao(String sodienthoai) {
-        Sodienthoaithongbao = sodienthoai;
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
     }
 
-    public String getNgaythongbao() {
-        return ngaythongbao;
+    public String getNgayThongBao() {
+        return ngayThongBao;
     }
 
-    public void setNgay(String ngay) {
-        this.ngaythongbao = ngay;
+    public void setNgayThongBao(String ngayThongBao) {
+        this.ngayThongBao = ngayThongBao;
     }
-
-
 
 }

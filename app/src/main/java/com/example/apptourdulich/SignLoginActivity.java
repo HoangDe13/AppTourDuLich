@@ -64,8 +64,9 @@ private static final  String Email="email";
         setContentView(R.layout.sign_login);
 //facebook
         mFirebaseAuth=FirebaseAuth.getInstance();
-        FacebookSdk.sdkInitialize(getApplicationContext());
+//        FacebookSdk.sdkInitialize(getApplicationContext());
         dangnhap=findViewById(R.id.btndn);
+
 
 
         edtSoDienThoai=findViewById(R.id.edtSDT);

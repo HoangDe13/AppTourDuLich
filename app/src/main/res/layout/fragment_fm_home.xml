@@ -8,37 +8,30 @@
     android:orientation="vertical"
     tools:context=".fmHome">
 
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="30dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/artifika"
-        android:text="@string/housetour"
-        android:textColor="#FFFFFF"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView6"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="121dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="250dp"
+        android:layout_width="355dp"
+        android:layout_height="53dp"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="13dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/cardView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="211dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/artifika"
+            android:text="@string/housetour"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp" />
 
         <ImageView
             android:id="@+id/imgSearch"
@@ -58,8 +51,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView6"
-        android:layout_width="335dp"
-        android:layout_height="180dp"
+        android:layout_width="358dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="13dp"
         android:layout_marginBottom="4dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp"
@@ -88,11 +82,10 @@
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="410dp"
-        android:layout_height="435dp"
+        android:layout_width="406dp"
+        android:layout_height="351dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView6">

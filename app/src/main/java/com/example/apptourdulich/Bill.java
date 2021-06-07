@@ -25,8 +25,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+
 
 public class Bill extends AppCompatActivity {
     TextView TenTour,NgayKhoiHanh,NoiKhoiHanh,SoNgay,HoTenBill,SoDienThoaiBill,DiaChi,
@@ -34,10 +39,11 @@ public class Bill extends AppCompatActivity {
     DatabaseReference databaseReference;
     DatabaseReference databaseReferenceKhachHang;
     DatabaseReference databaseReferenceKhuyenMai;
+    DatabaseReference refThongBao;
     Button ApDungKM,btnThanhToan;
     ImageView back;
     EditText MaKhuyenMai;
-    long maxid;
+    long maxid,maxidThongBao;
     DatabaseReference Ref;
     int DonGiaTinh;
     int ThanhToan;
@@ -210,30 +216,57 @@ public class Bill extends AppCompatActivity {
 
             }
         });
+        ThongTinThongBao thongBao=new ThongTinThongBao();
+        refThongBao = FirebaseDatabase.getInstance().getReference().child("ThongBao");
+        refThongBao.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    maxid = snapshot.getChildrenCount();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         btnThanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String sdt=SoDienThoaiBill.getText().toString().trim();
                 int NL=Integer.parseInt(SLNguoiLon.getText().toString().trim());
                 int TE=Integer.parseInt(SLTreEm.getText().toString().trim());
-
+                int Tong=Integer.parseInt(TongThanhToan.getText().toString().trim());
                 String KhuyenMaiid=MaKhuyenMai.getText().toString().trim();
+                String noidung="Cảm ơn quý khách đã đặt thành công chuyến đi "+TenTour.getText().toString().trim()+", được khởi hành vào ngày "+NgayKhoiHanh.getText().toString().trim();
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                String currentDateandTime = sdf.format(new Date());
                 hoaDon.setMaHoaDon((int)maxid + 1);
                 hoaDon.setMaKhuyenMai(KhuyenMaiid);
                 hoaDon.setMaTour(id);
                 hoaDon.setSoLuongNguoiLon(NL);
                 hoaDon.setSoLuongTreEm(TE);
                 hoaDon.setSoDienThoai(sdt);
-                hoaDon.setTongTien(ThanhToan);
-                Ref.child(String.valueOf(maxid + 1)).setValue(hoaDon);
+
+                hoaDon.setNgayThanhToan(currentDateandTime);
+                hoaDon.setTongTien(Tong);
+                thongBao.setMaThongBao((int)maxidThongBao+1);
+                thongBao.setNgayThongBao(currentDateandTime);
+                thongBao.setNoiDung(noidung);
+                thongBao.setSoDienThoai(SoDienThoaiBill.getText().toString().trim());
+                Ref.push().setValue(hoaDon);
+                refThongBao.push().setValue(thongBao);
+
                 Toast.makeText(Bill.this, "Thanh Toán Thành Công", Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(Bill.this,History.class);
+                Intent i=new Intent(Bill.this,Home.class);
                 Bundle b=new Bundle();
                 b.putString("SoDienThoai",sdt);
                 i.putExtras(b);
                 startActivity(i);
             }
         });
+
 
     }
 }

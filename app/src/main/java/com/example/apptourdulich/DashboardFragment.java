@@ -2,11 +2,14 @@ package com.example.apptourdulich;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import android.widget.ImageView;
 
 import android.widget.TextView;
 
@@ -19,8 +22,10 @@ import com.example.apptourdulich.ui.dashboard.DashboardViewModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -61,6 +66,8 @@ public class DashboardFragment extends Fragment {
 
 //        slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
 //        sltreem=Integer.parseInt(TreEm.getText().toString().trim());
+        
+
         CongLon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

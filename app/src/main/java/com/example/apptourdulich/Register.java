@@ -142,7 +142,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                                 khachHang.setImageid("man_user.png");
                                 khachHang.setCMND(cm);
                                 khachHang.setDiaChi(dc);
-                                Ref.child(String.valueOf(maxid + 1)).setValue(khachHang);
+                                Ref.push().setValue(khachHang);
 
                                 Toast.makeText(Register.this, "Đăng Ký Thành Công", Toast.LENGTH_SHORT).show();
                                 Intent i = new Intent(Register.this, SignLoginActivity.class);
@@ -171,7 +171,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
         return  mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
     }
     public void showDatepickerDialog() {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, AlertDialog.THEME_DEVICE_DEFAULT_LIGHT, this,
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, AlertDialog.THEME_HOLO_LIGHT, this,
 
                 Calendar.getInstance().get(Calendar.YEAR),
                 Calendar.getInstance().get(Calendar.MONTH),

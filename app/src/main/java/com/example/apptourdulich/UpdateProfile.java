@@ -50,7 +50,7 @@ public class UpdateProfile extends AppCompatActivity {
     TextView HoTen,SoDienThoai,GioiTinh,NgaySinh,CMND,DiaChi;
     DatabaseReference databaseReference;
     KhachHang khachHang=new KhachHang();
-    ImageView imageView;
+    ImageView imageView,imgBack;
     Button CapNhat;
     public Uri uri;
     StorageReference mStoreRef;
@@ -76,6 +76,13 @@ public class UpdateProfile extends AppCompatActivity {
         setContentView(R.layout.activity_update_profile);
 imageView=findViewById(R.id.imgCapNhat);
 CapNhat=findViewById(R.id.btnUpdate);
+imgBack=findViewById(R.id.imgBackUpdate);
+imgBack.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        finish();
+    }
+});
         storageReference=FirebaseStorage.getInstance().getReference().child("Image");
         Bundle b= getIntent().getExtras();
          sdt= b.getString("SoDienThoai");
