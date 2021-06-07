@@ -23,6 +23,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class AdapterLichSu extends FirebaseRecyclerAdapter<ThongTinHoaDon,AdapterLichSu.MyViewHolder> {
 
     ThongTinTour thongTinTour=new ThongTinTour();
@@ -59,7 +62,11 @@ public class AdapterLichSu extends FirebaseRecyclerAdapter<ThongTinHoaDon,Adapte
             }
         });
         holder.tvNgayThanhtoanHis.setText(model.getNgayThanhToan());
-        holder.tvTongtienHis.setText(String.valueOf(model.getTongTien()));
+        int tongtien=model.getTongTien();
+        NumberFormat fmDonGia = new DecimalFormat("#,###");
+        double thanhtoan = Double.parseDouble(String.valueOf(tongtien));
+        String tt = fmDonGia.format(thanhtoan);
+        holder.tvTongtienHis.setText(tt);
 
         holder.imgDetailsHis.setOnClickListener(new View.OnClickListener() {
             @Override
