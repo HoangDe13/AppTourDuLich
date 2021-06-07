@@ -150,10 +150,10 @@
 
    <string name="GuiLaiMa">Gửi lại</string>
 <string name="housetour">House Tour</string>
-  <string name="NoInterNetConnection">Không Có Kết Nối Internet</string>
+<!--  <string name="NoInterNetConnection">Không Có Kết Nối Internet</string>-->
 
 
-    <string name="GuiLaiMa">Gửi lại</string>
+<!--    <string name="GuiLaiMa">Gửi lại</string>-->
 
 
     <!--    <string name="DaLatThang1">Hoa Anh Đào Đà Lạt</string>-->

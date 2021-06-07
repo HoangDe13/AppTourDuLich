@@ -79,8 +79,8 @@ public  class AdapterTour2 extends FirebaseRecyclerAdapter<ThongTinTour,AdapterT
             super(itemView);
             imageView=itemView.findViewById(R.id.imgTourItem);
             ten=itemView.findViewById(R.id.tvTenTourItem);
-            soNgay=itemView.findViewById(R.id.tvSoNgayItem);
-            ngayKhoiHanh=itemView.findViewById(R.id.tvNgayKhoiHanhItem);
+//            soNgay=itemView.findViewById(R.id.tvSoNgayItem);
+//            ngayKhoiHanh=itemView.findViewById(R.id.tvNgayKhoiHanhItem);
             gia=itemView.findViewById(R.id.tvGiaItem);
             btnFavorite=itemView.findViewById(R.id.btnFavorite);
 

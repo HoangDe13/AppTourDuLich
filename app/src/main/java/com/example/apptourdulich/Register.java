@@ -171,7 +171,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
         return  mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
     }
     public void showDatepickerDialog() {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, AlertDialog.THEME_DEVICE_DEFAULT_LIGHT, this,
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, AlertDialog.THEME_HOLO_LIGHT, this,
 
                 Calendar.getInstance().get(Calendar.YEAR),
                 Calendar.getInstance().get(Calendar.MONTH),

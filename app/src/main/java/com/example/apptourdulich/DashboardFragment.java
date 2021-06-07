@@ -2,6 +2,7 @@ package com.example.apptourdulich;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,10 +60,12 @@ public class DashboardFragment extends Fragment {
         CongTre=root.findViewById(R.id.btnCongTreEm);
         TruLon=root.findViewById(R.id.btnTruNguoiLon);
         TruTre= root.findViewById(R.id.btnTruTreEm);
-        NguoiLon=root.findViewById(R.id.edtSoLuongNguoiLon);
-        TreEm=root.findViewById(R.id.edtSoLuongTreEm);
+       edtSLNguoiLon.setText("1");
 //        slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
 //        sltreem=Integer.parseInt(TreEm.getText().toString().trim());
+        edtSLNguoiLon.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "50")});
+        edtSLTreEm.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "50")});
+
         CongLon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,12 +91,13 @@ public class DashboardFragment extends Fragment {
             }
         });
         TruTre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sltreem=Integer.parseInt(TreEm.getText().toString().trim());
-                sltreem=sltreem-1;
-                TreEm.setText(sltreem);
-
+                                      @Override
+                                      public void onClick(View v) {
+                                          sltreem = Integer.parseInt(TreEm.getText().toString().trim());
+                                          sltreem = sltreem - 1;
+                                          TreEm.setText(sltreem);
+                                      }
+                                  });
 
         Bundle i= getActivity().getIntent().getExtras();
         id=i.getInt("IDTour");

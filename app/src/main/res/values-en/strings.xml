@@ -3,7 +3,7 @@
     <string name="app_name">AppTourTravel</string>
     <string name="nameload">HouseTour</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_usename">Number Phone</string>
+    <string name="prompt_usename">Phone Number</string>
     <string name="prompt_password">PassWord</string>
     <string name="otp">ID OTP</string>
     <string name="GuiLaiMa">Resend </string>
@@ -25,7 +25,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook">Login Facebook</string>
     <string name="Gmail">Gmail</string>
-    <string name="DatVe">Book ticket</string>
+    <string name="DatVe">Book</string>
     <string name="InfoTour">Information</string>
     <string name="details">Describe</string>
     <string name="Contact">Contact</string>
@@ -34,7 +34,7 @@
     <string name="EmailContact">HouseTour@gmail.com</string>
     <string name="infoContact">House Tour</string>
     <string name="ContactByPhone">Telephone Consultation</string>
-    <string name="CCCD">Number ID</string>
+    <string name="CCCD">ID Number</string>
     <string name="update">Update</string>
     <string name="phone">Number Phone </string>
     <string name="NoInterNetConnection">No Internet Connection</string>
@@ -62,7 +62,7 @@
     <string name="Boy">Male</string>
     <string name="Girl">Female</string>
     <string name="PhoneNumber">Number Phone</string>
-    <string name="inputOTP">Please enter the OTP sent to </string>
+    <string name="inputOTP">Please enter the OTP send to </string>
     <string name="youhaveaccount">Already have an account?</string>
     <string name="title_activity_home__screen">MainActivity</string>
     <string name="title_home">Home</string>
@@ -86,7 +86,7 @@
     <string name="News">News</string>
     <string name="All">All</string>
     <string name="South">South</string>
-    <string name="North">Northern</string>
+    <string name="North">North</string>
     <string name="Central">Central</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -106,14 +106,14 @@
     <string name="NgayKhoiHanh">Departure day</string>
     <string name="NgayKetThuc">End day</string>
     <string name="Khachsan">Hotel</string>
-    <string name="CMNN">CMNN/CCCD</string>
+    <string name="CMNN">ID Number</string>
     <string name="GiaVe">Fare</string>
     <string name="NoiKhoiHanh">Starting Gate</string>
     <string name="HoaDon">Bill</string>
     <string name="SoNgay">Number of Days</string>
     <string name="ThongTinKhachHang">Customer Information</string>
     <string name="ThongTinTour">Tour Information</string>
-    <string name="KhuyenMai">Sale</string>
+    <string name="KhuyenMai">Promotion</string>
     <string name="ApDung">Apply</string>
     <string name="ThongTinThanhToan">Billing Information</string>
     <string name="TenTour">Tour Name</string>
@@ -127,7 +127,7 @@
     <string name="ThanhToan">Payment</string>
 
     <!--Profile -->
-    <string name="dathich">Love</string>
+    <string name="dathich">Loved</string>
     <string name="dieukhoan">Rules</string>
     <string name="ngonngu">Language</string>
     <string name="lichsu">History</string>
@@ -140,14 +140,14 @@
     <string name="Retry">Retry</string>
     <string name="LogOut">Log Out</string>
 
-    <string name="listlike">Like List</string>
+    <string name="listlike">Loved</string>
 
 
     <string name="HuyTour">Cancel Tour</string>
     <string name="ChiTietLichSu">History Information</string>
 
     <string name="LichSu">History Payment</string>
-    <string name="YeuThich">Like</string>
+    <string name="YeuThich">Love</string>
 
 
 
