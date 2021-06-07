@@ -62,17 +62,21 @@
                         android:layout_height="wrap_content"
                         android:text="@string/ThongTinTour"
                         android:textColor="#050505"
-                        android:textSize="16sp" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/tvTenTourBill"
+                        android:id="@+id/textView34"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#050505" />
+
+                    <TextView
+                        android:id="@+id/tvTenTourBill1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/TenTour" />
+                        android:text="@string/TenTour"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,11 +91,12 @@
                             android:text="@string/NgayKhoiHanh" />
 
                         <TextView
-                            android:id="@+id/tvNgayKhoiHanhHis"
+                            android:id="@+id/tvNgayKhoiHanhHis1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/NgayKhoiHanh" />
+                            android:text="@string/NgayKhoiHanh"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -107,11 +112,12 @@
                             android:text="@string/NoiKhoiHanh" />
 
                         <TextView
-                            android:id="@+id/tvNoiKhoiHanhHis"
+                            android:id="@+id/tvNoiKhoiHanhHis1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/NoiKhoiHanh" />
+                            android:text="@string/NoiKhoiHanh"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -127,11 +133,12 @@
                             android:text="@string/SoNgay" />
 
                         <TextView
-                            android:id="@+id/tvSoNgayHis"
+                            android:id="@+id/tvSoNgayHis1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/SoNgay" />
+                            android:text="@string/SoNgay"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <Space
@@ -144,17 +151,21 @@
                         android:layout_height="wrap_content"
                         android:text="@string/ThongTinKhachHang"
                         android:textColor="#050505"
-                        android:textSize="16sp" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/tvHoTenBill"
+                        android:id="@+id/textView346"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#050505" />
+
+                    <TextView
+                        android:id="@+id/tvHoTenBill1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/hoten" />
+                        android:text="@string/hoten"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -166,14 +177,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/PhoneNumber" />
+                            android:text="@string/phone" />
 
                         <TextView
-                            android:id="@+id/tvSoDienThoaiHis"
+                            android:id="@+id/tvSoDienThoaiHis1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/PhoneNumber" />
+                            android:text="@string/PhoneNumber"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -186,14 +198,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/diachi" />
+                            android:text="@string/diachi1" />
 
                         <TextView
-                            android:id="@+id/tvDiaChiHis"
+                            android:id="@+id/tvDiaChiHis1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/diachi" />
+                            android:text="@string/diachi"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <Space
@@ -206,11 +219,13 @@
                         android:layout_height="wrap_content"
                         android:text="@string/ThongTinThanhToan"
                         android:textColor="#050505"
-                        android:textSize="16sp" />
+                        android:textSize="18sp" />
 
-                    <Space
+                    <TextView
+                        android:id="@+id/textView340"
                         android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:layout_height="1dp"
+                        android:background="#050505" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -219,22 +234,23 @@
 
                         <TextView
                             android:id="@+id/textView53"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/NguoiLon" />
 
                         <TextView
-                            android:id="@+id/tvSoLuongNguoiLonBill"
-                            android:layout_width="20dp"
+                            android:id="@+id/tvSoLuongNguoiLonBill1"
                             android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
                             android:layout_weight="1"
-                            android:text="0" />
+                            android:text="0"
+                            android:textColor="#000000" />
 
                         <TextView
-                            android:id="@+id/tvGiaNguoiLonBill"
+                            android:id="@+id/tvGiaNguoiLonBill1"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="4000000" />
                     </LinearLayout>
@@ -252,16 +268,17 @@
                             android:text="@string/TreEm" />
 
                         <TextView
-                            android:id="@+id/tvSoLuongTreEmBill"
-                            android:layout_width="21dp"
+                            android:id="@+id/tvSoLuongTreEmBill1"
+                            android:layout_width="10dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="0" />
+                            android:text="0"
+                            android:textColor="#000000" />
 
                         <TextView
-                            android:id="@+id/tvGiaTreEmBill"
+                            android:id="@+id/tvGiaTreEmBill1"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="2000000" />
                     </LinearLayout>
@@ -279,10 +296,11 @@
                             android:text="@string/SoTien" />
 
                         <TextView
-                            android:id="@+id/tvTongTienBill"
+                            android:id="@+id/tvTongTienBill1"
                             android:layout_width="178dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/SoTien" />
+                            android:text="@string/SoTien"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -298,11 +316,12 @@
                             android:text="@string/ChietKhau" />
 
                         <TextView
-                            android:id="@+id/tvChietKhauBill"
+                            android:id="@+id/tvChietKhauBill1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/ChietKhau" />
+                            android:text="0"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -318,11 +337,12 @@
                             android:text="@string/SoTienThanhToan" />
 
                         <TextView
-                            android:id="@+id/tvSoTienThanhToanBill"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/tvSoTienThanhToanBill1"
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/SoTienThanhToan" />
+                            android:text="TextView"
+                            android:textColor="#EDEF3F3F" />
                     </LinearLayout>
 
                     <Space
@@ -336,16 +356,43 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal" />
+                        android:orientation="horizontal" >
 
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/NgayThanhtoanHis" />
+
+                        <TextView
+                            android:id="@+id/tvngayThanhtoan"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textColor="#000000" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/luuy"
+                        android:textColor="#575757"
+                        android:textStyle="italic" />
                 </LinearLayout>
             </LinearLayout>
+
         </ScrollView>
 
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCancelTour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -356,7 +403,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView8" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgBackInfoHistory"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

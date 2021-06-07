@@ -38,7 +38,7 @@
     <string name="CCCD">CMNN/CCCD</string>
     <string name="update">Cập Nhật
     </string>
-    <string name="phone">Số Điện Thoại </string>
+    <string name="phone">Số Điện Thoại: </string>
 
     <string name="Login">Đăng Nhập</string>
     <string name="Register">Đăng Kí</string>
@@ -107,31 +107,32 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_info_tour">MainActivity</string>
     <!--info tour-->
-    <string name="NgayKhoiHanh">Ngày Khởi Hành</string>
-    <string name="NgayKetThuc">Ngày Kết Thúc</string>
-    <string name="Khachsan">Khách Sạn</string>
-    <string name="CMNN">CMNN/CCCD</string>
-    <string name="GiaVe">Giá Vé</string>
-    <string name="NoiKhoiHanh">Nơi Khởi Hành</string>
+    <string name="NgayKhoiHanh">Ngày Khởi Hành:</string>
+    <string name="NgayKetThuc">Ngày Kết Thúc:</string>
+    <string name="Khachsan">Khách Sạn:</string>
+    <string name="CMNN">CMNN/CCCD:</string>
+    <string name="GiaVe">Giá Vé:</string>
+    <string name="NoiKhoiHanh">Nơi Khởi Hành:</string>
 
     <!--Bill-->
     <string name="HoaDon">Hóa Đơn</string>
 
-    <string name="SoNgay">Số Ngày</string>
+    <string name="SoNgay">Số Ngày:</string>
     <string name="ThongTinKhachHang">Thông Tin Khách Hàng</string>
     <string name="ThongTinTour">Thông Tin Tour</string>
     <string name="KhuyenMai">Khuyến Mãi</string>
     <string name="ApDung">Áp Dụng</string>
     <string name="ThongTinThanhToan">Thông Tin Thanh Toán</string>
-    <string name="TenTour">Tên Tour</string>
-    <string name="ChietKhau">Chiết Khấu</string>
-    <string name="SoTienThanhToan">Số Tiền Thanh Toán</string>
-    <string name="PhuongThucThanhToan">Phương Thức Thanh Toán</string>
-    <string name="PhuongTien">Phương Tiện</string>
-    <string name="NguoiLon">Người Lớn</string>
-    <string name="TreEm">Trẻ Em</string>
-    <string name="SoTien">Số Tiền</string>
+    <string name="TenTour">Tên Tour:</string>
+    <string name="ChietKhau">Chiết Khấu:</string>
+    <string name="SoTienThanhToan">Số Tiền Thanh Toán:</string>
+    <string name="PhuongThucThanhToan">Phương Thức Thanh Toán:</string>
+    <string name="PhuongTien">Phương Tiện:</string>
+    <string name="NguoiLon">Người Lớn:</string>
+    <string name="TreEm">Trẻ Em:</string>
+    <string name="SoTien">Số Tiền:</string>
     <string name="ThanhToan">Thanh Toán</string>
+    <string name="diachi1">Địa Chỉ:</string>
 
     <string name="LichSu">Lịch Sử Thanh Toán</string>
     <string name="YeuThich">Yêu Thích</string>
@@ -146,6 +147,7 @@
     <string name="thongtincanhan">Thông tin cá nhân ></string>
     <!--Activiti ChangeLanguage -->
     <string name="haychonngonngu">Chọn ngôn ngữ</string>
+
 
 
     <string name="GuiLaiMa">Gửi lại</string>
@@ -211,10 +213,16 @@
 
     <string name="listlike">Danh Sách Yêu Thích</string>
 
-
     <string name="HuyTour">Hủy Tour</string>
 
+
     <string name="ChiTietLichSu">Chi Tiết Lịch Sử</string>
+
+    <string name="NgayDiHis">Ngày đi:</string>
+    <string name="NgayThanhtoanHis">Ngày thanh toán:</string>
+    <string name="luuy">Lưu ý: Quý khách chỉ được hủy Tour sau khi thanh Toán trong vòng 3 ngày.</string>
+
+
 
 
 </resources>
