@@ -20,7 +20,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:gravity="center"
         android:text="@string/inputOTP"
         android:textSize="20sp" />

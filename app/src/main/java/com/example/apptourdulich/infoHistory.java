@@ -22,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -87,7 +89,10 @@ public class infoHistory extends AppCompatActivity {
         tvSoLuongNguoiLonBill.setText(String.valueOf(SoLuongNguoiLon));
         tvSoLuongTreEmBill.setText(String.valueOf(SoLuongTreEm));
         tvngayThanhtoan.setText(ngayThanhtoan);
-        tvSoTienThanhToanBill.setText(String.valueOf(tt));
+        NumberFormat fmDonGia = new DecimalFormat("#,###");
+        double DonGia = Double.parseDouble(String.valueOf(tt));
+        String SoTienThanhToan = fmDonGia.format(DonGia);
+        tvSoTienThanhToanBill.setText(String.valueOf(SoTienThanhToan));
         tvSoDienThoaiHis.setText(SoDienThoai);
 
         databaseReferenceTour= FirebaseDatabase.getInstance().getReference("Tour");
@@ -114,12 +119,19 @@ public class infoHistory extends AppCompatActivity {
 
                         int DonGiaTreEm=DonGiaTinh/2;
                         int GiaTreEm=SoLuongTreEm*DonGiaTreEm;
+                        NumberFormat DonGia = new DecimalFormat("#,###");
+                        double DonGia1 = Double.parseDouble(String.valueOf(GiaNguoiLon));
+                        String GiaNL = DonGia.format(DonGia1);
+                        tvGianguoilon.setText(GiaNL);
 
-                        tvGianguoilon.setText(String.valueOf(GiaNguoiLon));
-                        tvGiatreem.setText(String.valueOf(GiaTreEm));
+                        double DonGia2 = Double.parseDouble(String.valueOf(GiaTreEm));
+                        String GiaTE = DonGia.format(DonGia2);
+                        tvGiatreem.setText(GiaTE);
 
                         int Tong=GiaNguoiLon+GiaTreEm;
-                        tvTongTienBill.setText(String.valueOf(Tong));
+                        double DonGia3 = Double.parseDouble(String.valueOf(Tong));
+                        String TongTien = DonGia.format(DonGia3);
+                        tvTongTienBill.setText(TongTien);
 
                     }
                 }
