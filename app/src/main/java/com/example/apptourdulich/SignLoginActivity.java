@@ -73,8 +73,8 @@ private static final  String Email="email";
 
         dangki=findViewById(R.id.btnDangKi);
 
-//
-//        callbackManager=CallbackManager.Factory.create();
+
+        callbackManager=CallbackManager.Factory.create();
 //        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
 //            @Override
 //            public void onSuccess(LoginResult loginResult) {

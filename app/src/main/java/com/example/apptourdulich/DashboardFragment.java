@@ -31,7 +31,7 @@ public class DashboardFragment extends Fragment {
 
     Button CongLon, TruLon,CongTre,TruTre;
     int slnguoilon,sltreem;
-    EditText NguoiLon,TreEm;
+
 
     DatabaseReference databaseReference;
 
@@ -56,11 +56,11 @@ public class DashboardFragment extends Fragment {
         btnDatTour=root.findViewById(R.id.btnDatTour);
         //khai báo
 
-        CongLon=root.findViewById(R.id.btnCongNguoiLon);
-        CongTre=root.findViewById(R.id.btnCongTreEm);
-        TruLon=root.findViewById(R.id.btnTruNguoiLon);
-        TruTre= root.findViewById(R.id.btnTruTreEm);
-       edtSLNguoiLon.setText("1");
+        CongLon=root.findViewById(R.id.btnCongTreEm);
+        CongTre=root.findViewById(R.id.btnCongNguoiLon);
+        TruLon=root.findViewById(R.id.btnTruTreEm);
+        TruTre= root.findViewById(R.id.btnTruNguoiLon);
+
 //        slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
 //        sltreem=Integer.parseInt(TreEm.getText().toString().trim());
         edtSLNguoiLon.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "50")});
@@ -69,36 +69,36 @@ public class DashboardFragment extends Fragment {
         CongLon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
+                slnguoilon=Integer.parseInt(edtSLNguoiLon.getText().toString().trim());
                 slnguoilon=slnguoilon+1;
-                NguoiLon.setText(slnguoilon);
+                edtSLNguoiLon.setText(String.valueOf(slnguoilon));
             }
         });
         TruLon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
+                slnguoilon=Integer.parseInt(edtSLNguoiLon.getText().toString().trim());
                 slnguoilon=slnguoilon-1;
-                NguoiLon.setText(slnguoilon);
+                edtSLNguoiLon.setText(String.valueOf(slnguoilon));
             }
         });
         CongTre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sltreem=Integer.parseInt(TreEm.getText().toString().trim());
+                sltreem=Integer.parseInt(edtSLTreEm.getText().toString().trim());
                 sltreem=sltreem+1;
-                TreEm.setText(sltreem);
+                edtSLTreEm.setText(String.valueOf(sltreem));
             }
         });
         TruTre.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View v) {
-                                          sltreem = Integer.parseInt(TreEm.getText().toString().trim());
+                                          sltreem = Integer.parseInt(edtSLTreEm.getText().toString().trim());
                                           sltreem = sltreem - 1;
-                                          TreEm.setText(sltreem);
+                                          edtSLTreEm.setText(String.valueOf(sltreem));
+
                                       }
                                   });
-
         Bundle i= getActivity().getIntent().getExtras();
         id=i.getInt("IDTour");
         String SoDienThoai=i.getString("SoDienThoai");

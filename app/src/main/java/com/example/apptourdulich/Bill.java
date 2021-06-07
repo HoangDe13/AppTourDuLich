@@ -29,7 +29,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Bill extends AppCompatActivity {
-    TextView TenTour,NgayKhoiHanh,NoiKhoiHanh,SoNgay,HoTenBill,SoDienThoaiBill,DiaChi,SLNguoiLon,SLTreEm,TienNguoiLon,TienTreEm,ChietKhau,TongTien,TongThanhToan;
+    TextView TenTour,NgayKhoiHanh,NoiKhoiHanh,SoNgay,HoTenBill,SoDienThoaiBill,DiaChi,
+            SLNguoiLon,SLTreEm,TienNguoiLon,TienTreEm,ChietKhau,TongTien,TongThanhToan;
     DatabaseReference databaseReference;
     DatabaseReference databaseReferenceKhachHang;
     DatabaseReference databaseReferenceKhuyenMai;
@@ -61,8 +62,10 @@ public class Bill extends AppCompatActivity {
         ApDungKM=findViewById(R.id.btnApDungKhuyenMai);
         MaKhuyenMai=findViewById(R.id.etMaKhuyenMaiBill);
         btnThanhToan=findViewById(R.id.btnThanhToan);
+
         Bundle b=getIntent().getExtras();
         String SoDienThoai=b.getString("SoDienThoai");
+
         int id=b.getInt("IDTour");
         //int ChietKhau=0;
         int SoLuongNguoiLon=b.getInt("NguoiLon");
@@ -93,23 +96,27 @@ public class Bill extends AppCompatActivity {
                         NgayKhoiHanh.setText(ngayKhoiHanh);
                         NoiKhoiHanh.setText(noiKhoiHanh);
                         SoNgay.setText(soNgay);
+
                         int DonGiaTinh=Integer.parseInt(donGia);
                         int GiaNguoiLon=SoLuongNguoiLon*DonGiaTinh;
+
                         int DonGiaTreEm=DonGiaTinh/2;
                         int GiaTreEm=SoLuongTreEm*DonGiaTreEm;
+
                         TienNguoiLon.setText(String.valueOf(GiaNguoiLon));
                         TienTreEm.setText(String.valueOf(GiaTreEm));
+
                         int Tong=GiaNguoiLon+GiaTreEm;
                         TongTien.setText(String.valueOf(Tong));
                         int TinhChietKhau=Integer.parseInt(ChietKhau.getText().toString());
                         int ThanhToan=Tong-(Tong*(TinhChietKhau/100));
                         TongThanhToan.setText(String.valueOf(ThanhToan));
 
-
                     }
                 }
             }
         });
+
         databaseReferenceKhachHang= FirebaseDatabase.getInstance().getReference("KhachHang");
         databaseReferenceKhachHang.orderByChild("sdt").equalTo(SoDienThoai).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -127,6 +134,7 @@ public class Bill extends AppCompatActivity {
 
             }
         });
+
         ApDungKM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

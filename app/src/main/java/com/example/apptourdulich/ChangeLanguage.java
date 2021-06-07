@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -17,15 +18,24 @@ import java.util.Locale;
 public class ChangeLanguage extends AppCompatActivity {
 
     TextView tvvn,tven;
+    ImageView imgBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_language);
         tvvn=findViewById(R.id.tvVn);
+        Bundle b= getIntent().getExtras();
+        String sdt= b.getString("SoDienThoai");
+
+        imgBack=findViewById(R.id.imgBackLanguage);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         tven=findViewById(R.id.tvEn);
-
-
         tvvn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +47,7 @@ public class ChangeLanguage extends AppCompatActivity {
                 mAnimation.setRepeatCount(Animation.INFINITE);
                 mAnimation.setRepeatMode(Animation.REVERSE);
                 tvvn.startAnimation(mAnimation);
+                i.putExtra("SoDienThoai",sdt);
                 startActivity(i);
             }
         });
@@ -51,6 +62,7 @@ public class ChangeLanguage extends AppCompatActivity {
                 mAnimationm.setRepeatCount(Animation.INFINITE);
                 mAnimationm.setRepeatMode(Animation.REVERSE);
                 tven.startAnimation(mAnimationm);
+                i.putExtra("SoDienThoai",sdt);
                 startActivity(i);
             }
         });

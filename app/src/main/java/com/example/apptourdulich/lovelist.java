@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -38,14 +40,25 @@ public class lovelist extends AppCompatActivity {
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     DatabaseReference reference,fvt;
     Boolean fvrtChecker=false;
-
+    ImageView imgBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lovelist);
 
+        imgBack=findViewById(R.id.imgBackLoveList);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         recyclerView=findViewById(R.id.rcvLove);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        Bundle bundle=this.getIntent().getExtras();
+        String SoDienThoai=bundle.getString("SoDienThoai");
 
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         String currentUserid=user.getPhoneNumber();
@@ -95,6 +108,18 @@ public class lovelist extends AppCompatActivity {
                             }
                         });
 
+                        holder.imgList.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                AppCompatActivity appCompatActivity=(AppCompatActivity) v.getContext();
+                                Intent i=new Intent(appCompatActivity,InfoTour.class);
+                                Bundle b=new Bundle();
+                                b.putInt("IDTour",thongTinTour.getMaTour());
+                                b.putString("SoDienThoai",SoDienThoai);
+                                i.putExtras(b);
+                                startActivity(i);
+                            }
+                        });
 
                     }
                     @NonNull
@@ -116,7 +141,7 @@ public class lovelist extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     dataSnapshot.getRef().removeValue();
-
+                     
                 }
             }
 
