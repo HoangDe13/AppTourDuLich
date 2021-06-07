@@ -1,10 +1,12 @@
 package com.example.apptourdulich;
 
 public class ThongTinThongBao {
+
     private int maThongBao;
     private String noiDung;
     private String soDienThoai;
     private String ngayThongBao;
+
 
     public int getMaThongBao() {
         return maThongBao;
@@ -13,6 +15,7 @@ public class ThongTinThongBao {
     public void setMaThongBao(int maThongBao) {
         this.maThongBao = maThongBao;
     }
+
 
     public String getNoiDung() {
         return noiDung;
@@ -37,4 +40,5 @@ public class ThongTinThongBao {
     public void setNgayThongBao(String ngayThongBao) {
         this.ngayThongBao = ngayThongBao;
     }
+
 }

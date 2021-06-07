@@ -5,8 +5,9 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,27 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".DetailKhuyenMaiActivity"></activity>
+        <activity android:name=".ThongBao"></activity>
+        <activity android:name=".DetailKhuyenMaiActivity" />
         <activity android:name=".DetailTinTucActivity" />
         <activity android:name=".infoHistory" />
-
-
-        <activity android:name=".lovelist"></activity>
-      
-
-        <activity android:name=".DetailTinTucActivity"></activity>
-       
-
-
-
-        <activity android:name=".infoHistory"></activity>
-
+        <activity android:name=".lovelist" />
+        <activity android:name=".DetailTinTucActivity" />
+        <activity android:name=".infoHistory" />
         <activity android:name=".History" />
         <activity android:name=".Like" />
         <activity android:name=".ChangeLanguage" />
         <activity android:name=".Bill" />
-
         <activity
             android:name=".InfoTour"
             android:label="@string/title_activity_info_tour" />
@@ -46,7 +37,7 @@
             android:name=".Search"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity android:name=".UpdateProfile" />
-         <activity android:name=".Profile" />
+        <activity android:name=".Profile" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"

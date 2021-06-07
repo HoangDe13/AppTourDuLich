@@ -53,8 +53,9 @@
                         android:id="@+id/textView33"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/sura"
                         android:text="@string/ThongTinTour"
-                        android:textColor="#050505"
+                        android:textColor="#0D24B6"
                         android:textSize="16sp" />
 
                     <Space
@@ -86,6 +87,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="left"
                             android:text="@string/NgayKhoiHanh"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -107,6 +109,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="left"
                             android:text="@string/NoiKhoiHanh"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -128,6 +131,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="left"
                             android:text="@string/SoNgay"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -140,8 +144,9 @@
                         android:id="@+id/textView37"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/sura"
                         android:text="@string/ThongTinKhachHang"
-                        android:textColor="#050505"
+                        android:textColor="#0D24B6"
                         android:textSize="16sp" />
 
                     <Space
@@ -173,6 +178,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="left"
                             android:text="@string/PhoneNumber"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -194,6 +200,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="left"
                             android:text="@string/diachi"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -206,8 +213,9 @@
                         android:id="@+id/textView49"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/sura"
                         android:text="@string/KhuyenMai"
-                        android:textColor="#050505"
+                        android:textColor="#0D24B6"
                         android:textSize="16sp" />
 
                     <Space
@@ -243,8 +251,9 @@
                         android:id="@+id/textView50"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/sura"
                         android:text="@string/ThongTinThanhToan"
-                        android:textColor="#050505"
+                        android:textColor="#0D24B6"
                         android:textSize="16sp" />
 
                     <Space
@@ -377,8 +386,9 @@
                         android:id="@+id/textView63"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/sura"
                         android:text="@string/PhuongThucThanhToan"
-                        android:textColor="#050505"
+                        android:textColor="#031FCD"
                         android:textSize="16sp" />
 
                     <Space

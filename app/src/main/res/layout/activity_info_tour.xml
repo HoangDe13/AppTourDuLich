@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imgHinhNen"
-        android:layout_width="418dp"
-        android:layout_height="309dp"
+        android:layout_width="453dp"
+        android:layout_height="235dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,9 +24,7 @@
         android:id="@+id/cardView2"
         android:layout_width="413dp"
         android:layout_height="758dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="190dp"
-        android:layout_marginEnd="20dp"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

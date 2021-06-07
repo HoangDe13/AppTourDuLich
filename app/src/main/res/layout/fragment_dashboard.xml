@@ -95,7 +95,7 @@
                 <TextView
                     android:id="@+id/tvNoiKhoihanh"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-light"
                     android:text="@string/NoiKhoiHanh"
@@ -150,7 +150,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-light"
                     android:text="@string/GiaVe"
-                    android:textColor="#000000"
+                    android:textColor="#D32F2F"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
@@ -231,10 +231,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="10dp" />
-
             <LinearLayout
                 android:layout_width="131dp"
                 android:layout_height="match_parent"
@@ -243,7 +239,7 @@
 
                 <TextView
                     android:id="@+id/textView36"
-                    android:layout_width="61dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/TreEm"
                     android:textColor="#000000"

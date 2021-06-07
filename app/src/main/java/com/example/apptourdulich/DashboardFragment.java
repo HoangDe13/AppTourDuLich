@@ -27,6 +27,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class DashboardFragment extends Fragment {
 
     Button CongLon, TruLon,CongTre,TruTre;
@@ -56,10 +59,10 @@ public class DashboardFragment extends Fragment {
         btnDatTour=root.findViewById(R.id.btnDatTour);
         //khai báo
 
-        CongLon=root.findViewById(R.id.btnCongTreEm);
-        CongTre=root.findViewById(R.id.btnCongNguoiLon);
-        TruLon=root.findViewById(R.id.btnTruTreEm);
-        TruTre= root.findViewById(R.id.btnTruNguoiLon);
+        CongLon=root.findViewById(R.id.btnCongNguoiLon);
+        CongTre=root.findViewById(R.id.btnCongTreEm);
+        TruLon=root.findViewById(R.id.btnTruNguoiLon);
+        TruTre= root.findViewById(R.id.btnTruTreEm);
 
 //        slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
 //        sltreem=Integer.parseInt(TreEm.getText().toString().trim());
@@ -120,7 +123,12 @@ public class DashboardFragment extends Fragment {
                         ngayKetThuc.setText(ngayKetThucstr);
                         noiKhoiHanh.setText(noiKhoiHanhstr);
                         phuongTien.setText(phuongTienstr);
-                        giaVe.setText(donGiastr);
+                        NumberFormat fmDonGia = new DecimalFormat("#,###");
+                        double DonGia = Double.parseDouble(String.valueOf(donGiastr));
+                        String fmdongia = fmDonGia.format(DonGia);
+
+
+                        giaVe.setText(fmdongia);
 
 
 
