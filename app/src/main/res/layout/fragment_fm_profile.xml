@@ -112,7 +112,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cvHistory"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="25dp"

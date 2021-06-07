@@ -36,7 +36,7 @@
     <string name="ContactByPhone">Telephone Consultation</string>
     <string name="CCCD">Number ID</string>
     <string name="update">Update</string>
-    <string name="phone">Number Phone:</string>
+    <string name="phone">Number Phone </string>
     <string name="NoInterNetConnection">No Internet Connection</string>
     <string name="Login">Login</string>
     <string name="Register">Sign Up</string>
@@ -75,9 +75,9 @@
     <string name="Location">Location</string>
     <string name="Promotion">Sale</string>
     <string name="Profile">Profile</string>
-    <string name="Haytanhuong">Enjoy Life</string>
-    <string name="vedepbattan">Endless Beauty</string>
-    <string name="vedeptieman">Hidden Beauty</string>
+    <string name="Haytanhuong">Enjoy life</string>
+    <string name="vedepbattan">Endless beauty</string>
+    <string name="vedeptieman">Hidden beauty</string>
 
     <string name="Search">Search</string>
     <string name="or">Or</string>
@@ -103,29 +103,28 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_info_tour">MainActivity</string>
-    <string name="NgayKhoiHanh">Departure day:</string>
+    <string name="NgayKhoiHanh">Departure day</string>
     <string name="NgayKetThuc">End day</string>
     <string name="Khachsan">Hotel</string>
     <string name="CMNN">CMNN/CCCD</string>
     <string name="GiaVe">Fare</string>
-    <string name="NoiKhoiHanh">Starting Gate:</string>
+    <string name="NoiKhoiHanh">Starting Gate</string>
     <string name="HoaDon">Bill</string>
-    <string name="SoNgay">Number of Days:</string>
+    <string name="SoNgay">Number of Days</string>
     <string name="ThongTinKhachHang">Customer Information</string>
     <string name="ThongTinTour">Tour Information</string>
     <string name="KhuyenMai">Sale</string>
     <string name="ApDung">Apply</string>
     <string name="ThongTinThanhToan">Billing Information</string>
     <string name="TenTour">Tour Name</string>
-    <string name="ChietKhau">Discount:</string>
-    <string name="SoTienThanhToan">Payment Amount:</string>
+    <string name="ChietKhau">Discount</string>
+    <string name="SoTienThanhToan">Payment Amount</string>
     <string name="PhuongThucThanhToan">Payment methods</string>
     <string name="PhuongTien">Vehicle</string>
-    <string name="NguoiLon">Adults:</string>
-    <string name="TreEm">Children:</string>
-    <string name="SoTien">Amount of money:</string>
+    <string name="NguoiLon">Adults</string>
+    <string name="TreEm">Children</string>
+    <string name="SoTien">Amount of money</string>
     <string name="ThanhToan">Payment</string>
-    <string name="diachi1">Address:</string>
 
     <!--Profile -->
     <string name="dathich">Love</string>
@@ -149,9 +148,7 @@
 
     <string name="LichSu">History Payment</string>
     <string name="YeuThich">Like</string>
-    <string name="NgayDiHis">Start Day:</string>
-    <string name="NgayThanhtoanHis">Payment of Day:</string>
 
-    <string name="luuy">Note: You can only cancel the Tour after paying within 3 days.</string>
+
 
 </resources>

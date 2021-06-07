@@ -7,8 +7,6 @@ public class ThongTinHoaDon {
     private int SoLuongNguoiLon;
     private int SoLuongTreEm;
     private String maKhuyenMai;
-    private String ngayThanhToan;
-    private int tongTien;
 
     public int getMaHoaDon() {
         return maHoaDon;
@@ -56,21 +54,5 @@ public class ThongTinHoaDon {
 
     public void setMaKhuyenMai(String maKhuyenMai) {
         this.maKhuyenMai = maKhuyenMai;
-    }
-
-    public int getTongTien() {
-        return tongTien;
-    }
-
-    public void setTongTien(int tongTien) {
-        this.tongTien = tongTien;
-    }
-
-    public String getNgayThanhToan() {
-        return ngayThanhToan;
-    }
-
-    public void setNgayThanhToan(String ngayThanhToan) {
-        this.ngayThanhToan = ngayThanhToan;
     }
 }

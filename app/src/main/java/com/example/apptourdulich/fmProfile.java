@@ -108,7 +108,7 @@ public class fmProfile extends Fragment {
     TextView HoTen,Profile;
     DatabaseReference databaseReference;
     ImageView imageProfile;
-    CardView DieuKhoan, LienHe,LichSu;
+    CardView DieuKhoan, LienHe;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -123,7 +123,6 @@ public class fmProfile extends Fragment {
         String sdt=b.getString("SoDienThoai");
         DieuKhoan=view.findViewById(R.id.cvDieuKhoan);
         LienHe= view.findViewById(R.id.cvLienHe);
-        LichSu=view.findViewById(R.id.cvHistory);
         DieuKhoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,11 +169,18 @@ public class fmProfile extends Fragment {
             }
         });
 
+
+
         changeLang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getContext(),ChangeLanguage.class);
-                i.putExtra("SoDienThoai",sdt);
+                //xử lý nhấp nháy khi click vào view
+                Animation mAnimationm = new AlphaAnimation(1, 0);
+                mAnimationm.setDuration(200);
+                mAnimationm.setRepeatCount(Animation.INFINITE);
+                mAnimationm.setRepeatMode(Animation.REVERSE);
+                changeLang.startAnimation(mAnimationm);
                 startActivity(i);
             }
         });
@@ -182,10 +188,12 @@ public class fmProfile extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getContext(),lovelist.class);
-                i.putExtra("SoDienThoai",sdt);
                 startActivity(i);
             }
         });
+
+
+
 
         HoTen=view.findViewById(R.id.tvHoTenProfile);
         Profile=view.findViewById(R.id.tvProfile);
@@ -206,18 +214,6 @@ public class fmProfile extends Fragment {
                 startActivity(i);
             }
         });
-
-        LichSu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(view.getContext(),History.class);
-                i.putExtra("SoDienThoai",sdt);
-                startActivity(i);
-            }
-        });
-
-
-
 
         return view;
     }

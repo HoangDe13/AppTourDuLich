@@ -65,8 +65,8 @@ public class fmPromo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fm_promo, container, false);
 
+        View view= inflater.inflate(R.layout.fragment_fm_promo, container, false);
         rcvKhuyenMai=view.findViewById(R.id.rcvKhuyenMai);
         rcvKhuyenMai.setLayoutManager(new LinearLayoutManager(view.getContext()));
         FirebaseRecyclerOptions<ThongTinKhuyenMai> thongTinKhuyenMaiFirebaseRecyclerOptionsFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinKhuyenMai>().setQuery(FirebaseDatabase.getInstance().getReference().child("KhuyenMai"),ThongTinKhuyenMai.class).build();

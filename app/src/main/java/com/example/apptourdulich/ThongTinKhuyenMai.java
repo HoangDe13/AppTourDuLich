@@ -3,7 +3,7 @@ package com.example.apptourdulich;
 public class ThongTinKhuyenMai {
     private String maKhuyenMai;
     private String tenKhuyenMai;
-    private int chietKhau;
+    private int chietKhau;//kiểu int mà ??? ờ hee
     private String ngayBatDau;
     private String ngayKetThuc;
     private String thongTin;
