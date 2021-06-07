@@ -13,7 +13,7 @@
         android:padding="15dp">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="157dp"
+            android:layout_width="110dp"
             android:layout_height="112dp"
             app:cardCornerRadius="20dp">
 
@@ -21,7 +21,7 @@
                 android:id="@+id/imgTourItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 app:srcCompat="@drawable/huechu" />
         </androidx.cardview.widget.CardView>
 
@@ -37,7 +37,7 @@
 
                 <TextView
                     android:id="@+id/tvTenTourItem"
-                    android:layout_width="151dp"
+                    android:layout_width="140dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="TextView"
@@ -46,10 +46,15 @@
 
                 <ImageView
                     android:id="@+id/btnFavorite"
-                    android:layout_width="38dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/ic_baseline_favorite_24" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <TextView

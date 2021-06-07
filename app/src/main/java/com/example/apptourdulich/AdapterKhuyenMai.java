@@ -42,9 +42,6 @@ public class AdapterKhuyenMai extends FirebaseRecyclerAdapter<ThongTinKhuyenMai,
         holder.ngayBatDau.setText(thongTinKhuyenMai.getNgayBatDau());
         holder.ngayKetThuc.setText(thongTinKhuyenMai.getNgayKetThuc());
 
-
-
-
         holder.ten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
