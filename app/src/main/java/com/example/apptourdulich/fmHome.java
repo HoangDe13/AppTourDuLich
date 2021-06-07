@@ -65,6 +65,8 @@ import com.google.type.DateTime;
 import com.squareup.picasso.Picasso;
 
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -141,7 +143,7 @@ public class fmHome extends Fragment {
     Handler handler=new Handler();
 
 
-    ImageView etTimKiem1;
+    ImageView etTimKiem1, thongbao;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -152,6 +154,7 @@ public class fmHome extends Fragment {
         viewPager=view.findViewById(R.id.viewPager);
         viewPager2=view.findViewById(R.id.viewPagerImage);
         etTimKiem1=view.findViewById(R.id.imgSearch);
+        thongbao= view.findViewById(R.id.imgThongBao);
         //todo: xử lý get data đưa vào recycleview
         recyclerView= view.findViewById(R.id.rcvTour);
         //recyclerView.setHasFixedSize(true);
@@ -239,6 +242,7 @@ public class fmHome extends Fragment {
                                                 thongTinTour.setPhuongTien(pt);
                                                 thongTinTour.setKhachSan(ks);
                                                 thongTinTour.setNgayketThuc(nkt);
+
                                                 thongTinTour.setDonGia(dg);
                                                 thongTinTour.setMoTa(mt);
                                                 thongTinTour.setTinhTrang(tt);
@@ -337,7 +341,14 @@ public class fmHome extends Fragment {
                 startActivity(i);
             }
         });
-
+        thongbao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), ThongBao.class);
+                i.putExtra("SoDienThoai",SoDienThoai);
+                startActivity(i);
+            }
+        });
         return view;
     }
 

@@ -70,7 +70,12 @@ public  class AdapterTour extends RecyclerView.ViewHolder{
             //imageItemTour.setImageResource(Integer.parseInt(image));
             ItemtenTour.setText(tenTour);
             ItemngayKhoiHanh.setText(ngayKhoiHanh);
-            ItemgiaTour.setText(String.valueOf(donGia));
+        NumberFormat fmDonGia = new DecimalFormat("#,###");
+        double DonGia = Double.parseDouble(String.valueOf(donGia));
+        String fmdongia = fmDonGia.format(DonGia);
+
+
+        ItemgiaTour.setText(fmdongia);
             ItemsoNgay.setText(soNgay);
 
     }
@@ -122,6 +127,8 @@ public  class AdapterTour extends RecyclerView.ViewHolder{
 
 
     }
+
+
 }
 
 

@@ -8,7 +8,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cvMienBac"
         android:layout_width="379dp"
-        android:layout_height="633dp"
+        android:layout_height="513dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp" />
 </FrameLayout>
