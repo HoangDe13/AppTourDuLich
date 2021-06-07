@@ -25,6 +25,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class Bill extends AppCompatActivity {
     TextView TenTour,NgayKhoiHanh,NoiKhoiHanh,SoNgay,HoTenBill,SoDienThoaiBill,DiaChi,SLNguoiLon,SLTreEm,TienNguoiLon,TienTreEm,ChietKhau,TongTien,TongThanhToan;
     DatabaseReference databaseReference;
@@ -35,6 +38,7 @@ public class Bill extends AppCompatActivity {
     EditText MaKhuyenMai;
     long maxid;
     DatabaseReference Ref;
+    int DonGiaTinh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,17 +93,32 @@ public class Bill extends AppCompatActivity {
                         NgayKhoiHanh.setText(ngayKhoiHanh);
                         NoiKhoiHanh.setText(noiKhoiHanh);
                         SoNgay.setText(soNgay);
-                        int DonGiaTinh=Integer.parseInt(donGia);
+                        DonGiaTinh=Integer.parseInt(donGia);
                         int GiaNguoiLon=SoLuongNguoiLon*DonGiaTinh;
                         int DonGiaTreEm=DonGiaTinh/2;
                         int GiaTreEm=SoLuongTreEm*DonGiaTreEm;
-                        TienNguoiLon.setText(String.valueOf(GiaNguoiLon));
-                        TienTreEm.setText(String.valueOf(GiaTreEm));
+                        NumberFormat fmDonGia = new DecimalFormat("#,###");
+                        double DonGia = Double.parseDouble(String.valueOf(GiaNguoiLon));
+                        String fmdongiaNguoiLon = fmDonGia.format(DonGia);
+                        TienNguoiLon.setText(fmdongiaNguoiLon);
+
+                        double DonGia1= Double.parseDouble(String.valueOf(GiaTreEm));
+                        String fmdongiatreem = fmDonGia.format(DonGia1);
+                        TienTreEm.setText(String.valueOf(fmdongiatreem));
+
                         int Tong=GiaNguoiLon+GiaTreEm;
-                        TongTien.setText(String.valueOf(Tong));
+
+                        double DonGia2 = Double.parseDouble(String.valueOf(Tong));
+                        String fmdongiaTong = fmDonGia.format(DonGia2);
+
+
+                        TongTien.setText(String.valueOf(fmdongiaTong));
                         int TinhChietKhau=Integer.parseInt(ChietKhau.getText().toString());
                         int ThanhToan=Tong-(Tong*(TinhChietKhau/100));
-                        TongThanhToan.setText(String.valueOf(ThanhToan));
+
+                        double DonGia3 = Double.parseDouble(String.valueOf(ThanhToan));
+                        String fmdongiathanhtoan = fmDonGia.format(DonGia3);
+                        TongThanhToan.setText(fmdongiathanhtoan);
 
 
                     }
@@ -135,9 +154,16 @@ public class Bill extends AppCompatActivity {
                             if (child != null) {
                                 ThongTinKhuyenMai kh = child.getValue(ThongTinKhuyenMai.class);
                                 ChietKhau.setText(String.valueOf(kh.getChietKhau())+"%");
-                                int Tong =Integer.parseInt(TongTien.getText().toString());
+
+                                int GiaNguoiLon=SoLuongNguoiLon*DonGiaTinh;
+                                int DonGiaTreEm=DonGiaTinh/2;
+                                int GiaTreEm=SoLuongTreEm*DonGiaTreEm;
+                                int Tong=GiaNguoiLon+GiaTreEm;
                                 int ThanhToan=Tong-(Tong*kh.getChietKhau()/100);
-                                TongThanhToan.setText(String.valueOf(ThanhToan));
+                                NumberFormat fmDonGia = new DecimalFormat("#,###");
+                                double thanhtoan = Double.parseDouble(String.valueOf(ThanhToan));
+                                String tt = fmDonGia.format(thanhtoan);
+                                TongThanhToan.setText(tt);
                             } else {
                                 ChietKhau.setText("0");
                                 Toast.makeText(Bill.this, "Không tìm thấy khuyến mãi", Toast.LENGTH_SHORT).show();

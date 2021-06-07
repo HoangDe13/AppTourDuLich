@@ -9,7 +9,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMienTrung"
         android:layout_width="387dp"
-        android:layout_height="636dp"
+        android:layout_height="496dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp" />
 </FrameLayout>

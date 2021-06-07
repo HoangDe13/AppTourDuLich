@@ -91,146 +91,151 @@ public class fm_tour_mien_trung extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_fm_tour_mien_trung, container, false);
+        {
+            Bundle bundle = getActivity().getIntent().getExtras();
+            SoDienThoai= bundle.getString("SoDienThoai");
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            String currentUserid = user.getPhoneNumber();///
+            thongTinTour = new ThongTinTour();
+            fvrtref = database.getReference("Likes");
+            fvrt_listRef = database.getReference("LikeList").child(currentUserid);
 
-        Bundle bundle = getActivity().getIntent().getExtras();
-        SoDienThoai = bundle.getString("SoDienThoai");
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String currentUserid = user.getPhoneNumber();///
-        thongTinTour = new ThongTinTour();
-        fvrtref = database.getReference("Likes");
-        fvrt_listRef = database.getReference("LikeList").child(currentUserid);
+            recyclerView = view.findViewById(R.id.rvMienTrung);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            reference = database.getReference("Tour");
+            FirebaseRecyclerOptions<ThongTinTour> options =
+                    new FirebaseRecyclerOptions.Builder<ThongTinTour>()
+                            .setQuery(FirebaseDatabase.getInstance().getReference().child("Tour").orderByChild("khuVuc").equalTo("Miền Trung"), ThongTinTour.class).build();
+            FirebaseRecyclerAdapter<ThongTinTour, AdapterTour> firebaseRecyclerAdapter =
+                    new FirebaseRecyclerAdapter<ThongTinTour, AdapterTour>(options) {
+                        @Override
+                        protected void onBindViewHolder(@NonNull AdapterTour holder, int i, @NonNull ThongTinTour thongTinTour) {
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            String currentUserid = user.getPhoneNumber();///
+                            final String postkey = getRef(i).getKey();
 
-        recyclerView = view.findViewById(R.id.rvMienTrung);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        reference = database.getReference("Tour");
-        FirebaseRecyclerOptions<ThongTinTour> options =
-                new FirebaseRecyclerOptions.Builder<ThongTinTour>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Tour").orderByChild("khuVuc").equalTo("Miền Trung"), ThongTinTour.class).build();
-        FirebaseRecyclerAdapter<ThongTinTour, AdapterTour> firebaseRecyclerAdapter =
-                new FirebaseRecyclerAdapter<ThongTinTour, AdapterTour>(options) {
-                    @Override
-                    protected void onBindViewHolder(@NonNull AdapterTour holder, int i, @NonNull ThongTinTour thongTinTour) {
-                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                        String currentUserid = user.getPhoneNumber();///
-                        final String postkey = getRef(i).getKey();
+                            holder.setItem(getActivity(), thongTinTour.getMaTour(), thongTinTour.getTenTour(),
+                                    thongTinTour.getPhuongTien(), thongTinTour.getKhachSan(), thongTinTour.getDonGia(),
+                                    thongTinTour.getNgayKhoiHanh(), thongTinTour.getNgayketThuc(), thongTinTour.getMoTa(), thongTinTour.getTinhTrang(),
+                                    thongTinTour.getKhuVuc(), thongTinTour.getImage(), thongTinTour.getSoNgay(), thongTinTour.getNoiKhoiHanh());
+                            //Glide.with(holder.imageItemTour.getContext()).load(thongTinTour.getImage().into(holder.imageItemTour));
+                            //todo: chỗ này xử lý load ảnh nè
+                            String image = thongTinTour.getImage();
+                            Task<Uri> storageReference = FirebaseStorage.getInstance().getReference().child("Images/" + image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    // Got the download URL for 'users/me/profile.png'
+                                    System.out.println(uri);
+                                    Glide.with(holder.imageItemTour.getContext()).load(uri).into(holder.imageItemTour);
 
-                        holder.setItem(getActivity(), thongTinTour.getMaTour(), thongTinTour.getTenTour(),
-                                thongTinTour.getPhuongTien(), thongTinTour.getKhachSan(), thongTinTour.getDonGia(),
-                                thongTinTour.getNgayKhoiHanh(), thongTinTour.getNgayketThuc(), thongTinTour.getMoTa(), thongTinTour.getTinhTrang(),
-                                thongTinTour.getKhuVuc(), thongTinTour.getImage(), thongTinTour.getSoNgay(), thongTinTour.getNoiKhoiHanh());
-                        //Glide.with(holder.imageItemTour.getContext()).load(thongTinTour.getImage().into(holder.imageItemTour));
-                        //todo: chỗ này xử lý load ảnh nè
-                        String image = thongTinTour.getImage();
-                        Task<Uri> storageReference = FirebaseStorage.getInstance().getReference().child("Images/" + image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                // Got the download URL for 'users/me/profile.png'
-                                System.out.println(uri);
-                                Glide.with(holder.imageItemTour.getContext()).load(uri).into(holder.imageItemTour);
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception exception) {
+                                    // Handle any errors
+                                }
+                            });
 
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception exception) {
-                                // Handle any errors
-                            }
-                        });
+                            int idT = getItem(i).getMaTour();
+                            String name = getItem(i).getTenTour();
+                            String pt = getItem(i).getPhuongTien();
+                            String ks = getItem(i).getKhachSan();
+                            int dg = getItem(i).getDonGia();
+                            String nkh = getItem(i).getNgayKhoiHanh();
+                            final String nkt = getItem(i).getNgayketThuc();
+                            String mt = getItem(i).getMoTa();
+                            String tt = getItem(i).getTinhTrang();
+                            String kv = getItem(i).getKhuVuc();
+                            String imgg = getItem(i).getImage();
+                            String sng = getItem(i).getSoNgay();
+                            String noikh = getItem(i).getNoiKhoiHanh();
 
-                        int idT = getItem(i).getMaTour();
-                        String name = getItem(i).getTenTour();
-                        String pt = getItem(i).getPhuongTien();
-                        String ks = getItem(i).getKhachSan();
-                        int dg = getItem(i).getDonGia();
-                        String nkh = getItem(i).getNgayKhoiHanh();
-                        final String nkt = getItem(i).getNgayketThuc();
-                        String mt = getItem(i).getMoTa();
-                        String tt = getItem(i).getTinhTrang();
-                        String kv = getItem(i).getKhuVuc();
-                        String imgg = getItem(i).getImage();
-                        String sng = getItem(i).getSoNgay();
-                        String noikh = getItem(i).getNoiKhoiHanh();
+                            //todo:chỗ này xử lý lưu tour nè
+                            holder.favoriteChecker(postkey);
+                            holder.imgBtnfav.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
 
-                        //todo:chỗ này xử lý lưu tour nè
-                        holder.favoriteChecker(postkey);
-                        holder.imgBtnfav.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
+                                    fvrtChecker = true;
+                                    fvrtref.addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            if (fvrtChecker.equals(true)) {
+                                                if (snapshot.child(postkey).hasChild(currentUserid)) {
+                                                    fvrtref.child(postkey).child(currentUserid).removeValue();
+                                                    delete(idT);
+                                                    fvrtChecker = false;
+                                                } else {
+                                                    fvrtref.child(postkey).child(currentUserid).setValue(true);
+                                                    thongTinTour.setMaTour(idT);
+                                                    thongTinTour.setTenTour(name);
+                                                    thongTinTour.setNgayKhoiHanh(nkh);
+                                                    thongTinTour.setPhuongTien(pt);
+                                                    thongTinTour.setKhachSan(ks);
+                                                    thongTinTour.setNgayketThuc(nkt);
+                                                    thongTinTour.setDonGia(dg);
+                                                    thongTinTour.setMoTa(mt);
+                                                    thongTinTour.setTinhTrang(tt);
+                                                    thongTinTour.setKhuVuc(kv);
+                                                    thongTinTour.setImage(imgg);
+                                                    thongTinTour.setSoNgay(sng);
+                                                    thongTinTour.setNoiKhoiHanh(noikh);
 
-                                fvrtChecker = true;
-                                fvrtref.addValueEventListener(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        if (fvrtChecker.equals(true)) {
-                                            if (snapshot.child(postkey).hasChild(currentUserid)) {
-                                                fvrtref.child(postkey).child(currentUserid).removeValue();
-                                                delete(idT);
-                                                fvrtChecker = false;
-                                            } else {
-                                                fvrtref.child(postkey).child(currentUserid).setValue(true);
-                                                thongTinTour.setMaTour(idT);
-                                                thongTinTour.setTenTour(name);
-                                                thongTinTour.setNgayKhoiHanh(nkh);
-                                                thongTinTour.setPhuongTien(pt);
-                                                thongTinTour.setKhachSan(ks);
-                                                thongTinTour.setNgayketThuc(nkt);
-                                                thongTinTour.setDonGia(dg);
-                                                thongTinTour.setMoTa(mt);
-                                                thongTinTour.setTinhTrang(tt);
-                                                thongTinTour.setKhuVuc(kv);
-                                                thongTinTour.setImage(imgg);
-                                                thongTinTour.setSoNgay(sng);
-                                                thongTinTour.setNoiKhoiHanh(noikh);
+                                                    String id = fvrt_listRef.push().getKey();
+                                                    fvrt_listRef.child(id).setValue(thongTinTour);
+                                                    fvrtChecker = false;
 
-                                                String id = fvrt_listRef.push().getKey();
-                                                fvrt_listRef.child(id).setValue(thongTinTour);
-                                                fvrtChecker = false;
-
+                                                }
                                             }
                                         }
-                                    }
 
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
 
-                                    }
-                                });
+                                        }
+                                    });
 
-                            }
-                        });
-                        // todo: chỗ này xử lý bundle qua chi tiết tour nè
-                        holder.imageItemTour.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                AppCompatActivity appCompatActivity = (AppCompatActivity) v.getContext();
-                                Intent i = new Intent(appCompatActivity, InfoTour.class);
-                                Bundle b = new Bundle();
-                                b.putInt("IDTour", thongTinTour.getMaTour());
-                                b.putString("SoDienThoai", SoDienThoai);
-                                i.putExtras(b);
-                                startActivity(i);
-                            }
-                        });
-
-
-                    }
+                                }
+                            });
+                            // todo: chỗ này xử lý bundle qua chi tiết tour nè
+                            holder.imageItemTour.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    AppCompatActivity appCompatActivity = (AppCompatActivity) v.getContext();
+                                    Intent i = new Intent(appCompatActivity, InfoTour.class);
+                                    Bundle b = new Bundle();
+                                    b.putInt("IDTour", thongTinTour.getMaTour());
+                                    b.putString("SoDienThoai", SoDienThoai);
+                                    i.putExtras(b);
+                                    startActivity(i);
+                                }
+                            });
 
 
-                    @NonNull
-                    @Override
-                    public AdapterTour onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view1 = LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.touritem, parent, false);
-                        return new AdapterTour(view1);
-                    }
+                        }
 
 
-                };
-        firebaseRecyclerAdapter.startListening();
-        recyclerView.setAdapter(firebaseRecyclerAdapter);
 
 
+                        @NonNull
+                        @Override
+                        public AdapterTour onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                            View view1 = LayoutInflater.from(parent.getContext())
+                                    .inflate(R.layout.touritem, parent, false);
+                            return new AdapterTour(view1);
+                        }
+
+
+                    };
+            firebaseRecyclerAdapter.startListening();
+            recyclerView.setAdapter(firebaseRecyclerAdapter);
+
+
+
+        }
         return view;
     }
+
     void delete(int idT){
         Query query=fvrt_listRef.orderByChild("maTour").equalTo(idT);
         query.addListenerForSingleValueEvent(new ValueEventListener() {

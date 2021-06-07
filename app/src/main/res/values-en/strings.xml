@@ -29,7 +29,7 @@
     <string name="InfoTour">Information</string>
     <string name="details">Describe</string>
     <string name="Contact">Contact</string>
-    <string name="addressContact">828 Sư Van Hanh, Ward 13,District 10</string>
+    <string name="addressContact">828 Sư Van Hanh, Ward 13,District 10, HoChiMinh City</string>
     <string name="HotlineContact">01254621321</string>
     <string name="EmailContact">HouseTour@gmail.com</string>
     <string name="infoContact">House Tour</string>
@@ -96,8 +96,9 @@
     <string name="DetailRules2"> 2. We collect and process your information, such as your name and email address, when you register. You must provide accurate and complete information, keep it up to date, and agree to provide us with any proof of identity as reasonably requested by us. </string>
     <string name="DetailRules3"> 3. If the information you provide us changes, for example, if you change your email address, or if you wish to cancel your account, please update the details by
         how to send a request to us. We will, to the best of our ability, endeavor to implement the requested change within thirty (30) business days of receipt of notice of the change.</string>
-    <string name="DetailRules4"> 4. You may choose to purchase part or all of the contents of the Application by paying us.5. You can only cancel the tour no more than 3 days after booking and 15 days before departure....</string>
-    <string name="DetailRules5">5. You can only cancel the tour no more than 3 days after booking and 15 days before departure....</string>
+    <string name="DetailRules4"> 4. You may choose to purchase part or all of the contents of the Application by paying us.</string>
+    <string name="DetailRules5">5. You can only cancel the tour no more than 3 days after booking and 7 days before departure....</string>
+<string name="ThongBao">Notification</string>
     <string name="close">Close</string>
     <string name="title_activity_infor_tour">InforTour</string>
     <string name="tab_text_1">Tab 1</string>
