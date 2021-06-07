@@ -53,13 +53,11 @@ public class InfoTour extends AppCompatActivity {
                 R.id.navigation_info, R.id.navigation_details)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.navkhoanchi);
-
         NavigationUI.setupWithNavController(navView, navController);
+
         Bundle b=getIntent().getExtras();
-
-
-
         int id=b.getInt("IDTour");
+
         databaseReference= FirebaseDatabase.getInstance().getReference("Tour");
         databaseReference.child(String.valueOf(id)).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -79,6 +77,7 @@ public class InfoTour extends AppCompatActivity {
                         String soNgay = String.valueOf(dataSnapshot.child("soNgay").getValue());
                         String image = String.valueOf(dataSnapshot.child("image").getValue());
                         tvTen.setText(Ten);
+
                         imageHinhNen = (ImageView) findViewById(R.id.imgHinhNen);
                         Task<Uri> storageReference = FirebaseStorage.getInstance().getReference().child("Images/"+image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
@@ -96,16 +95,11 @@ public class InfoTour extends AppCompatActivity {
                         });
                         System.out.println(storageReference);
 
-
                     }
                 }
             }
         });
     }
-
-
-//        Bundle b=getIntent().getExtras();
-//        int idt=b.getInt("IDTour");
 
 
     }

@@ -41,13 +41,8 @@ public class Home extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
 
-
-
-
-Bundle b= getIntent().getExtras();
-String sdt= b.getString("SoDienThoai");
-
-
+        Bundle b= getIntent().getExtras();
+        String sdt= b.getString("SoDienThoai");
 
         toolbar = getSupportActionBar();
 
