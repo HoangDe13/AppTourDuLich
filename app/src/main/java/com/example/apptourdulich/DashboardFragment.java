@@ -63,8 +63,7 @@ public class DashboardFragment extends Fragment {
 
 //        slnguoilon=Integer.parseInt(NguoiLon.getText().toString().trim());
 //        sltreem=Integer.parseInt(TreEm.getText().toString().trim());
-        edtSLNguoiLon.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "50")});
-        edtSLTreEm.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "50")});
+        
 
         CongLon.setOnClickListener(new View.OnClickListener() {
             @Override

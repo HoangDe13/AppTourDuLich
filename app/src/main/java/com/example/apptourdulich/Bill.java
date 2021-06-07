@@ -220,10 +220,10 @@ public class Bill extends AppCompatActivity {
                 thongBao.setNgayThongBao(currentDateandTime);
                 thongBao.setNoiDung(noidung);
                 thongBao.setSoDienThoai(SoDienThoaiBill.getText().toString().trim());
-                Ref.child(String.valueOf(maxid + 1)).setValue(hoaDon);
-                refThongBao.child(String.valueOf(maxidThongBao+1)).setValue(thongBao);
+                Ref.push().setValue(hoaDon);
+                refThongBao.push().setValue(thongBao);
                 Toast.makeText(Bill.this, "Thanh Toán Thành Công", Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(Bill.this,History.class);
+                Intent i=new Intent(Bill.this,Home.class);
                 Bundle b=new Bundle();
                 b.putString("SoDienThoai",sdt);
                 i.putExtras(b);

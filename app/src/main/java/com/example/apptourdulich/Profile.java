@@ -29,7 +29,7 @@ public class Profile extends AppCompatActivity {
     TextView HoTen,SoDienThoai,GioiTinh,NgaySinh,CMND,DiaChi;
     DatabaseReference databaseReference;
     Button dangxuat;
-    ImageView imageView;
+    ImageView imageView,imgBack;
     FloatingActionButton CapNhat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,13 @@ public class Profile extends AppCompatActivity {
         Bundle b= getIntent().getExtras();
         String sdt= b.getString("SoDienThoai");
         CapNhat= findViewById(R.id.floatProfile);
-
+        imgBack=findViewById(R.id.imgBackProfile);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         databaseReference= FirebaseDatabase.getInstance().getReference("KhachHang");
         databaseReference.orderByChild("sdt").equalTo(sdt).addListenerForSingleValueEvent(
                 new ValueEventListener() {
@@ -112,4 +118,4 @@ public class Profile extends AppCompatActivity {
         imageView=findViewById(R.id.imgCapNhat);
 
     }
-    }
+}

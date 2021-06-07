@@ -195,7 +195,7 @@
                         android:id="@+id/btnTruNguoiLon"
                         android:layout_width="0dp"
 
-                        android:layout_height="20dp"
+                        android:layout_height="match_parent"
 
                         android:layout_weight="1"
                         android:background="@drawable/ic_baseline_horizontal_rule_24"
@@ -205,13 +205,15 @@
                     <EditText
                         android:id="@+id/edtSoLuongNguoiLon"
                         android:layout_width="4dp"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:autoText="true"
+                        android:background="#FFFFFF"
                         android:ems="10"
                         android:fontFamily="@font/sura"
-                        android:gravity="center"
+                        android:gravity="center|top"
                         android:inputType="number"
-                        android:text="0"
+                        android:text="1"
                         android:textSize="16sp" />
 
                     <Button
@@ -219,7 +221,7 @@
                         android:id="@+id/btnCongNguoiLon"
                         android:layout_width="0dp"
 
-                        android:layout_height="20dp"
+                        android:layout_height="match_parent"
 
                         android:layout_weight="1"
                         android:background="@drawable/ic_baseline_add_24"
@@ -256,7 +258,7 @@
 
                         android:id="@+id/btnTruTreEm"
                         android:layout_width="0sp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
 
                         android:layout_weight="1"
                         android:background="@drawable/ic_baseline_horizontal_rule_24"
@@ -265,8 +267,9 @@
                     <EditText
                         android:id="@+id/edtSoLuongTreEm"
                         android:layout_width="6dp"
-                        android:layout_height="40dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="#FFFFFF"
                         android:ems="10"
                         android:fontFamily="@font/sura"
                         android:gravity="center"
@@ -278,7 +281,7 @@
 
                         android:id="@+id/btnCongTreEm"
                         android:layout_width="0dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
 
 
                         android:layout_weight="1"
