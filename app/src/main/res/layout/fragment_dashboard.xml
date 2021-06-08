@@ -48,7 +48,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="@string/NgayKhoiHanh"
                     android:textColor="#000000"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -74,7 +74,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="@string/NgayKetThuc"
                     android:textColor="#000000"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,7 +126,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="@string/PhuongTien"
                     android:textColor="#000000"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -151,7 +151,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="@string/GiaVe"
                     android:textColor="#D32F2F"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 

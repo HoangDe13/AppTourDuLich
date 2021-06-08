@@ -71,6 +71,7 @@ public class infoHistory extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 finish();
             }
         });
@@ -85,7 +86,7 @@ public class infoHistory extends AppCompatActivity {
 
         String ngayThanhtoan=b.getString("ngayThanhToan");
         String tt=b.getString(String.valueOf("tongTien"));
-        String idHoaDon=b.getString(String.valueOf("maHoaDon"));
+        String idHoaDon=b.getString("maHoaDon");
 
         tvSoLuongNguoiLonBill.setText(String.valueOf(SoLuongNguoiLon));
         tvSoLuongTreEmBill.setText(String.valueOf(SoLuongTreEm));
@@ -146,7 +147,7 @@ public class infoHistory extends AppCompatActivity {
                 for (DataSnapshot child : snapshot.getChildren()) {
                     KhachHang kh = child.getValue(KhachHang.class);
                     tvHoTenBill.setText(kh.getHoTen());
-                    tvDiaChiHis.setText(kh.getDiaChi());
+                    tvDiaChiHis.setText(kh.getDiaChi());//cais thoong bao dau
                 }
             }
 
@@ -199,6 +200,7 @@ public class infoHistory extends AppCompatActivity {
                     Long diff = _cvcurrent.getTime() - datetime.getTime();
                     if (diff < 4)
                     {
+
                         deleteBill(idHoaDon);
                         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                         String currentDateandTime = sdf.format(new Date());
@@ -208,6 +210,7 @@ public class infoHistory extends AppCompatActivity {
                         thongBao.setNoiDung(Thongtin);
                         thongBao.setSoDienThoai(tvSoDienThoaiHis.getText().toString().trim());
                         refThongBao.child(String.valueOf(maxid+1)).setValue(thongBao);
+
                     }
                     else
                     {
@@ -232,20 +235,39 @@ public class infoHistory extends AppCompatActivity {
     private void ShowToast(String message){
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
     }
-    private void deleteBill(String idHoaDon){
-        reference=FirebaseDatabase.getInstance().getReference("HoaDon").child(idHoaDon);
-        Task<Void> mTask=reference.removeValue();
-        mTask.addOnSuccessListener(new OnSuccessListener<Void>() {
+//    private void deleteBill(String idHoaDon){
+//        reference=FirebaseDatabase.getInstance().getReference("HoaDon").child(idHoaDon);
+//        Task<Void> mTask=reference.removeValue();
+//        mTask.addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                ShowToast("delete");
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                ShowToast("Error delete");
+//            }
+//        });
+//    }
+
+
+    void delete(String idHoaDon) {
+        reference= FirebaseDatabase.getInstance().getReference("HoaDon");
+        Query query = reference.orderByChild("maHoaDon").equalTo(idHoaDon);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
+
             public void onSuccess(Void aVoid) {
                 ShowToast("Hủy Tour Thành Công");
+
             }
-        }).addOnFailureListener(new OnFailureListener() {
+
             @Override
-            public void onFailure(@NonNull Exception e) {
-                ShowToast("Error delete");
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }
 
-}
+    }

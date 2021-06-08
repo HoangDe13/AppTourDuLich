@@ -100,7 +100,8 @@
     <string name="DetailRules3"> 3. Nếu các thông tin mà bạn cung cấp cho chúng tôi thay đổi, ví dụ, nếu bạn thay đổi địa chỉ email, hoặc nếu bạn muốn hủy tài khoản, xin vui lòng cập nhật chi tiết bằng cách gửi yêu cầu đến chúng tôi. Chúng tôi, trong khả năng của mình, sẽ nỗ lực thực hiện thay đổi theo yêu cầu trong ba mươi (30) ngày làm việc kể từ khi nhận được thông báo về thay đổi.</string>
     <string name="DetailRules4"> 4. Bạn có thể chọn mua một phần hoặc toàn bộ các nội dung của Ứng dụng bằng cách thanh toán cho chúng tôi.</string>
     <string name="DetailRules6">6. Người từ 11 tuổi trở lên sẽ tính vé bình thường. Phụ thu vé trẻ em từ 2 tuổi đến 11 tuổi sẽ tính bằng 50% vé và trẻ em dưới 2 tuổi sẽ được miễn phí. </string>
-    <string name="DetailRules5">5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 7 ngày....</string>
+    <string name="DetailRules5">5.  Bạn chỉ có thể hủy tour không quá 3 ngày sau khi đặt tour và trước khi khởi hành 7 ngày.</string>
+    <string name="DetailRules7">7. Số lượng đặt tour phải lớn hơn 0 và không quá 30 vé cho từng đối tượng.</string>
     <string name="close">Đóng</string>
     <string name="title_activity_infor_tour">InforTour</string>
     <string name="tab_text_1">Tab 1</string>
@@ -196,8 +197,10 @@
     <!--    <string name="QuangNinh1">Quảng Ninh là một trong những địa phương tiên phong trên cả nước triển khai các giải pháp du lịch thông minh. Hạ tầng du lịch thông minh của Quảng Ninh cũng đang dần hoàn thiện dựa trên “bệ phóng” của đô thị thông minh.</string>-->
     <!--    <string name="QuangNinh2">Các tàu du lịch trên Vịnh Hạ Long đều được lắp đặt hệ thống định vị GPS để nâng cao hệ số an toàn cho khách du lịch. Hệ thống camera giám sát ở một số hang động lớn như: Hang Ðầu Gỗ, động Thiên Cung, bảo đảm liên tục truyền dữ liệu về cho bộ phận giám sát.</string>-->
     <!--    <string name="QuangNinh3">Đặc biệt, chỉ với 1 chiếc điện thoại thông minh, du khách có thể tiếp cận với các tiện ích, ứng dụng thông minh về du lịch, như tìm kiếm thông tin bằng giọng nói, dịch chuyển ngôn ngữ, hệ thống thuyết minh tự động tại các điểm đến với hướng dẫn viên ảo, hay tham quan 3D... trên nền tảng điện thoại di động.</string>-->
+
     <string name="NoInterNetConnection">Không Có Kết Nối Internet</string>
 <string name="HinhNoiBat">Hình Ảnh Nổi Bật</string>
+
     <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
     <string name="Retry">Thử Lại</string>
     <string name="LogOut">Đăng Xuất</string>
@@ -213,7 +216,7 @@
     <string name="NgayThanhtoanHis">Ngày thanh toán:</string>
     <string name="luuy">Lưu ý: Quý khách chỉ được hủy Tour sau khi thanh Toán trong vòng 3 ngày.</string>
 
-
+<string name="DiaDiemDuLich">Địa Điểm Du Lịch</string>
 
 
 </resources>

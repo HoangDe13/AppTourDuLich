@@ -8,8 +8,8 @@
     tools:context="NotificationsFragment" >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="325dp"
-        android:layout_height="622dp"
+        android:layout_width="327dp"
+        android:layout_height="571dp"
         android:layout_marginTop="20dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,30 +26,55 @@
                 android:orientation="vertical"
                 android:padding="15dp">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Khachsan"
+                    android:textSize="17dp" />
+
+                <Space
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvKhachSanDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sura"
+                    android:text="@string/Khachsan"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="15dp"
+                    android:layout_weight="1" />
 
-                    <TextView
-                        android:id="@+id/textView34"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/Khachsan" />
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/DiaDiemDuLich"
+                    android:textSize="17sp" />
 
-                    <TextView
-                        android:id="@+id/tvKhachSanDetail"
-                        android:layout_width="191dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Khachsan" />
-                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/tvMoTa"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Mô tả" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sura"
+                    android:text="Mô tả"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>

@@ -99,6 +99,7 @@
         how to send a request to us. We will, to the best of our ability, endeavor to implement the requested change within thirty (30) business days of receipt of notice of the change.</string>
     <string name="DetailRules4"> 4. You may choose to purchase part or all of the contents of the Application by paying us.</string>
     <string name="DetailRules5">5. You can only cancel the tour no more than 3 days after booking and 7 days before departure....</string>
+    <string name="DetailRules7">7.The number of tour bookings must be greater than 0 and no more than 30 tickets for each object.</string>
 <string name="ThongBao">Notification</string>
     <string name="close">Close</string>
     <string name="title_activity_infor_tour">InforTour</string>
@@ -155,5 +156,6 @@
     <string name="NgayThanhtoanHis">Payment of Day:</string>
 
     <string name="luuy">Note: You can only cancel the Tour after paying within 3 days.</string>
+    <string name="DiaDiemDuLich">Tourist Attraction</string>
 
 </resources>
