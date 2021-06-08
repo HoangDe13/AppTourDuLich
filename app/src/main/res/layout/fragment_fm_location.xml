@@ -9,14 +9,13 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="175dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="149dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="87dp"
-        android:fontFamily="@font/artifika"
+        android:fontFamily="@font/baloo"
         android:text="@string/News"
-        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

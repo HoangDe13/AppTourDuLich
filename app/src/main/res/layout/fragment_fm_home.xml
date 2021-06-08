@@ -28,7 +28,7 @@
             android:layout_width="211dp"
             android:layout_height="33dp"
             android:layout_weight="1"
-            android:fontFamily="@font/artifika"
+            android:fontFamily="@font/baloo"
             android:text="@string/housetour"
             android:textColor="#FFFFFF"
             android:textSize="28sp" />

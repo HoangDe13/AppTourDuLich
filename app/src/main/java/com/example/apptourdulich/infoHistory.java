@@ -235,39 +235,21 @@ public class infoHistory extends AppCompatActivity {
     private void ShowToast(String message){
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
     }
-//    private void deleteBill(String idHoaDon){
-//        reference=FirebaseDatabase.getInstance().getReference("HoaDon").child(idHoaDon);
-//        Task<Void> mTask=reference.removeValue();
-//        mTask.addOnSuccessListener(new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void aVoid) {
-//                ShowToast("delete");
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                ShowToast("Error delete");
-//            }
-//        });
-//    }
-
-
-    void delete(String idHoaDon) {
-        reference= FirebaseDatabase.getInstance().getReference("HoaDon");
-        Query query = reference.orderByChild("maHoaDon").equalTo(idHoaDon);
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+    private void deleteBill(String idHoaDon){
+        reference=FirebaseDatabase.getInstance().getReference("HoaDon").child(idHoaDon);
+        Task<Void> mTask=reference.removeValue();
+        mTask.addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
-
             public void onSuccess(Void aVoid) {
-                ShowToast("Hủy Tour Thành Công");
-
+                ShowToast("Đã Xóa Thành Công ");
             }
-
+        }).addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+            public void onFailure(@NonNull Exception e) {
+                ShowToast("Không Thể Xóa Được");
             }
         });
     }
+
 
     }

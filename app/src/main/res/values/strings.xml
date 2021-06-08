@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppTourDuLich</string>
+    <string name="app_name">House Tour</string>
     <string name="nameload">HouseTour</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_usename">Số Điện Thoại</string>
