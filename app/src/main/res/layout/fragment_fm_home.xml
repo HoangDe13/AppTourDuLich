@@ -54,7 +54,6 @@
         android:layout_width="358dp"
         android:layout_height="206dp"
         android:layout_marginTop="13dp"
-        android:layout_marginBottom="4dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView4"
@@ -86,6 +85,7 @@
         android:layout_height="351dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView6">
@@ -111,17 +111,10 @@
                     android:shadowDx="7"
                     android:shadowDy="10"
                     android:shadowRadius="7"
-                    android:text="@string/News"
+                    android:text="@string/HinhNoiBat"
                     android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/ViewAll" />
 
             </LinearLayout>
 
@@ -154,13 +147,6 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="116dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/ViewAll" />
             </LinearLayout>
 
             <Space
@@ -170,7 +156,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcvTour"
                 android:layout_width="match_parent"
-                android:layout_height="507dp"
+                android:layout_height="320dp"
                 android:paddingEnd="20dp" />
         </LinearLayout>
     </ScrollView>

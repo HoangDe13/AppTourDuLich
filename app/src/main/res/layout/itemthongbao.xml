@@ -3,26 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="15dp"
+    app:cardCornerRadius="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="71dp"
+        android:layout_height="109dp"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvNoiDung"
-            android:layout_width="302dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_width="304dp"
+            android:layout_height="59dp"
             android:text="TextView"
             android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvNgayThongBao"
-            android:layout_width="wrap_content"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="TextView"

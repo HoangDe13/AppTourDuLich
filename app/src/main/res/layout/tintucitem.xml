@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="128dp"
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
@@ -27,23 +27,24 @@
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
-            android:layout_width="226dp"
-            android:layout_height="99dp"
+            android:layout_width="207dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="5dp"
-            android:gravity="center|top"
+            android:gravity="top"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txtTieuDe"
-                android:layout_width="163dp"
-                android:layout_height="33dp"
+                android:layout_width="186dp"
+                android:layout_height="46dp"
+                android:gravity="center"
                 android:text="TextView"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtThongTinNgan"
-                android:layout_width="196dp"
+                android:layout_width="182dp"
                 android:layout_height="wrap_content"
                 android:text="TextView" />
 

@@ -21,15 +21,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="340dp"
         android:layout_height="68dp"
+        android:layout_marginBottom="20dp"
         android:background="#9EFFFFFF"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
         app:cardElevation="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"

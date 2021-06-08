@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageDetailTinTuc"
-        android:layout_width="413dp"
-        android:layout_height="358dp"
+        android:layout_width="419dp"
+        android:layout_height="255dp"
         android:scaleType="centerCrop"
         android:src="@drawable/camnangsapa"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
                     android:paddingTop="20dp"
                     android:paddingEnd="20dp"
                     android:text="TextView"
-                    android:textSize="24sp"
+                    android:textSize="28sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -52,7 +52,8 @@
                     android:layout_width="369dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="24sp" />
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
