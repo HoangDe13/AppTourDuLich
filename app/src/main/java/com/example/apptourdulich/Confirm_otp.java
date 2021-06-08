@@ -59,7 +59,7 @@ public class Confirm_otp extends AppCompatActivity {
             public void onClick(View v) {
                 if(otp.getText().toString().trim().isEmpty())
                 {
-                    Toast.makeText(getApplicationContext(),"Please enter OTP",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Vui Lòng Nhập Mã OTP",Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -79,7 +79,7 @@ public class Confirm_otp extends AppCompatActivity {
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(),"OTP was invaid",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"OTP Không Đúng",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
