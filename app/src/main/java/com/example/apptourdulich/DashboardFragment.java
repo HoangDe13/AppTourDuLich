@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -144,13 +145,21 @@ public class DashboardFragment extends Fragment {
                 Intent i=new Intent(root.getContext(),Bill.class);
                 Bundle b=new Bundle();
                 int NL=Integer.parseInt(edtSLNguoiLon.getText().toString());
+
                 int TE=Integer.parseInt(edtSLTreEm.getText().toString());
-                b.putString("SoDienThoai",SoDienThoai);
-                b.putInt("IDTour",id);
-                b.putInt("NguoiLon",NL);
-                b.putInt("TreEm",TE);
-                i.putExtras(b);
-                startActivity(i);
+                if (NL<=0||NL>30||TE<0||TE>30)
+
+                    {
+                        Toast.makeText(getContext(),"Vui Lòng Kiểm Tra Số Lượng Đặt Vé",Toast.LENGTH_SHORT).show();
+                    }
+                else {
+                    b.putString("SoDienThoai", SoDienThoai);
+                    b.putInt("IDTour", id);
+                    b.putInt("NguoiLon", NL);
+                    b.putInt("TreEm", TE);
+                    i.putExtras(b);
+                    startActivity(i);
+                }
             }
         });
         return root;

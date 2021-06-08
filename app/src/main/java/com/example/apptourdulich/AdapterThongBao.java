@@ -26,8 +26,8 @@ public class AdapterThongBao extends FirebaseRecyclerAdapter<ThongTinThongBao,Ad
 
     @Override
     protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull ThongTinThongBao thongTinThongBao) {
-        holder.noidung.setText(thongTinThongBao.getNoidung());
-        holder.ngay.setText(thongTinThongBao.getNgaythongbao());
+        holder.noidung.setText(thongTinThongBao.getNoiDung());
+        holder.ngay.setText(thongTinThongBao.getNgayThongBao());
     }
 
     @NonNull

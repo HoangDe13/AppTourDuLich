@@ -129,42 +129,6 @@ imgBack.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View v) {
                                              ChooseImage();
-//                                             mStoreRef= FirebaseStorage.getInstance().getReference("Images");
-//                                             String dt=SoDienThoai.getText().toString().trim();
-//                                             DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("KhachHang");
-//
-//                                             userRef.orderByChild("sdt").equalTo(dt).addListenerForSingleValueEvent(new ValueEventListener() {
-//                                                 @Override
-//                                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                                                     for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                                                         String id = dataSnapshot.getKey();
-//                                                         String i = System.currentTimeMillis() + "." + getExtension(uri);
-//                                                         khachHang.setImageid(i);
-//                                                         userRef.child(id).setValue(khachHang);
-//                                                         Toast.makeText(getApplicationContext(), "Update Success", Toast.LENGTH_SHORT).show();
-//
-//                                                         StorageReference Ref = mStoreRef.child(i);
-//                                                         Ref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                                                             @Override
-//                                                             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                                                                 Toast.makeText(getApplicationContext(), "ThanhCong", Toast.LENGTH_SHORT).show();
-//                                                             }
-//                                                         }).addOnFailureListener(new OnFailureListener() {
-//                                                             @Override
-//                                                             public void onFailure(@NonNull Exception e) {
-//
-//                                                             }
-//                                                         });
-//                                                         finish();
-//                                                     }
-//
-//                                                 }
-//
-//                                                 @Override
-//                                                 public void onCancelled(@NonNull DatabaseError error) {
-//
-//                                                 }
-//                                             });
 
 
                                          }
@@ -190,30 +154,35 @@ imgBack.setOnClickListener(new View.OnClickListener() {
                             khachHang.setHoTen(Hoten);
                             khachHang.setGioitinh(Gioitinh);
                             khachHang.setNgaySinh(Ngaysinh);
-                            String i = System.currentTimeMillis() + "." + getExtension(uri);
-                                                         khachHang.setImageid(i);
-                            khachHang.setSDT(dt);
-                            khachHang.setCMND(Cmnd);
-                            khachHang.setDiaChi(Diachi);
+                            if(uri==null)
+                            {
+                                Toast.makeText(getApplicationContext(),"Vui Lòng Chọn Hình Ảnh",Toast.LENGTH_SHORT).show();
+                            }else {
+                                i = System.currentTimeMillis() + "." + getExtension(uri);
+                                khachHang.setImageid(i);
 
-                            userRef.child(id).setValue(khachHang);
-                            Toast.makeText(getApplicationContext(),"Update Success",Toast.LENGTH_SHORT).show();
+                                khachHang.setSDT(dt);
+                                khachHang.setCMND(Cmnd);
+                                khachHang.setDiaChi(Diachi);
 
-                            StorageReference Ref=mStoreRef.child(i);
-                            Ref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                @Override
-                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                    Toast.makeText(getApplicationContext(),"ThanhCong",Toast.LENGTH_SHORT).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
+                                userRef.child(id).setValue(khachHang);
+                                Toast.makeText(getApplicationContext(), "Cập Nhật Thành Công", Toast.LENGTH_SHORT).show();
 
-                                }
-                            });
-                            finish();
-//                            Intent intent= new Intent(getApplicationContext(),fmProfile.class);
-//                            startActivity(intent);
+                                StorageReference Ref = mStoreRef.child(i);
+
+                                Ref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                    @Override
+                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+
+                                    }
+                                });
+                            }
+
 
                         }
                     };
@@ -222,15 +191,18 @@ imgBack.setOnClickListener(new View.OnClickListener() {
 
                     }
                 });
+
             }
         });
     }
 
 
     private String getExtension(Uri uri){
-        ContentResolver cr= getContentResolver();
-        MimeTypeMap mimeTypeMap=MimeTypeMap.getSingleton();
-        return  mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
+
+    ContentResolver cr = getContentResolver();
+    MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+    return mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
+
     }
     @Override
     protected void onStart() {
