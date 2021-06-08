@@ -116,11 +116,11 @@ private static final  String Email="email";
                         if (snapshot.getValue() == null) {
                             //it means user already registered
                             //Add code to show your prompt
-                      edtSoDienThoai.setError("Phone Number Unregistered");
+                      edtSoDienThoai.setError("Số Điện Thoại Chưa Được Đăng Kí");
                         } else {
                             String SoDienThoai = edtSoDienThoai.getText().toString().trim();
                             if (SoDienThoai.isEmpty()) {
-                                edtSoDienThoai.setError("Phone is requied");
+                                edtSoDienThoai.setError("Vui Lòng Nhập Số Điện Thoại!!");
                                 edtSoDienThoai.requestFocus();
                                 return;
                             } else {
