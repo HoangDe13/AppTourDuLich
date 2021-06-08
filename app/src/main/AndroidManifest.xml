@@ -20,8 +20,10 @@
         <activity android:name=".DetailTinTucActivity" />
         <activity android:name=".infoHistory" />
         <activity android:name=".lovelist" />
-        <activity android:name=".DetailTinTucActivity" />
-        <activity android:name=".infoHistory" />
+        <activity android:name=".DetailTinTucActivity"
+            tools:ignore="DuplicateActivity" />
+        <activity android:name=".infoHistory"
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".History" />
         <activity android:name=".Like" />
         <activity android:name=".ChangeLanguage" />
