@@ -38,8 +38,9 @@ public class infoHistory extends AppCompatActivity {
     DatabaseReference databaseReferenceKhachHang;
     DatabaseReference databaseReferenceKhuyenMai,reference;
     Button btnHuy;
-
+    DatabaseReference refThongBao;
     ImageView imgBack;
+    long maxid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,6 +171,21 @@ public class infoHistory extends AppCompatActivity {
             }
         });
 
+        ThongTinThongBao thongBao=new ThongTinThongBao();
+        refThongBao = FirebaseDatabase.getInstance().getReference().child("ThongBao");
+        refThongBao.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    maxid = snapshot.getChildrenCount();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         btnHuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -184,10 +200,18 @@ public class infoHistory extends AppCompatActivity {
                     if (diff < 4)
                     {
                         deleteBill(idHoaDon);
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                        String currentDateandTime = sdf.format(new Date());
+                        String Thongtin="Quý khách đã hủy tour thành công chuyến đi "+tvTenTourBill.getText().toString().trim()+" vào ngày " +tvNgayKhoiHanhHis.getText().toString().trim();
+                        thongBao.setMaThongBao((int)maxid+1);
+                        thongBao.setNgayThongBao(currentDateandTime);
+                        thongBao.setNoiDung(Thongtin);
+                        thongBao.setSoDienThoai(tvSoDienThoaiHis.getText().toString().trim());
+                        refThongBao.child(String.valueOf(maxid+1)).setValue(thongBao);
                     }
                     else
                     {
-                        ShowToast("Can not delete");
+                        ShowToast("Không thể hủy tour, Vui lòng liên hệ để được hỗ trợ");
                     }
                 }
                 catch (Exception e){
@@ -214,7 +238,7 @@ public class infoHistory extends AppCompatActivity {
         mTask.addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                ShowToast("delete");
+                ShowToast("Hủy Tour Thành Công");
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

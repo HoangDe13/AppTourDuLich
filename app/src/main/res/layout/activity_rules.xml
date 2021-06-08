@@ -7,6 +7,16 @@
     android:background="@drawable/nendangnhapdangky"
     tools:context=".Rules">
 
+    <ImageView
+        android:id="@+id/btnBackDieuKhoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="256dp"
@@ -24,10 +34,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="389dp"
-        android:layout_height="511dp"
+        android:layout_width="387dp"
+        android:layout_height="539dp"
         android:foregroundGravity="center"
         app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
@@ -88,18 +99,5 @@
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/btnbackDieuKhoan"
-        android:layout_width="119dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="20dp"
-        android:background="#0097A7"
-        android:text="@string/close"
-        android:textSize="18sp"
-        app:backgroundTint="#0097A7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

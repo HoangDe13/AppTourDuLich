@@ -12,25 +12,27 @@
         android:layout_width="175dp"
         android:layout_height="45dp"
         android:layout_marginStart="149dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="87dp"
         android:fontFamily="@font/artifika"
         android:text="@string/News"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/rclTinTuc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rclTinTuc"
-        android:layout_width="375dp"
-        android:layout_height="644dp"
+        android:layout_width="391dp"
+        android:layout_height="555dp"
         android:layout_marginStart="37dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

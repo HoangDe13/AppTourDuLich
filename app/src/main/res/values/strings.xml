@@ -156,7 +156,7 @@
 
     <string name="GuiLaiMa">Gửi lại</string>
     <string name="housetour">House Tour</string>
-    <string name="NoInterNetConnection">Không Có Kết Nối Internet</string>
+
 
 <!--    <string name="GuiLaiMa">Gửi lại</string>-->
 
@@ -182,24 +182,8 @@
     <!--    <string name="PhuQuoc1">Tháng 5 tùy rơi vào mùa mưa ở Phú Quốc nhưng đây là thời điểm tốt để đi du lịch. Tháng 5 là thời điểm giao mùa từ khô sang mưa. </string>-->
 
     <!--    <string name="CamNangSapa">Cẩm Nang Sapa</string>-->
-    <!--    <string name="CamNang2">Đến Sapa vào mỗi mùa đều có những trải nghiệm thú vị riêng của mảnh đất vùng cao xinh đẹp này.-->
 
-    <!--– Thời điểm thích hợp để đi du lịch Sapa là từ tháng 9 đến tháng 11 hoặc từ tháng 3 đến 5. Thời điểm này thời tiết Sapa ổn định, ngày nắng khô, đêm lạnh.-->
 
-    <!--– Tháng 4 – 5 là mùa nước đổ, những ruộng bậc thang ngút mắt cảm tưởng như chạy đến tận chân trời.-->
-
-    <!--– Tháng 9 – 10 là mùa lúa chín, khi ấy Sapa như được khoác chiếc áo vàng óng ả, lấp lánh. Bạn nên đi vào giữa hoặc cuối tháng 9 bởi sang tháng 10 ruộng bậc thang nhiều nơi đã gặt xong.-->
-
-    <!--– Tháng 12 đến tháng 2 trời rất lạnh, có thể xuất hiện băng và thỉnh thoảng có tuyết rơi. Đây cũng là mùa nở của hoa đào, đỗ quyên…</string>-->
-    <!--    <string name="CamNang3">Đỉnh Fansipan- nóc nhà Đông Dương-->
-    <!--Còn gì tuyệt vời hơn khi được đứng ở độ cao 3143m vươn vai hít thở bầu không khí trên cao, tận hưởng cảm giác như chạm vào mây và phóng tầm mắt xuống bức tranh Sapa toàn cảnh bên dưới.</string>-->
-    <!--    <string name="CamNang1">Sapa là “nơi gặp gỡ giữa trời và đất” với cảnh sắc thiên nhiên hùng vĩ bậc nhất miền Bắc. Đây cũng là nơi hội tụ đồng bào các dân tộc thiểu số sinh sống bao đời nay. Bạn đã đến để chiêm ngưỡng và trải nghiệm vùng đất đầy thú vị này chưa? </string>-->
-    <!--    <string name="DuLichAnToan">Du Lịch An Toàn Mùa Lễ</string>-->
-    <!--    <string name="AnToan4">Sau khi bạn trở về nhà, hãy làm theo các khuyến cáo hoặc yêu cầu từ chính quyền địa phương như khai báo y tế đầy đủ và tiếp tục tuân thủ tất cả các biện pháp phòng ngừa chính.</string>-->
-    <!--    <string name="AnToan2">Kiểm tra trước những lựa chọn có sẵn tại điểm đến của bạn về phương tiện đi lại, thức ăn và chỗ ở. Hãy nhớ rằng một số hoạt động kinh doanh và dịch vụ có thể bị gián đoạn hoàn toàn hoặc một phần ở các khu vực bị ảnh hưởng, bao gồm giao thông công cộng, cửa hàng và nhà hàng, cũng như các điểm du lịch nổi tiếng - vì vậy hãy kiểm tra thông tin mới nhất về những thay đổi đối với dịch vụ và thủ tục.</string>-->
-    <!--    <string name="AnToan3">Tránh đến những không gian đông đúc, không gian kín, không thông thoáng, cũng như bất kỳ cuộc tụ tập đông người nào như hòa nhạc, sự kiện và tiệc tùng. Tránh giờ cao điểm tại các bãi biển như buổi chiều.</string>-->
-    <!--    <string name="AnToan1">Dù trong nước, dịch bệnh đã được kiểm soát tốt, song nguy cơ dịch bệnh bùng phát trở lại luôn thường trực. Nếu bạn đã lên kế hoạch cho chuyến nghỉ dưỡng dịp lễ này, dưới đây là một số "mẹo" để giúp bạn thực hiện một chuyến du lịch một cách an toàn hơn.</string>-->
-    <!--    <string name="HoaDaQuyDaLat">Hoa Dã Quỳ Đà Lạt</string>-->
     <!--    <string name="DaQuy1">Dã quỳ là một trong những loài hoa dại đẹp nổi tiếng của khắp núi rừng Tây Nguyên và nhiều tỉnh miền núi Tây Bắc. Tuy nhiên để đưa vẻ đẹp của hoa Dã Qùy lên một tầm cao mới thì chỉ có Đà Lạt.</string>-->
     <!--    <string name="DaQuy3">Đà Lạt – Cầu Đất – Đ’ran – Châu Sơn – Phi Nôm – Tu Tra-->
     <!--      Đây có thể được xem là cung đường ngắm hoa Dã Quỳ đẹp nhất tại Đà Lạt, khu vực dọc theo cung đường từ Trại Mát về đến đồ trà Cầu Đất, hoa Quỳ nở vàng rực hai bên đường, và đây cũng là mùa hồng giòn Đà Lạt đang chín nên bạn sẽ tha hồ đắm chìm vào không gian thiên nhiên xinh đẹp hai bên cung đường này. Qua hết đèo Dran là địa phận của thị trấn Đơn Dương, bạn sẽ dễ dàng bắt gặp những cung đường với hoa Dã Quỳ vàng rực hai bên và chân đập nước Đa Nhim là nơi hoa Dã Quỳ Đà Lạt rực rỡ nhất.</string>-->
@@ -213,7 +197,7 @@
     <!--    <string name="QuangNinh2">Các tàu du lịch trên Vịnh Hạ Long đều được lắp đặt hệ thống định vị GPS để nâng cao hệ số an toàn cho khách du lịch. Hệ thống camera giám sát ở một số hang động lớn như: Hang Ðầu Gỗ, động Thiên Cung, bảo đảm liên tục truyền dữ liệu về cho bộ phận giám sát.</string>-->
     <!--    <string name="QuangNinh3">Đặc biệt, chỉ với 1 chiếc điện thoại thông minh, du khách có thể tiếp cận với các tiện ích, ứng dụng thông minh về du lịch, như tìm kiếm thông tin bằng giọng nói, dịch chuyển ngôn ngữ, hệ thống thuyết minh tự động tại các điểm đến với hướng dẫn viên ảo, hay tham quan 3D... trên nền tảng điện thoại di động.</string>-->
     <string name="NoInterNetConnection">Không Có Kết Nối Internet</string>
-
+<string name="HinhNoiBat">Hình Ảnh Nổi Bật</string>
     <string name="PleaseCheckYourConnection">Vui Lòng Kiểm Tra Kết Nối Internet</string>
     <string name="Retry">Thử Lại</string>
     <string name="LogOut">Đăng Xuất</string>

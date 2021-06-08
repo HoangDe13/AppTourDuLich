@@ -44,7 +44,7 @@ ImageView back;
         String sdt=b.getString("SoDienThoai");
 
         rcvThongBao.setLayoutManager(new LinearLayoutManager(ThongBao.this));
-        FirebaseRecyclerOptions<ThongTinThongBao> thongTinTinTucFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinThongBao>().setQuery(FirebaseDatabase.getInstance().getReference().child("ThongBao"),ThongTinThongBao.class).build();
+        FirebaseRecyclerOptions<ThongTinThongBao> thongTinTinTucFirebaseOptions=new FirebaseRecyclerOptions.Builder<ThongTinThongBao>().setQuery(FirebaseDatabase.getInstance().getReference().child("ThongBao").orderByChild("soDienThoai").equalTo(sdt),ThongTinThongBao.class).build();
 
         adapterThongBao=new AdapterThongBao(thongTinTinTucFirebaseOptions);
         rcvThongBao.setAdapter(adapterThongBao);

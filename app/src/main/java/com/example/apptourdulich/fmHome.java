@@ -375,14 +375,13 @@ public class fmHome extends Fragment {
 
     private List<Photo> getListPhotoTour() {
         List<Photo> list=new ArrayList<>();
-        list.add(new Photo(R.drawable.hagiangchu));
-        list.add(new Photo(R.drawable.dalate));
-        list.add(new Photo(R.drawable.vinhhalonge));
-        list.add(new Photo(R.drawable.phuquoce));
-        list.add(new Photo(R.drawable.danange));
-        list.add(new Photo(R.drawable.phanxipange));
-        list.add(new Photo(R.drawable.huee));
-        list.add(new Photo(R.drawable.nhatrange));
+        list.add(new Photo(R.drawable.im1));
+        list.add(new Photo(R.drawable.im2));
+        list.add(new Photo(R.drawable.im3));
+        list.add(new Photo(R.drawable.im4));
+        list.add(new Photo(R.drawable.im5));
+        list.add(new Photo(R.drawable.im6));
+
         return list;
     }
     private List<Photo> getListPhoto() {

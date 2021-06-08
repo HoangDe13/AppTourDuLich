@@ -9,13 +9,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Rules extends AppCompatActivity {
-    Button back;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules);
-        back= findViewById(R.id.btnbackDieuKhoan);
+        back= findViewById(R.id.btnBackDieuKhoan);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -222,7 +222,7 @@ public class Bill extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    maxid = snapshot.getChildrenCount();
+                    maxidThongBao = snapshot.getChildrenCount();
                 }
             }
 
@@ -237,7 +237,7 @@ public class Bill extends AppCompatActivity {
                 String sdt=SoDienThoaiBill.getText().toString().trim();
                 int NL=Integer.parseInt(SLNguoiLon.getText().toString().trim());
                 int TE=Integer.parseInt(SLTreEm.getText().toString().trim());
-                int Tong=Integer.parseInt(TongThanhToan.getText().toString().trim());
+
                 String KhuyenMaiid=MaKhuyenMai.getText().toString().trim();
                 String noidung="Cảm ơn quý khách đã đặt thành công chuyến đi "+TenTour.getText().toString().trim()+", được khởi hành vào ngày "+NgayKhoiHanh.getText().toString().trim();
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -250,13 +250,13 @@ public class Bill extends AppCompatActivity {
                 hoaDon.setSoDienThoai(sdt);
 
                 hoaDon.setNgayThanhToan(currentDateandTime);
-                hoaDon.setTongTien(Tong);
+                hoaDon.setTongTien(ThanhToan);
                 thongBao.setMaThongBao((int)maxidThongBao+1);
                 thongBao.setNgayThongBao(currentDateandTime);
                 thongBao.setNoiDung(noidung);
                 thongBao.setSoDienThoai(SoDienThoaiBill.getText().toString().trim());
-                Ref.push().setValue(hoaDon);
-                refThongBao.push().setValue(thongBao);
+                Ref.child(String.valueOf(maxid+1)).setValue(hoaDon);
+                refThongBao.child(String.valueOf(maxidThongBao+1)).setValue(thongBao);
 
                 Toast.makeText(Bill.this, "Thanh Toán Thành Công", Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(Bill.this,Home.class);
