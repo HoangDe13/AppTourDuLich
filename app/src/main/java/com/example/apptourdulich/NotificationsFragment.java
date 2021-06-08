@@ -56,8 +56,8 @@ public class NotificationsFragment extends Fragment{
                         String khachSanstr = String.valueOf(dataSnapshot.child("khachSan").getValue());
 
 
-                        khachSan.setText(moTaStr);
-                        moTa.setText(khachSanstr);
+                        moTa.setText(moTaStr);
+                        khachSan.setText(khachSanstr);
 
 
 
