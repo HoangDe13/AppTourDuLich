@@ -123,7 +123,10 @@ public  class AdapterTour extends RecyclerView.ViewHolder{
         //imageItemTour.setImageResource(Integer.parseInt(image));
         listTourName.setText(tenTour);
         listNgay.setText(ngayKhoiHanh);
-        listGia.setText(String.valueOf(donGia));
+        NumberFormat fmDonGia = new DecimalFormat("#,###");
+        double DonGia = Double.parseDouble(String.valueOf(donGia));
+        String fmdongia = fmDonGia.format(DonGia);
+        listGia.setText(String.valueOf(fmdongia));
 
 
     }
