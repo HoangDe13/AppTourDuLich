@@ -164,7 +164,8 @@ public class fmHome extends Fragment {
         Bundle bundle=getActivity().getIntent().getExtras();
         String SoDienThoai=bundle.getString("SoDienThoai");
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
-        String currentUserid=user.getPhoneNumber();///
+       // String currentUserid=user.getPhoneNumber();///
+        String currentUserid="0364140312";
         thongTinTour=new ThongTinTour();
         fvrtref=database.getReference("Likes");
         fvrt_listRef=database.getReference("LikeList").child(currentUserid);

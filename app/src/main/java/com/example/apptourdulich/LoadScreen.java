@@ -30,12 +30,12 @@ public class LoadScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent= new Intent(getApplicationContext(),Home.class);
-                intent.putExtra("SoDienThoai",SoDienThoai.toString());
-                startActivity(intent);
-//                Intent i=new Intent(LoadScreen.this,StartActivity.class);
-//
-//                startActivity(i);
+//                Intent intent= new Intent(getApplicationContext(),Home.class);
+//                intent.putExtra("SoDienThoai",SoDienThoai.toString());
+//                startActivity(intent);
+                Intent i=new Intent(LoadScreen.this,StartActivity.class);
+
+                startActivity(i);
             }
         },4000);
 
