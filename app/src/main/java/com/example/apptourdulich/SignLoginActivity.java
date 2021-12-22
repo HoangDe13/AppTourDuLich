@@ -126,6 +126,7 @@ private static final  String Email="email";
                             } else {
                                 dangnhap.setVisibility(View.VISIBLE);
 
+
                                 PhoneAuthOptions options;
                                 options = PhoneAuthOptions.newBuilder(mFirebaseAuth)
                                         .setPhoneNumber("+84" + edtSoDienThoai.getText().toString().trim())       // Phone number to verify
