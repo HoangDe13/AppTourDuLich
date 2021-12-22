@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="409dp"
+        android:layout_width="417dp"
 
-        android:layout_height="228dp"
+        android:layout_height="361dp"
         android:layout_marginStart="-2dp"
 
         android:scaleType="fitXY"
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="36dp"
 
         android:gravity="center"
         android:text="@string/vedeptieman"
